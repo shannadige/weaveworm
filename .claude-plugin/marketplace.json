@@ -1,0 +1,14 @@
+{
+  "name": "weaveworm",
+  "owner": {
+    "name": "Shan Nadige",
+    "email": "hello@shannadige.com"
+  },
+  "plugins": [
+    {
+      "name": "discover",
+      "source": "./discover",
+      "description": "Product-design discovery toolkit: plan research, run it, and log evidence in one shared, parseable format."
+    }
+  ]
+}

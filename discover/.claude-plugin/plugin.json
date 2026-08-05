@@ -1,0 +1,9 @@
+{
+  "name": "discover",
+  "version": "0.1.0",
+  "description": "Discovery toolkit for product designers. Each skill produces one fixed-shape artifact; findings accumulate in a shared evidence log that later design stages can cite by ID.",
+  "author": {
+    "name": "Shan Nadige",
+    "email": "hello@shannadige.com"
+  }
+}
