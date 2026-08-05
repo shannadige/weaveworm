@@ -67,9 +67,9 @@ In order of strength:
 4. Interviews *about* users with customer-facing staff (support, sales) —
    last resort, twice-removed
 
-Findings from proxies log at `medium` confidence at best (per the
-evidence-log spec — secondhand caps confidence), and the plan's Risks line
-must say the evidence is indirect.
+Findings from proxies log at `low` confidence (per the evidence-log spec —
+secondhand caps confidence at `low`), and the plan's Risks line must say
+the evidence is indirect.
 
 ## Before filling the template
 
