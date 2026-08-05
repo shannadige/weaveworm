@@ -19,7 +19,9 @@ the competitor's homepage happens to emphasize.
 1. Read the plan's Q-NNN block, or take the one-line version above.
 2. Ask once, as one batched question: which competitors (default cap 3 —
    more only if the user asks) and whatever the capability check below
-   needs (e.g. is an account available).
+   needs (e.g. is an account available). If the user is unreachable, take
+   the plan's named competitors (cap 3) in fetch-only mode, marked
+   `(assumed)`.
 3. Derive the 3–5 comparison axes from the question and show them.
 4. Walk one competitor at a time: one dated file each, cross-competitor
    axes table in the comparison file.

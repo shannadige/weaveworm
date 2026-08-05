@@ -26,9 +26,17 @@ the others can be appended later as their own `Q-NNN` blocks.
   an old one.
 - **Status** is always the first bullet under the heading, so heading + next
   line alone give a complete index of questions and their state.
-- The only allowed edit to an existing block is its **Status** line:
+- Two edits are allowed to an existing block: its **Status** line, and
+  appending one **Fielded:** line when the work actually runs (actual
+  dates, sessions completed, instrument version used) — Timeline stays
+  the plan; Fielded records reality. Status transitions:
   - `open` → `answered (→ E-014, E-015)` once the entries named in "Done
-    when" exist in the evidence log — cite them by ID.
+    when" exist in the evidence log — cite them by ID. Substantively
+    answered but formally short of "Done when" (or the reverse) →
+    `answered (→ …) — caveat: <one line>`, never a stretched claim and
+    never an edited "Done when".
+  - `open` → `deferred — <reason>` for a question planned but knowingly
+    not schedulable yet.
   - `open` → `dropped — <reason>` if the question is abandoned. Never delete
     the block.
 
@@ -86,6 +94,11 @@ Two flags to raise before planning:
 - The question is "how common" but nobody has done qualitative work yet →
   recommend the interview row first; a survey written on assumptions
   measures the wrong things precisely.
+
+If the user can't be reached to confirm — a reframe, a primary-question
+pick, or a batched default — act anyway, record in the block that the
+call is the operator's and unconfirmed, and list it for confirmation.
+Unconfirmed is a state to surface, not a reason to stall.
 
 ## Plan template
 

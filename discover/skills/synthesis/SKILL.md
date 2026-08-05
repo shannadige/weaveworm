@@ -10,7 +10,8 @@ spec at `${CLAUDE_PLUGIN_ROOT}/references/evidence-log-spec.md`) and the
 plan file (default `research/plans.md`; if the user keeps research
 elsewhere, ask once, then reuse their answer for the session), scoped to
 one or more `Q-NNN` questions or a topic the user names. Select in-scope
-entries by their `Question:` field; for older entries without one, fall
+entries by their `Question:` field — `unplanned` entries whose topic
+slug matches the named scope are in scope; for older entries without one, fall
 back to matching the Source line against the question's kit, teardown,
 or mining artifacts and the plan block's "Done when". Output: the
 synthesis file below. If the log has no entries in scope, say so — a
@@ -49,7 +50,9 @@ refuses to write one.
   in-scope entries make the same claim from independent firsthand sources,
   that's an evidence-log merge — route to evidence-log, let confidence
   rise there, then re-cite the merged entry. Proxy-sourced entries stay
-  `low` no matter how many venues agree.
+  `low` no matter how many venues agree. If a cited entry carries
+  `Stakes: high`, the theme states both — "confidence low, stakes high —
+  cheap to verify" — so a low label can't read as low importance.
 - **Contradictions are findings, not noise.** The spec's `Contradicts:`
   line lives only on the newer entry, so collect in both directions:
   in-scope entries carrying one, plus entries anywhere in the log whose
@@ -61,7 +64,9 @@ refuses to write one.
   count exceeds what you surfaced, say so.
 - **Name the gaps.** What the question needed that no entry covers, and
   which populations the evidence structurally missed (screener limits,
-  proxy-source skew). An honest Gaps section is what stops a readout
+  proxy-source skew). Clusters of `Question: unplanned` entries are named
+  here too — each is a question the plan never asked, and the seed of the
+  next `Q-NNN` block. An honest Gaps section is what stops a readout
   from being read as more complete than the log is.
 - **Recommendations are downstream of themes, and separate.** Each one
   names the theme(s) it follows from and its cost if the theme is wrong.
