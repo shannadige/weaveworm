@@ -6,8 +6,11 @@ through documents — not vibes.
 
 ## Plugins
 
-- **discover** — research planning + evidence logging. Skills: `research-plan`,
-  `evidence-log`. Shared contract: [evidence log spec](discover/references/evidence-log-spec.md).
+- **discover** — research planning, study instruments, evidence logging, and
+  synthesis. Skills: `research-plan`, `interview-kit`, `survey-kit`,
+  `usability-test-kit`, `competitor-teardown`, `review-mining`,
+  `evidence-log`, `synthesis`. Shared contract:
+  [evidence log spec](discover/references/evidence-log-spec.md).
 
 ## Install
 

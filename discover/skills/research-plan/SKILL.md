@@ -48,6 +48,7 @@ the "why" — the choice must be inspectable, and they may overrule it.
 | How to organize navigation or content | Card sort / tree test, 10–15 people | Structure problems show up in sorting patterns; cheap and remote-friendly |
 | Which of two live variants performs better | A/B test | Only works with real traffic — with under ~1k users/week, run a usability test instead |
 | How behavior unfolds over days or weeks | Diary study, 6–10 people | One-shot sessions miss routines, workarounds, and drop-off; longitudinal self-logging catches them |
+| What users say when you can't reach them | Review mining, 2+ source types | Real user language at zero recruiting cost — but self-selected and secondhand; findings cap at `low` confidence |
 
 **No row fits?** Say so instead of force-fitting one. Propose the closest
 method in the same shape — method, why, and what it *can't* tell you — and

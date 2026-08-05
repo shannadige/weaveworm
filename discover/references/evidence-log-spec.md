@@ -21,6 +21,7 @@ cite entries by ID instead of re-quoting research.
 ## E-014 Users abandon setup at the API-key step
 - **Evidence:** 4 of 6 interviewees stalled here; P2: "I didn't know where to even get the key."
 - **Source:** interviews 2026-08 (P1–P6), guide v2
+- **Question:** Q-002
 - **Confidence:** high — observed behavior, not opinion
 - **Contradicts:** E-003
 ```
@@ -31,9 +32,14 @@ Field rules:
   states something that could be proven wrong ("users abandon setup at the
   API-key step"), not a theme ("onboarding friction").
 - **Evidence** — the observation that supports the claim. Counts and verbatim
-  quotes beat paraphrase. Quote participants by ID (P1, P2…), never by name.
+  quotes beat paraphrase. Quote voices by ID, never by name — firsthand
+  participants are P1, P2…, survey respondents R1, R2…, mined proxy voices
+  M1, M2…, so one log can hold all three without collision.
 - **Source** — where this came from, specific enough to relocate: session
   batch + date, teardown target + date, analytics query, etc.
+- **Question** — the `Q-NNN` plan block this entry answers. Synthesis scopes
+  entries by this field; an entry without one can only be found by
+  Source-line matching, so producer skills always write it.
 - **Confidence** — one of three levels, with a short reason:
   - `high` — observed behavior, or the same finding from 2+ independent sources
   - `medium` — self-reported, or a single strong source
