@@ -16,7 +16,8 @@ The plan doesn't name the artifact. Ask once, as one batched question,
 for: what exactly is being tested (URL, build, or prototype link) and its
 version or date; whether sessions are moderated or unmoderated; and the
 session length. Never guess a build identifier — a wrong one silently
-pools results across different artifacts.
+pools results across different artifacts. If the user is unreachable,
+stop rather than draft against an unnamed build.
 
 ## Kit file
 

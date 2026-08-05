@@ -39,13 +39,32 @@ Field rules:
   batch + date, teardown target + date, analytics query, etc.
 - **Question** — the `Q-NNN` plan block this entry answers. Synthesis scopes
   entries by this field; an entry without one can only be found by
-  Source-line matching, so producer skills always write it.
+  Source-line matching, so producer skills always write it. A real finding
+  no plan block covers — sessions reliably produce these — is written
+  `Question: unplanned (<topic slug>)`, never omitted; clusters of
+  `unplanned` entries on one topic are the seed of the next `Q-NNN` block.
 - **Confidence** — one of three levels, with a short reason:
   - `high` — observed behavior, or the same finding from 2+ independent sources
   - `medium` — self-reported, or a single strong source
   - `low` — single anecdote, hunch, or secondhand
+- **Stakes** — optional: `high` + one line, for claims whose cost-if-true is
+  severe (safety, data loss, revenue). Stakes records importance; Confidence
+  records evidence strength. `low` confidence with `Stakes: high` means
+  "verify cheaply, soon", not "deprioritize".
 - **Contradicts** — optional. IDs of entries this one conflicts with. Never
   delete or edit the older entry; the tension is data for synthesis.
+
+## Confidence precedence
+
+Three rules interact across skills; apply them in this order:
+
+1. **Proxy cap** — an entry whose evidence is wholly proxy (mined reviews,
+   forums, secondhand reports) is `low`, no matter how many venues agree.
+2. **Corroboration raise** — new evidence raises an existing entry's level
+   only if it is firsthand and independent of the entry's existing sources.
+   Proxy material may be appended as evidence but never changes the level.
+3. **Synthesis floor** — synthesis never raises a level; it reports the
+   weakest load-bearing entry.
 
 ## ID rules
 

@@ -50,11 +50,16 @@ fabrication.
 - **Bounded sweep.** Scan 40–60 items per source type, or the full set if
   smaller — record the n either way. Stop when the last 15 items scanned
   add no new theme, and say so; that's saturation, not laziness.
-- **Count, don't vibe.** Every theme states the arithmetic: "11 of 60
-  reviews scanned mention export friction" — never "many users complain
-  about export." Record what was scanned (source, date range, n, and the
-  sort/filter applied — most recent, most helpful, 1-star only) in
-  **Sources** so the denominator is auditable and its bias visible.
+- **Count, don't vibe.** Every theme states the arithmetic with the item
+  numbers inline: "11 of 60 reviews scanned mention export friction
+  [#3, #7, #12, …]" — never "many users complain about export." An item
+  supporting two themes is counted in both with the overlap said out
+  loud; theme counts that sum past n with no overlap note read as
+  fabrication. Repeat voices shrink the denominator — "7 of 12 posts
+  (4 distinct users)" — state both numbers. Record what was scanned
+  (source, date range, n, and the sort/filter applied — most recent,
+  most helpful, 1-star only) in **Sources** so the denominator is
+  auditable and its bias visible.
 - **Capped output.** At most 5 themes, ranked by count, the remainder
   rolled into one "also mentioned" line; 1–2 quotes per theme, not a
   quote wall.
@@ -75,7 +80,10 @@ Proxy evidence is secondhand: per the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/evidence-log-spec.md` and the plan's
 proxy rules, **cap confidence at `low`** regardless of how many reviews
 agree — the spec's 2+-independent-sources route to `high` does not apply
-across proxy venues; venue independence does not make evidence firsthand. Volume raises confidence within a source's reach, not beyond it.
+across proxy venues; venue independence does not make evidence firsthand. Volume raises confidence within a source's reach, not beyond
+it, and mined corroboration never raises an existing firsthand entry's
+level — append it as evidence, leave the level alone (spec: confidence
+precedence).
 If a mined theme matters, its evidence-log entry should end by naming
 the firsthand method that would confirm it ("would rise with 5
 interviews — see research-plan").
