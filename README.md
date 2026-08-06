@@ -11,6 +11,7 @@ through documents — not vibes.
   `usability-test-kit`, `competitor-teardown`, `review-mining`,
   `evidence-log`, `synthesis`. Shared contract:
   [evidence log spec](discover/references/evidence-log-spec.md).
+  Usage guide: [discover/README.md](discover/README.md).
 
 ## Install
 
