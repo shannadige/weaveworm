@@ -15,7 +15,7 @@ through documents — not vibes.
 ## Install
 
 ```
-/plugin marketplace add <this-repo>
+/plugin marketplace add shannadige/weaveworm
 ```
 
 Then pick plugins from the `/plugin` menu.
