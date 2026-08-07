@@ -1,0 +1,9 @@
+{
+  "name": "design",
+  "version": "0.1.0",
+  "description": "Design toolkit for product designers — stage three of the stack: turn pursued opportunities into briefs, diverge on concepts, log design decisions, map flows, build testable HTML prototypes, and critique the result against the charter it must not betray.",
+  "author": {
+    "name": "Shan Nadige",
+    "email": "hello@shannadige.com"
+  }
+}
