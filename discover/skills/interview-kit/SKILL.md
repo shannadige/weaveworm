@@ -36,7 +36,7 @@ question — same discipline as research-plan — for: session length (default
 45 minutes if they have no preference) and whether sessions are recorded.
 If not recorded, the consent script drops the recording clause and keeps
 the rest. Never improvise either value mid-draft. If the user can't be
-reached, take the defaults (45 minutes, recorded), mark them `(assumed)`
+reached, take the defaults (45 minutes, recorded), mark them `(unconfirmed)`
 in the kit header, and flag them for confirmation before session 1.
 
 ## Guide versioning

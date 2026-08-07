@@ -21,7 +21,7 @@ the competitor's homepage happens to emphasize.
    more only if the user asks) and whatever the capability check below
    needs (e.g. is an account available). If the user is unreachable, take
    the plan's named competitors (cap 3) in fetch-only mode, marked
-   `(assumed)`.
+   `(unconfirmed)`.
 3. Derive the 3–5 comparison axes from the question and show them.
 4. Walk one competitor at a time: one dated file each, cross-competitor
    axes table in the comparison file.

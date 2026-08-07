@@ -9,6 +9,11 @@
       "name": "discover",
       "source": "./discover",
       "description": "Product-design discovery toolkit: plan research, run it, and log evidence in one shared, parseable format."
+    },
+    {
+      "name": "define",
+      "source": "./define",
+      "description": "Product-design definition toolkit — the product strategy workshop as a pipeline: charter, user roles, journey maps, and impact-vs-complexity opportunity prioritization. Works assumption-led when there's no research yet."
     }
   ]
 }

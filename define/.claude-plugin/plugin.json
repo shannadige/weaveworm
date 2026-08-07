@@ -1,0 +1,9 @@
+{
+  "name": "define",
+  "version": "0.2.0",
+  "description": "Definition toolkit for product designers — the product strategy workshop as a pipeline: charter the challenges and outcomes, map user roles and their journeys, then prioritize opportunities by impact against complexity. Artifacts later design stages cite by ID.",
+  "author": {
+    "name": "Shan Nadige",
+    "email": "hello@shannadige.com"
+  }
+}
