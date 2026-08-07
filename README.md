@@ -20,6 +20,13 @@ through documents — not vibes.
   [define spec](define/references/define-spec.md).
   Usage guide: [define/README.md](define/README.md).
 
+## Brand
+
+The visual identity (Sekiguchi violet, rev 04) lives in
+[brand/README.md](brand/README.md) — tokens in [brand/tokens.css](brand/tokens.css),
+self-hosted faces in [brand/fonts.css](brand/fonts.css), and the rendered,
+self-demonstrating spec in [brand/spec.html](brand/spec.html).
+
 ## Install
 
 ```

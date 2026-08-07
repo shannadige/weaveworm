@@ -1,0 +1,48 @@
+/* weaveworm brand tokens — Sekiguchi violet, rev 04 (approved 2026-08-06)
+   Canonical spec: brand/README.md · rendered spec: brand/spec.html
+   Light is the canonical theme; dark serves explicit dark mode only. */
+
+:root{
+  --shell:#f2f0ec;        /* ground — pearl, faint lilac cast */
+  --silk:#e9e6e0;         /* recessed panels, figure grounds  */
+  --lilac:#e4deec;        /* violet's only ambient trace      */
+  --weft:#c9c3ce;         /* secondary thread tone            */
+  --chitin:#211c26;       /* ink — violet-black               */
+  --violet:#6847c9;       /* the corporation's voice          */
+  --violet-deep:#4a3096;  /* pressed / hover of violet        */
+  --muted:#7b7480;        /* secondary text                   */
+  --hairline:#dbd7d6;     /* rules and borders                */
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --shell:#141118; --silk:#1c1822; --lilac:#251f31; --weft:#4c4457;
+    --chitin:#ebe8f0; --violet:#a78fff; --violet-deep:#8a70ec;
+    --muted:#97909f; --hairline:#2f2a38;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="light"]{
+  --shell:#f2f0ec; --silk:#e9e6e0; --lilac:#e4deec; --weft:#c9c3ce;
+  --chitin:#211c26; --violet:#6847c9; --violet-deep:#4a3096;
+  --muted:#7b7480; --hairline:#dbd7d6;
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --shell:#141118; --silk:#1c1822; --lilac:#251f31; --weft:#4c4457;
+  --chitin:#ebe8f0; --violet:#a78fff; --violet-deep:#8a70ec;
+  --muted:#97909f; --hairline:#2f2a38;
+  color-scheme:dark;
+}
+
+:root{
+  /* type roles — see brand/fonts.css for @font-face */
+  --font-serif:'CMU Serif', Georgia, serif;                       /* headings, ceremony */
+  --font-body:'Overused Grotesk', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono:'Departure Mono', "Courier New", monospace;         /* specification only */
+
+  /* serif tracking (thin serif needs less compensation as it shrinks) */
+  --track-display:-0.022em;   /* h1/h2 scale            */
+  --track-large:-0.018em;     /* large specimens        */
+  --track-text:-0.012em;      /* serif at text sizes    */
+}

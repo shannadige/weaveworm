@@ -1,0 +1,19 @@
+/* weaveworm brand faces — all SIL OFL / free licenses, self-hosted.
+   Nothing from the Google or Adobe libraries (a standing brand rule).
+   Subsets: basic latin + latin-1 + greek + punctuation + arrows + math ops.
+   Sources for regeneration:
+     CMU Serif        — github.com/dreampulse/computer-modern-web-font (Computer Modern, D. Knuth)
+     Overused Grotesk — github.com/RandomMaerks/Overused-Grotesk
+     Departure Mono   — departuremono.com
+     Libertinus / ET Book (candidates) — github.com/alerque/libertinus · github.com/edwardtufte/et-book */
+
+@font-face{font-family:'CMU Serif';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/cmu-serif-400.woff2) format('woff2')}
+@font-face{font-family:'CMU Serif';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/cmu-serif-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Overused Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/overused-grotesk-400.woff2) format('woff2')}
+@font-face{font-family:'Overused Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/overused-grotesk-500.woff2) format('woff2')}
+@font-face{font-family:'Overused Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/overused-grotesk-700.woff2) format('woff2')}
+@font-face{font-family:'Departure Mono';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/departure-mono-400.woff2) format('woff2')}
+
+/* candidates kept on file — not part of the shipped system */
+@font-face{font-family:'Libertinus Serif Display';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/libertinus-serif-display-400.woff2) format('woff2')}
+@font-face{font-family:'ET Book';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/et-book-400.woff2) format('woff2')}
