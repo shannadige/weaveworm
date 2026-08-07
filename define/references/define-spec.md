@@ -396,6 +396,54 @@ Three edge cases carry over from discover:
 A log kept by hand in that shape works identically. Define skills
 never write to the log — evidence flows in through discover only.
 
+## Standalone fallback
+
+When no evidence log exists (and the user, asked once, confirms there
+is none elsewhere), define runs assumption-led rather than stalling.
+The dependency is on information, not files: every upstream artifact
+answers questions, and when the artifact is absent the skill asks the
+user those questions directly — a short intake before any writing.
+
+The doctrine, four rules:
+
+1. **Ask the floor, not everything.** Each skill has a prerequisite
+   set (below) of at most ~5 questions, asked in one pass. What the
+   user can't answer becomes an Open question or research-plan seed —
+   never a blocker.
+2. **Answers land in the skill's own artifact**, as `(assumption)`
+   lines — or `given (<source>)` when the user names a source. Define
+   never mints `E-NNN`s to dress up intake answers; evidence IDs stay
+   discover's.
+3. **The debt stays visible** via the existing labels:
+   `Evidence: none (assumption)`,
+   `Confidence: assumption-led — no evidence cited`,
+   `Log: none — assumption-led`.
+4. **Promotion, not rewrite.** When a log exists later, re-cite:
+   intake answers that evidence now supports gain `E-NNN` citations;
+   contradicted ones follow the contradiction discipline. Backfilling
+   citations is an allowed edit everywhere.
+
+Prerequisite questions per skill — the intake floor, phrased for the
+user, answers labeled per rule 2:
+
+- **product-charter** — What problems have you seen, and how do you
+  know each one is real? Who set this mandate, and what future are
+  they committed to? What limits are non-negotiable, and who set them?
+- **user-roles** — Who uses this, who pays for it, and who can veto
+  it? What does each group observably do differently?
+- **journey-map** — Walk one role through the scope today: what do
+  they do at each step, and where does it break down?
+- **opportunity-map** — Which problems matter most, and why do you
+  believe that? What's the team's read on cost, and whose read is it?
+
+The same doctrine governs gaps *between* define's own skills — the
+artifact rules above already carry those fallbacks (`(role tbd)`
+before roles exist, `current-only` journeys with no charter,
+`unstated outcomes (assumption)`, a plain population phrase on Who).
+A skill invoked out of sequence asks its floor questions about the
+missing define artifact the same way, and the answer lines re-point to
+real IDs once the upstream skill runs.
+
 ## Contradictions, everywhere
 
 Discover's `Contradicts:` line lives only on the newer entry, so any

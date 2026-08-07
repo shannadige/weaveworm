@@ -66,10 +66,12 @@ anything.
   `—` journey line — honest gaps that point back at the skipped
   stage.
 - **No research yet? Every stage has an assumption-led path.**
-  Mandates and greenfield work get charters, roles, and journeys too —
-  with every claim labeled `(assumption)` and the open questions
-  doubling as your first research backlog for discover's
-  research-plan.
+  With no evidence log, each skill opens with a short intake — at most
+  ~5 prerequisite questions — and writes your answers as
+  `(assumption)`-labeled claims. Mandates and greenfield work get
+  charters, roles, and journeys too, with the open questions doubling
+  as your first research backlog for discover's research-plan. When
+  evidence lands later, claims get re-cited — promotion, not rewrite.
 - **`agreed` means frozen.** While the charter is `draft`, edit
   freely. Once the team commits, changes go through supersession — the
   record of what was agreed never silently changes. (One exception:

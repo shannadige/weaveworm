@@ -39,6 +39,13 @@ The loop closes through discover: `(untested)` decisions seed
 research-plan questions, usability-test-kit runs them, evidence lands
 in the log, and decisions get re-cited with `E-NNN`s behind them.
 
+No define artifacts yet? Design stands alone: design-brief asks the
+prerequisite questions itself — problem, audience, constraints,
+done-when — and writes the answers into the brief as labeled
+assumptions. Critique counts the assumption debt instead of blocking
+on it, and citations backfill once define runs (see the spec's
+Standalone fallback).
+
 ## Files it creates
 
 Everything lives under one `design/` root in your project, next to

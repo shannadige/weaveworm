@@ -102,9 +102,48 @@ Design reads, and never writes:
   gap.
 - `research/evidence-log.md` — citable directly, same as define.
 
-TODO: the assumption-led path (no define artifacts at all — how much
-of design legitimately runs on labeled assumptions before it becomes
-dishonest).
+When define artifacts are missing, the Standalone fallback below
+applies — design runs on labeled assumptions gathered at intake, and
+never stalls on an absent file.
+
+## Standalone fallback
+
+The same doctrine as define's Standalone fallback (define-spec.md):
+the dependency is on information, not files. Every upstream artifact
+answers questions; when the artifact is absent, design-brief asks the
+user those questions directly — a short intake before any writing —
+and records the answers in the brief's own body. Design still never
+mints upstream IDs; the brief is the assumption boundary, and
+everything downstream (concepts, decisions, flows, prototypes) cites
+the brief unchanged.
+
+Per missing artifact, the intake floor:
+
+- **No opportunities.md** — What problem is this design solving, in
+  one sentence? For whom? Why now — what breaks if it stays unsolved?
+  The brief's `Pulls:` line reads `none — assumption-led`; the problem
+  statement lives in the heading as usual, `(assumption)`-labeled.
+- **No charter.md** — What may the design not trade away, and who set
+  each limit? What is explicitly not this design's job? What
+  observable state means done? Recorded as brief-local `Constraints:`
+  / `Out of scope:` / `Done when:` lines — `given (<source>)` when
+  sourced, `(assumption)` otherwise.
+- **No roles.md / journeys/** — Who is this for, and which moment of
+  their current workflow does it change? A plain population phrase and
+  a prose moment stand in for `U-NNN` / `J-NNN.S` citations.
+
+What the user can't answer becomes a brief Open question — a
+research-plan seed, never a blocker. Critique prices the debt rather
+than gating on it: alongside the `(untested)` census it counts the
+brief's `(assumption)` lines, and a design whose load-bearing lines
+are mostly assumptions gets that named in the verdict, with define as
+the pointed-to fix.
+
+Promotion, not rewrite: when define artifacts appear later, backfill —
+`Pulls:` gains its `O-NNN`, population phrases and prose moments gain
+`U-NNN` / `J-NNN.S` citations, constraint lines re-point at the
+charter. Backfilling citations is an allowed edit; the brief heading
+never changes.
 
 ## Brief format (briefs/B-NNN-<slug>.md)
 
@@ -183,7 +222,10 @@ The field-level work, roughly in dependency order:
    flow.
 5. Prototype fidelity policy and annotation mechanism.
 6. Whether critique gates transitions or advises.
-7. The assumption-led path for teams with no define artifacts.
+7. ~~The assumption-led path for teams with no define artifacts.~~
+   Resolved — see Standalone fallback: intake questions per missing
+   artifact, answers as labeled assumptions in the brief, critique
+   counts the debt, citations backfilled when define lands.
 8. What exactly deliver will pull — which of these artifacts is the
    handoff surface (likely flows + decisions + prototype, but that's
    deliver's spec to claim).
