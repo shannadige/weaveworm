@@ -1,7 +1,7 @@
 # design
 
-> **Status: scaffold.** Pipeline and contracts planned; skills
-> unwritten. Not yet registered in the marketplace.
+> **Status: scaffold.** Pipeline and contract decisions closed; skill
+> bodies unwritten. Not yet registered in the marketplace.
 
 Design toolkit for product designers, stage three of the stack. Six
 skills, five artifact kinds, one discipline: pull a pursued
