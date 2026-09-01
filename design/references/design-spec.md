@@ -61,7 +61,11 @@ and header themselves.
 Same ID discipline as discover and define: sequential, zero-padded to
 three digits (stage numbers `S` plain integers), permanent — never
 renumbered, reused, or deleted; next = highest existing + 1, scanning
-the artifact's file(s) first. Each kind counts independently. Upstream
+the artifact's file(s) first. Each kind counts independently, and
+each sequence is global to the stage even where its files are
+per-brief: the next `C-NNN` scans every file under `concepts/`, not
+just the current brief's sprint, so two briefs never mint the same
+concept ID. Upstream
 IDs (`E-NNN`, `Q-NNN`, `CH-NNN`, `OC-NNN`, `U-NNN`, `J-NNN`, `O-NNN`,
 voices P/R/M) are discover's and define's; design cites them and never
 mints them.
@@ -107,8 +111,11 @@ Design reads, and never writes:
   opportunity-map, where pursuing is a one-line status edit. If the
   user insists on designing an open block, design-brief redirects
   once, then proceeds on explicit override: the brief's `Pulls:` line
-  reads `O-NNN — open, designed on user override (unconfirmed)`,
-  design never edits opportunities.md itself, and critique names the
+  reads `O-NNN — open, designed on user override (assumption)` — the
+  override is the user's explicit call, so `(unconfirmed)`, define's
+  marker for calls made without them, would misfile it; what's
+  assumed is that the pursue call will be recorded. Design never
+  edits opportunities.md itself, and critique names the
   unpursued pull in every pass until opportunity-map records the call.
 - `define/charter.md` — Constraints are what design may not trade
   away; Non-goals are a write-time gate on brief and concept scope;
@@ -155,6 +162,12 @@ Per missing artifact, the intake floor:
   their current workflow does it change? A plain population phrase and
   a prose moment stand in for `U-NNN` / `J-NNN.S` citations.
 
+Downstream artifacts inherit the stand-ins, labeled: where a concept
+`Serves:` line or a flow header's `Role:` / `Journey:` line would
+cite `U-NNN` / `J-NNN.S` / `OC-NNN`, an assumption-led run carries
+the brief's population phrase or prose moment verbatim,
+`(assumption)`-labeled — never an invented ID, never a blank.
+
 What the user can't answer becomes a brief Open question — a
 research-plan seed, never a blocker. Critique prices the debt rather
 than gating on it: alongside the `(untested)` census it counts the
@@ -165,8 +178,10 @@ the pointed-to fix.
 Promotion, not rewrite: when define artifacts appear later, backfill —
 `Pulls:` gains its `O-NNN`, population phrases and prose moments gain
 `U-NNN` / `J-NNN.S` citations, constraint lines re-point at the
-charter. Backfilling citations is an allowed edit; the brief heading
-never changes.
+charter — and the backfill walks downstream: concept `Serves:` lines
+and flow headers carrying the brief's stand-ins gain the same
+citations in the same pass. Backfilling citations is an allowed edit;
+the brief heading never changes.
 
 ## Brief format (briefs/B-NNN-<slug>.md)
 
@@ -208,9 +223,13 @@ Brief lifecycle (transitions and who writes them):
 - `open` — brief written; no direction picked. Written by design-brief.
 - `in-design (→ D-NNN)` — a concept-sprint pick is on record; flows
   and prototype build from it. Written by concept-sprint at the pick.
-- `reviewed (<date>)` — the newest critique pass found no constraint
-  violations and no non-goal creep. Written by design-critique — its
-  only write outside its own file. This is deliberately a **partial
+- `reviewed (<date>, → D-NNN)` — the newest critique pass found no
+  constraint violations and no non-goal creep. Written by
+  design-critique — its only write outside its own file (`parked`
+  aside, which any skill records). The `→ D-NNN` carries the
+  concept-sprint pick pointer forward: every post-pick status keeps
+  the pointer visible, so flow-map and prototype never lose their
+  trigger to a status change. This is deliberately a **partial
   gate**: reviewed means coherent and charter-true, ready to put in
   front of users — never done. A brief sitting at `reviewed` with no
   `Q-NNN` plan naming its test seeds is visible testing debt, and a
@@ -218,19 +237,26 @@ Brief lifecycle (transitions and who writes them):
 - `validated (<date>, through D-NNN, → E-NNN…)` — a usability test
   ran this brief's test seeds, and the decisions its tested flows
   trace to now cite the resulting `E-NNN` entries. Requires a
-  `reviewed`-clean critique on record first: testing proves users
-  succeed; only critique proves the charter wasn't traded away.
-  Written by decision-log when the last qualifying `(untested)`
-  clears. `through D-NNN` pins the validation to the decision set it
-  covered — the highest decision this brief's artifacts traced to at
-  validation time.
-- **Validation decays mechanically.** When decision-log writes a new
-  or reversing `D-NNN` against a `validated` brief, it flips Status
+  `reviewed`-clean critique on record first, dated on or after the
+  pinned `through D-NNN` block was written: testing proves users
+  succeed; only critique proves the charter wasn't traded away, and
+  a critique older than the decisions being validated proved nothing
+  about them — a stale one means the next action is a fresh pass,
+  not the write. Written by decision-log when the last qualifying
+  `(untested)` clears. `through D-NNN` pins the validation to the
+  decision set it covered — the highest decision this brief's
+  artifacts traced to at validation time.
+- **Validation decays mechanically.** When any skill writes a new
+  or reversing `D-NNN` against a `validated` brief — decision-log's
+  usual write, or concept-sprint's at a re-pick — it flips Status
   back to `in-design — revalidation needed (→ D-NNN)` in the same
   pass. The old test evidence stays cited on the decisions it covered;
   what it can no longer vouch for is the design as it now stands.
-- `parked — <reason>` — written by any skill on the user's call; the
-  brief keeps its ID and artifacts.
+- `parked — <reason> (was <status>)` — written by any skill on the
+  user's call; the brief keeps its ID and artifacts. `(was <status>)`
+  records the full prior Status line, pick pointer included, and
+  design-brief restores it verbatim when the user unparks — a brief
+  parked mid-design comes back mid-design, not `open`.
 
 Allowed edits: everything but the heading. Backfilling citations per
 the Standalone fallback is an allowed edit; a genuinely different job
@@ -264,7 +290,12 @@ Concept rules:
   `C-NNN`.
 - **The pick is a `D-NNN` block, never a concept edit.** The chosen
   concept's Status points at the deciding block; parked concepts keep
-  their IDs and their reasons.
+  their IDs and their reasons. When the deciding block is later
+  reversed, the Status lines re-point — the old winner to
+  `parked — pick reversed (→ D-NNN)`, the new one to its choosing
+  block — concept-sprint's write, prompted by decision-log's
+  blast-radius sweep, so the sprint file never claims a choice the
+  log has overturned.
 - **Iteration needs a source after the pick.** Before it, the sprint
   file is freely editable — divergence is the point, and adding or
   reshaping a concept needs no justification. After it, the sprint
@@ -351,6 +382,12 @@ Flow rules:
   `not handled (open)` — a line, never a silence — and additional
   edge kinds are welcome. An edge whose handling is load-bearing gets
   its own `D-NNN` like any stage.
+- **Flow lifecycle mirrors decision reversal.** A current flow
+  carries no Status line. When material change supersedes one
+  (reordered or re-scoped stages, a re-picked concept), the
+  replacement is a fresh `F-NNN`, and the old file's header gains
+  `- **Status:** superseded (→ F-NNN)` — the one edit ever made to
+  a superseded flow; the record stays.
 
 ## Prototype format (prototypes/B-NNN/)
 
@@ -376,14 +413,16 @@ Flow rules:
 
 ## Critique format (critiques/<date>-B-NNN.md)
 
-A dated pass, never edited after — the next pass is a new file.
+A dated pass, never edited after — the next pass is a new file. A
+second pass on the same brief the same day suffixes the filename
+`-2`, `-3`… (define's archive rule; a pass is never overwritten).
 Header:
 
 ```markdown
 # Critique — B-001 — <date>
 <!-- weaveworm design-critique v1 -->
 - **Brief:** B-001
-- **Against:** charter (agreed 2026-08-01), O-003, J-003, decisions through D-021
+- **Against:** charter (agreed 2026-08-01), O-003, J-003, decisions through D-021 (this brief's highest at pass time)
 ```
 
 Then one section per lens, fixed set, in this order:
@@ -406,8 +445,10 @@ a number is how a critique stops being argued with.
 
 Critique's gating role, settled: **a partial gate.** A pass where
 lenses 1 and 2 come back clean writes the brief's Status to
-`reviewed (<date>)` — design-critique's only write outside its own
-file. Critique never writes `validated`; it mints no evidence, so
+`reviewed (<date>, → D-NNN)`, the pick pointer carried forward —
+design-critique's only write outside its own file (`parked` aside,
+which any skill records). Critique never writes `validated`; it
+mints no evidence, so
 only cited test entries do that, per the brief lifecycle. And
 `reviewed` is not a resting place: a brief sitting there with no
 `Q-NNN` naming its test seeds is a standing finding in every

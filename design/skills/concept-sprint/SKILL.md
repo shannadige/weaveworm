@@ -12,8 +12,10 @@ concepts cite it and never reach past it; if no brief exists, route
 to design-brief first (its Standalone fallback covers missing define
 artifacts — a sprint without a brief has nothing to trade against).
 Output: `design/concepts/B-NNN.md` per the spec's concept block
-format, and at the pick, the choosing `D-NNN` in `design/decisions.md`
-per the decision block format, with the brief's Status flipped to
+format (`C-NNN` numbering is stage-global: the next ID scans every
+file under `design/concepts/`, not just this brief's sprint), and at
+the pick, the choosing `D-NNN` in `design/decisions.md` per the
+decision block format, with the brief's Status flipped to
 `in-design (→ D-NNN)` in the same pass. Read the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/design-spec.md` before your first
 write in a session — it owns the block formats, ID rules, and the
@@ -24,6 +26,14 @@ and question/report shape live there, not here.
 
 ## Sprint rules
 
+- **The intake floor, one batched pass at sprint start:** the
+  directions already in the user's head (they join as C-blocks, on
+  equal footing), the constraint they most expect to bind, and what
+  they'd worry about shipping each direction they brought. One named
+  exception to the voice contract's batched-pass rule: a concept
+  generated mid-sprint whose cost you can't name gets its
+  what-would-worry-you question asked when it exists, because the
+  trade question can't precede the concept.
 - **The floor is 3 genuinely distinct directions before any pick.**
   Distinct means both halves differ: the `Mechanism:` lines describe
   different experiences, *and* the `Trades:` lines give up different
@@ -63,8 +73,17 @@ and question/report shape live there, not here.
   inheritance rules — `(untested)` unless the pick cites evidence,
   and never higher than the opportunity the brief pulls. The chosen
   concept's Status points at the block, parked concepts keep their
-  IDs and reasons, and the brief flips to `in-design (→ D-NNN)`.
-  Concepts are never edited into winners.
+  IDs and reasons, and the brief flips to `in-design (→ D-NNN)` — or,
+  when the brief stands `validated`, to the spec's decay form
+  `in-design — revalidation needed (→ D-NNN)`; a re-pick never leaves
+  a validation claim standing. Concepts are never edited into
+  winners.
+- **Assumption-led briefs pass their stand-ins down.** When the
+  brief carries no `J-NNN.S` or `OC-NNN` to cite, a concept's
+  `Serves:` line carries the brief's population phrase or prose
+  moment verbatim, `(assumption)`-labeled, per the spec's Standalone
+  fallback — never an invented ID — and gains the citation when
+  define's backfill lands.
 - **Before the pick the file is a playground; after it, a record.**
   Pre-pick, adding and reshaping concepts needs no justification —
   divergence is the point, and a re-run extends the sprint. Post-pick

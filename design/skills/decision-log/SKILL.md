@@ -21,6 +21,12 @@ and question/report shape live there, not here.
 
 ## Logging rules
 
+- **The intake floor, per choice, one batched ask:** why this way,
+  what else was on the table, and what observation would change your
+  mind. Every block's fields come from that single pass; the
+  fallbacks below (proposing the implied observation, the
+  what-else-was-on-the-table nudge) live inside it, never as later
+  drip.
 - **The bar is traced-or-contested.** A choice earns a `D-NNN` when a
   downstream artifact traces to it (a flow stage, a prototype screen,
   a test task) or when it rejected a real alternative someone could
@@ -64,10 +70,11 @@ and question/report shape live there, not here.
   observation happens (or the team overrules), the old block gains
   `reversed (→ D-NNN)` and stays; the new block cites the evidence
   or labeled call that overturned it. Then sweep: find every flow
-  stage, edge, and prototype screen tracing to the reversed block and
-  report them in product terms ("the empty state at F-002.1 and two
-  prototype screens were built on the reversed call") — re-pointing
-  them is flow-map's and prototype's work, but naming the blast
+  stage, edge, prototype screen, and concept Status line tracing to
+  the reversed block and report them in product terms ("the empty
+  state at F-002.1, two prototype screens, and C-004's chosen status
+  were built on the reversed call") — re-pointing them is flow-map's,
+  prototype's, and concept-sprint's work, but naming the blast
   radius is this skill's, in the same pass.
 - **Writing against a `validated` brief downgrades it, same pass.**
   A new or reversing `D-NNN` on a validated brief flips that brief's
@@ -77,12 +84,15 @@ and question/report shape live there, not here.
   block and leave the brief claiming a validation it has outgrown.
 - **This skill writes `validated`.** When a test's `E-NNN` entries
   land on the last qualifying `(untested)` decision, and a
-  `reviewed`-clean critique is on record, write the brief's Status
+  `reviewed`-clean critique is on record dated on or after the
+  pinned `through D-NNN` block was written, write the brief's Status
   `validated (<date>, through D-NNN, → E-NNN…)`, pinned to the
   highest decision the tested artifacts traced to. No clean critique
-  on record means no `validated` — testing proves users succeed;
-  only critique proves the charter wasn't traded away. Say which is
-  missing.
+  on record, or only one older than the decisions being validated,
+  means no `validated` — testing proves users succeed; only critique
+  proves the charter wasn't traded away, and a stale pass proved
+  nothing about the newer blocks. Say which is missing; a stale
+  critique makes the fresh pass the named next action.
 
 ## After the log
 

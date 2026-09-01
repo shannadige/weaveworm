@@ -69,8 +69,9 @@ here.
 Report per the voice contract: the directory path, one line per
 screen (the stage it renders, interactive or static), one line for
 the sample data labeled as such, and the state line ("B-001
-prototype: 6 screens covering F-002 and F-003, happy path and 3 edges
-interactive, 4 test seeds"). The decision this artifact exists for:
+prototype: 6 screens covering F-002 (connect a source) and F-003
+(recover a failed sync), happy path and 3 edges interactive, 4 test
+seeds"). The decision this artifact exists for:
 test it or keep building on belief — name the `(untested)` decisions
 the seeds would exercise, ranked by what's tracing to them, and force
 the call on running the test. The single next action when the user is

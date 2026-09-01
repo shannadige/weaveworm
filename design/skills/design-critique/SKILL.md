@@ -8,11 +8,14 @@ description: "The gate stage of design — run a dated critique pass over a brie
 The gate stage of design: the recurring pass that checks the work
 against the charter it must not betray. Input: a brief and every
 design artifact citing it — concepts, decisions, flows, prototype —
-plus the charter, journeys, and roles upstream, read as they stand
-now, not as they stood at pull time. Output:
+plus the charter, journeys, roles, and the pulled opportunity's
+block in opportunities.md upstream, read as they stand now, not as
+they stood at pull time. This skill's intake floor is empty: it asks
+the user nothing; its input is the artifacts as they stand. Output:
 `design/critiques/<date>-B-NNN.md` per the spec's critique format,
 and the one write this skill makes outside its own file: the brief's
-Status to `reviewed (<date>)` when the gate clears. Read the spec at
+Status to `reviewed (<date>, → D-NNN)` when the gate clears, the
+pick pointer carried forward per the brief lifecycle. Read the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/design-spec.md` before your first
 write in a session — it owns the lens set, the verdict form, and the
 gate; do not improvise lenses. Conversation runs per the voice
@@ -59,7 +62,8 @@ translation, and question/report shape live there, not here.
   made.
 - **The gate is partial, and this skill holds it.** Lenses 1 and 2
   clean — no constraint traded, no non-goal crept — writes the
-  brief's Status to `reviewed (<date>)`: coherent and charter-true,
+  brief's Status to `reviewed (<date>, → D-NNN)`, the pick pointer
+  carried forward: coherent and charter-true,
   ready to put in front of users, deliberately not done. Critique
   never writes `validated`; it mints no evidence, and only cited
   test entries clear that bar, through decision-log. Findings on
@@ -84,7 +88,8 @@ finding.
 
 - A score, grade, or any composite number standing in for verdicts.
 - Editing the artifacts it critiques — the Status write on a cleared
-  gate is the whole of its reach; fixes route to owners.
+  gate, plus `parked` on the user's call per the spec, is the whole
+  of its reach; fixes route to owners.
 - Editing or superseding a past critique — the next pass is a new
   file.
 - Softening a violation into a suggestion — a traded constraint is

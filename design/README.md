@@ -28,9 +28,9 @@ what define settled; it cites `O-NNN`, `OC-NNN`, `U-NNN`, and
    task seeds a usability test would run. Built to be tested, not
    admired.
 6. **design-critique** — a dated pass against fixed lenses:
-   constraints violated, non-goals crept, shifts dropped, decisions
-   untraced, `(untested)` choices counted. Verdicts per lens, never
-   a score.
+   constraints violated, non-goals crept, shifts dropped, roles
+   unserved, decisions untraced, `(untested)` choices counted.
+   Verdicts per lens, never a score.
 
 The loop closes through discover: `(untested)` decisions seed
 research-plan questions, usability-test-kit runs them, evidence lands
@@ -55,7 +55,7 @@ session remembers):
 
 ```
 design/
-├── briefs/B-NNN-<slug>.md      # one brief per pursued opportunity
+├── briefs/B-NNN-<slug>.md      # one brief per pursued opportunity (or coherent cluster)
 ├── concepts/B-NNN.md           # that brief's concept sprint
 ├── decisions.md                # all D-NNN decision blocks
 ├── flows/F-NNN-<slug>.md       # one flow per brief × scope

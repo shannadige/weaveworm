@@ -27,7 +27,7 @@ and question/report shape live there, not here.
   that. Redirect once: pursuing is a one-line status edit in
   opportunity-map, and that's the honest route. If the user insists,
   proceed on explicit override per the spec — `Pulls: O-NNN — open,
-  designed on user override (unconfirmed)`, opportunities.md untouched
+  designed on user override (assumption)`, opportunities.md untouched
   (design never writes upstream) — and say that critique will name
   the unpursued pull in every pass until opportunity-map records the
   call.
@@ -91,16 +91,20 @@ and question/report shape live there, not here.
   edit per the spec's allowed list: everything but the heading, and
   backfilling citations when define artifacts land is the expected
   edit, not an exception. A genuinely different job is a new brief.
-  This skill writes `open` (and `parked` on the user's call);
-  `in-design`, `reviewed`, and `validated` belong to concept-sprint,
-  design-critique, and decision-log.
+  This skill writes `open`, and `parked` on the user's call —
+  recording the prior Status per the spec's `(was <status>)` form and
+  restoring it verbatim when the user unparks, so a brief parked
+  mid-design comes back mid-design; `in-design`, `reviewed`, and
+  `validated` belong to concept-sprint, design-critique, and
+  decision-log.
 
 ## After the brief
 
 Report per the voice contract: the file path, the job sentence, then
 one line each for what it pulls, who it serves, what it moves, and
-the constraint set — plus the state line ("B-003 open: pulls O-003,
-4 constraints (1 brief-local), 2 open questions"). The decision this
+the constraint set — plus the state line ("B-003 open: pulls O-003
+(trial users reach a connected source unaided), 4 constraints (1
+brief-local), 2 open questions"). The decision this
 artifact exists for: is this brief's scope one concept sprint or two,
 and what's the first question that sprint has to answer — name your
 read and the one-line why. If the brief is assumption-led or
