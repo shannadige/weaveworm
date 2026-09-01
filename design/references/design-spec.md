@@ -1,8 +1,7 @@
 # Design spec — v1
 
-> **Status: contracts settled, all six skills written.** Every format
-> and lifecycle below is decided and consumed by the stage's skills,
-> though the plugin is not yet registered in the marketplace. The one
+> **Status: v1 — settled and consumed.** Every format and lifecycle
+> below is decided and consumed by the stage's six skills. The one
 > item still open (what deliver pulls) is deliver's spec to claim —
 > see Open decisions.
 

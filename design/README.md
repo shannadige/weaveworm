@@ -1,8 +1,5 @@
 # design
 
-> **Status: contracts settled; all six skills written.** Not yet
-> registered in the marketplace.
-
 Design toolkit for product designers, stage three of the stack. Six
 skills, five artifact kinds, one discipline: pull a pursued
 opportunity, diverge before converging, log every load-bearing

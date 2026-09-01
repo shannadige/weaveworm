@@ -14,6 +14,11 @@
       "name": "define",
       "source": "./define",
       "description": "Product-design definition toolkit — the product strategy workshop as a pipeline: charter, user roles, journey maps, and impact-vs-complexity opportunity prioritization. Works assumption-led when there's no research yet."
+    },
+    {
+      "name": "design",
+      "source": "./design",
+      "description": "Product-design solution toolkit — pursued opportunities into briefs, divergent concepts, a decision log, flows, and testable HTML prototypes, with critique as the recurring gate against the charter. Works assumption-led when define hasn't run."
     }
   ]
 }

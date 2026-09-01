@@ -22,6 +22,13 @@ only at the root.
   `opportunity-map`. Shared contract:
   [define spec](define/references/define-spec.md).
   Usage guide: [define/README.md](define/README.md).
+- **design** — pursued opportunities into solutions a team can test:
+  briefs, divergent concepts, a decision log, flows, and
+  self-contained HTML prototypes, gated by recurring critique. Skills:
+  `design-brief`, `concept-sprint`, `decision-log`, `flow-map`,
+  `prototype`, `design-critique`. Shared contract:
+  [design spec](design/references/design-spec.md).
+  Usage guide: [design/README.md](design/README.md).
 
 ## Install
 
