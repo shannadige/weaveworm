@@ -1,9 +1,10 @@
 # Design spec — v1
 
-> **Status: contracts settled, skills unwritten.** Every format and
-> lifecycle below is decided; the six skills are stubs, so nothing here
-> is consumed by a published skill yet. The one item still open (what
-> deliver pulls) is deliver's spec to claim — see Open decisions.
+> **Status: contracts settled, all six skills written.** Every format
+> and lifecycle below is decided and consumed by the stage's skills,
+> though the plugin is not yet registered in the marketplace. The one
+> item still open (what deliver pulls) is deliver's spec to claim —
+> see Open decisions.
 
 Design turns define's handoff — pursued `O-NNN` opportunities — into
 solutions a team can test and build, without ever re-arguing what
