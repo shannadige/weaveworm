@@ -14,11 +14,14 @@ exactly that section: while the charter is `draft` it may rewrite it
 freely; once `agreed`, the only allowed edit is the spec's baseline
 backfill, and anything else means the supersession procedure via
 product-charter. If no charter exists yet, route to product-charter
-first — metrics without outcomes have nothing to measure.
+first — metrics without outcomes have nothing to measure. Conversation
+runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here.
 
 ## Before writing
 
-Ask once, as one batched question: what's instrumented today (events,
+The intake floor: what's instrumented today (events,
 dashboards, warehouse queries), any baseline numbers already known,
 and any targets handed down from above. If the user is unreachable,
 write `Instrumented by: <best guess> (unconfirmed)`, use the spec's
@@ -65,9 +68,9 @@ unknown-baseline forms, and list everything unconfirmed at the end.
 
 ## After the section
 
-Update the section in place. In chat, show one line per outcome metric,
-the guardrail count, and anything routed to research-plan — never the
-whole charter. If every outcome's metric now passes its half of the
+Update the section in place. Report per the voice contract: one line
+per outcome metric, the guardrail count, and anything routed to
+research-plan. If every outcome's metric now passes its half of the
 spec's agreed gate, say so — and check the other half: outcomes still
 reading `(role tbd)` mean user-roles stands between this charter and
 `agreed`. product-charter writes that transition, and agreeing freezes

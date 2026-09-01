@@ -19,6 +19,9 @@ statuses, and confidence inheritance; do not improvise fields. Output:
 `define/opportunities.md` (define root per the spec — ask once if
 definition work lives elsewhere) created with the spec's header —
 `Log: none — assumption-led` when no log exists — or updated.
+Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here.
 
 ## Mapping rules
 
@@ -102,11 +105,11 @@ definition work lives elsewhere) created with the spec's header —
 
 ## After the mapping
 
-In chat, show pursued blocks first (one line each — they're the
-handoff), then the top 5 open opportunities as one line each — ID,
-statement, impact, complexity — plus one state line covering the rest
-("9 opportunities: 1 pursued, 6 open, 2 dropped"). Never paste block
-bodies. Then force the decision this artifact exists for: which
+Report per the voice contract: pursued blocks first (one line each —
+they're the handoff), then the top 5 open opportunities as one line
+each — ID, statement, impact, complexity — plus the state line
+covering the rest ("9 opportunities: 1 pursued, 6 open, 2 dropped").
+The decision this artifact exists for: which
 opportunity gets pursued — name your top pick and the one-line why.
 If the top pick is `(single source)`, contested, or carries
 `unknown`/`(assumption)` complexity, say what one cheap step (a

@@ -8,12 +8,14 @@ description: Turn a Q-NNN research plan whose method is a usability test into se
 Input: a `Q-NNN` block from the plan file (default `research/plans.md`)
 whose Method is a usability test. Output: the kit file below. If no plan
 block exists, say so and run research-plan first — the kit inherits the
-question and the Participants line from the plan.
+question and the Participants line from the plan. Conversation runs per
+the voice contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` —
+register, translation, and question/report shape live there, not here.
 
 ## Before writing the kit
 
-The plan doesn't name the artifact. Ask once, as one batched question,
-for: what exactly is being tested (URL, build, or prototype link) and its
+The plan doesn't name the artifact. The intake floor: what exactly is
+being tested (URL, build, or prototype link) and its
 version or date; whether sessions are moderated or unmoderated; and the
 session length. Never guess a build identifier — a wrong one silently
 pools results across different artifacts. If the user is unreachable,
@@ -147,9 +149,9 @@ Changed: initial version
 
 ## After writing the kit
 
-Show the user only the file path, the task count with session length,
-and the concrete first step ("dry-run the tasks on a teammate today").
-Never paste the full kit back into chat — point at the file.
+Report per the voice contract: the file path, the task count with
+session length, and the concrete first step ("dry-run the tasks on a
+teammate today").
 
 ## After each session
 

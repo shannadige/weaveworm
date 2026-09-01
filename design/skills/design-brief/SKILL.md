@@ -12,6 +12,9 @@ write in a session). -->
 Input: a `pursued` block in `define/opportunities.md`, plus the
 charter, roles, and journeys it cites. Output:
 `design/briefs/B-NNN-<slug>.md` per the spec's brief format.
+Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here.
 
 ## Brief rules
 
@@ -28,7 +31,8 @@ charter, roles, and journeys it cites. Output:
 
 ## After the brief
 
-- TODO: chat summary shape; force the decision — is this brief's
+- TODO: summary lines per the voice contract; force the decision —
+  is this brief's
   scope one sprint or two, and what's the first concept question.
 
 ## What this skill refuses

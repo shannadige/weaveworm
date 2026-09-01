@@ -14,11 +14,14 @@ and the user's knowledge of mandates and constraints. Output:
 work lives elsewhere) per the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/define-spec.md`. Read the spec before
 writing — it owns the format, ID rules, confidence inheritance, and
-the charter lifecycle. Do not improvise sections.
+the charter lifecycle. Do not improvise sections. Conversation runs
+per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here.
 
 ## Before writing
 
-Ask once, as one batched question, only what changes the charter: what
+The intake floor — only what changes the charter: what
 the org already believes the product is for (mandates, stated
 strategy), hard constraints (these land in the Constraints section,
 each `given (<source>)` or `(assumption)`), who owns the charter, and
@@ -95,11 +98,10 @@ them.
 
 ## After the charter
 
-In chat, show only: the file path, each challenge as one line with its
-confidence, each outcome as one line, and one state line ("4
-challenges, 3 outcomes, metrics stubbed, 2 open questions"). Never
-paste the charter body. Then force the charter's own decisions: name
-the challenge you'd put first and the one-line why, and state the gate
+Report per the voice contract; the lines: each challenge with its
+confidence, each outcome, and the state line ("4 challenges, 3
+outcomes, metrics stubbed, 2 open questions"). The decisions to force:
+the challenge you'd put first and the one-line why, and the gate
 distance — "metrics stubbed and roles unresolved; success-metrics and
 user-roles stand between this draft and `agreed`" — recommending which
 to run next. If open questions outnumber cited entries, the honest

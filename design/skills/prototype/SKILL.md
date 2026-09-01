@@ -12,7 +12,9 @@ write in a session). -->
 Input: a brief's `F-NNN` flows and the decisions they trace to.
 Output: `design/prototypes/B-NNN/` — `index.html` plus a `README.md`
 mapping screens → flow stages → decisions, per the spec's prototype
-format.
+format. Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here.
 
 ## Prototype rules
 
@@ -31,7 +33,8 @@ format.
 
 ## After the build
 
-- TODO: chat summary; force the decision — test it or ship the
+- TODO: summary lines per the voice contract; force the decision —
+  test it or ship the
   learning question to research-plan; name the `(untested)` choices
   the test should target.
 

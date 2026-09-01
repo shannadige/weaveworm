@@ -9,6 +9,9 @@ Input: a product question in plain language. Output: the one-page plan below,
 filled in and appended to the plan file. If the user's question is really
 several questions, say so and plan for the one they confirm matters most;
 the others can be appended later as their own `Q-NNN` blocks.
+Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here.
 
 ## Plan file
 
@@ -82,9 +85,9 @@ the evidence is indirect.
 
 ## Before filling the template
 
-If the user hasn't told you, ask — once, as one batched question — for
-whatever actually changes the plan: access to users, hard deadlines, and
-what research already exists. Never invent Participants or Timeline
+The intake floor — only what actually changes the plan: access to
+users, hard deadlines, and what research already exists. If the user
+hasn't told you, ask. Never invent Participants or Timeline
 values; a plausible-looking guess reads as fact once it's in the plan.
 
 Two flags to raise before planning:

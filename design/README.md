@@ -1,7 +1,7 @@
 # design
 
-> **Status: scaffold.** Pipeline and contracts planned; skills
-> unwritten. Not yet registered in the marketplace.
+> **Status: contracts settled; skills unwritten.** Not yet registered
+> in the marketplace.
 
 Design toolkit for product designers, stage three of the stack. Six
 skills, five artifact kinds, one discipline: pull a pursued
@@ -38,6 +38,10 @@ what define settled; it cites `O-NNN`, `OC-NNN`, `U-NNN`, and
 The loop closes through discover: `(untested)` decisions seed
 research-plan questions, usability-test-kit runs them, evidence lands
 in the log, and decisions get re-cited with `E-NNN`s behind them.
+That loop is also the validation gate: a clean critique marks a brief
+`reviewed` (ready to test — deliberately not done), only cited test
+evidence marks it `validated`, and a later design decision knocks it
+back to needing revalidation.
 
 No define artifacts yet? Design stands alone: design-brief asks the
 prerequisite questions itself — problem, audience, constraints,
@@ -65,7 +69,9 @@ design/
 Skills create every file and header themselves — you never scaffold
 anything.
 
-The shared contract all six skills will write against:
-[design-spec.md](references/design-spec.md) (draft). Upstream:
+The shared contract all six skills write against:
+[design-spec.md](references/design-spec.md). How they talk while
+writing it: [voice.md](references/voice.md), the conversation contract
+shared across all weaveworm stages. Upstream:
 [define spec](../define/references/define-spec.md) ·
 [evidence-log spec](../discover/references/evidence-log-spec.md).

@@ -12,7 +12,9 @@ comparison file, then evidence-log entries. If no plan block exists, offer
 the one-line version: confirm the question and axes inline, run the
 teardown, and append the Q-NNN block afterward so the evidence stays
 citable. Either way the axes come from the question, never from whatever
-the competitor's homepage happens to emphasize.
+the competitor's homepage happens to emphasize. Conversation runs per
+the voice contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` —
+register, translation, and question/report shape live there, not here.
 
 ## Run order
 
@@ -104,6 +106,5 @@ so synthesis can scope it. Then check the plan's "Done when": if the
 teardown was the last evidence it named, remind the user to mark the
 question answered in research-plan.
 
-In chat, show only the comparison axes, the new E-NNN headings, and one
-state line ("2 teardowns, 5 entries logged"). Never paste teardown
-bodies into the conversation — point at the files.
+Report per the voice contract: the comparison axes, the new E-NNN
+headings, and one state line ("2 teardowns, 5 entries logged").

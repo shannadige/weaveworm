@@ -11,7 +11,9 @@ write in a session). -->
 
 Input: a design choice — from concept-sprint, flow-map, prototype, or
 the user directly. Output: `design/decisions.md` per the spec's
-decision block format.
+decision block format. Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here.
 
 ## Logging rules
 
@@ -30,7 +32,8 @@ decision block format.
 
 ## After the log
 
-- TODO: chat summary; surface the `(untested)` census when it grows.
+- TODO: summary lines per the voice contract; surface the
+  `(untested)` census when it grows.
 
 ## What this skill refuses
 

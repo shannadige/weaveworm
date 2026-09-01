@@ -12,7 +12,9 @@ elsewhere) and the charter if one exists. Output: `define/roles.md`
 (define root per the spec — ask once if definition work lives
 elsewhere) per the spec at `${CLAUDE_PLUGIN_ROOT}/references/define-spec.md` —
 read it before writing; it owns the block format, ID rules, and
-confidence inheritance. Do not improvise fields.
+confidence inheritance. Do not improvise fields. Conversation runs per
+the voice contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` —
+register, translation, and question/report shape live there, not here.
 
 ## Role rules
 
@@ -59,10 +61,10 @@ If the charter has `(role tbd)` outcomes, resolve them now — write the
 `U-NNN` into each outcome's `For:` line (a charter `draft` edit; the
 agreed gate makes `(role tbd)` in an `agreed` charter impossible
 plugin-side, but on a hand-kept charter that skipped the gate, list
-the mapping in chat for product-charter's supersession instead). In chat, show each role as one line — ID, name,
-Kind, confidence — plus one state line ("4 roles: 2 user, 1 customer,
-1 stakeholder; U-003 is proxy-based"). Never paste block bodies. Then
-force the decision: name the role whose experience you'd map first and
+the mapping in chat for product-charter's supersession instead). Report per the voice contract: each role as one
+line — ID, name, Kind, confidence — plus the state line ("4 roles: 2
+user, 1 customer, 1 stakeholder; U-003 is proxy-based"). The decision
+to force: name the role whose experience you'd map first and
 the one-line why (most evidence behind it, most friction in it, or the
 charter's outcomes point at it) — and offer journey-map for that role.
 

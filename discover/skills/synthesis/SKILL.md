@@ -16,7 +16,9 @@ back to matching the Source line against the question's kit, teardown,
 or mining artifacts and the plan block's "Done when". Output: the
 synthesis file below. If the log has no entries in scope, say so — a
 synthesis of zero entries is a pitch, not research, and this skill
-refuses to write one.
+refuses to write one. Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here.
 
 ## Synthesis file
 
@@ -117,10 +119,10 @@ the count and roll the rest into one line rather than listing them.
 
 ## After the synthesis
 
-In chat, show only the file path, each theme as one line with its E-IDs
-and confidence, and one state line ("3 themes, 1 contradiction, 2 gaps —
-14 entries in scope"). Never reproduce the file body in the
-conversation — the readout is for stakeholders to read there.
+Report per the voice contract: the file path, each theme as one line
+with its E-IDs and confidence, and one state line ("3 themes, 1
+contradiction, 2 gaps — 14 entries in scope"). The readout itself is
+for stakeholders to read in the file.
 
 Then check each in-scope plan block's "Done when" against the log: if
 it's now satisfied, remind the user to mark the question

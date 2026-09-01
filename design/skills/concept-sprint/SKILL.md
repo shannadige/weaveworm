@@ -11,7 +11,10 @@ write in a session). -->
 
 Input: a `B-NNN` brief and everything it cites. Output:
 `design/concepts/B-NNN.md` per the spec's concept block format, plus
-the choosing `D-NNN` routed through decision-log.
+the choosing `D-NNN` routed through decision-log. Conversation runs
+per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here.
 
 ## Sprint rules
 
@@ -27,7 +30,8 @@ the choosing `D-NNN` routed through decision-log.
 
 ## After the sprint
 
-- TODO: chat summary; force the pick or name what's blocking it —
+- TODO: summary lines per the voice contract; force the pick or name
+  what's blocking it —
   and if the pick is `(untested)` with high stakes, say the cheap
   test first.
 

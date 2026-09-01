@@ -12,6 +12,9 @@ write in a session). -->
 Input: a brief and every design artifact citing it, plus the charter,
 journeys, and roles upstream. Output:
 `design/critiques/<date>-B-NNN.md` per the spec's critique format.
+Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here.
 
 ## Critique rules
 
@@ -29,8 +32,9 @@ journeys, and roles upstream. Output:
 
 ## After the critique
 
-- TODO: chat summary — verdicts one line per lens; force the
-  decision: fix, test, or accept each finding, named per finding.
+- TODO: summary lines per the voice contract — verdicts one line per
+  lens; force the decision: fix, test, or accept each finding, named
+  per finding.
 
 ## What this skill refuses
 

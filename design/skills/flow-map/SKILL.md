@@ -11,7 +11,9 @@ write in a session). -->
 
 Input: a brief with a chosen concept (`D-NNN`), the journey it
 redesigns. Output: `design/flows/F-NNN-<slug>.md` per the spec's flow
-format.
+format. Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here.
 
 ## Mapping rules
 
@@ -29,7 +31,8 @@ format.
 
 ## After the mapping
 
-- TODO: chat summary; force the decision — which flow gets
+- TODO: summary lines per the voice contract; force the decision —
+  which flow gets
   prototyped first, and which edge is riskiest untested.
 
 ## What this skill refuses

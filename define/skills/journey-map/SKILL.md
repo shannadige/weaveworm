@@ -17,7 +17,9 @@ writing; it owns the file format, stage IDs, and confidence
 inheritance. If roles.md doesn't exist, route to user-roles first — a
 journey without a role is a flowchart of nobody; the quick path is
 running user-roles for just the one role in question, assumption-led
-if it must be.
+if it must be. Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here.
 
 ## Mapping rules
 
@@ -60,10 +62,10 @@ if it must be.
 
 ## After the journey
 
-In chat, show the stage list as one line each (number, name, friction
-count), the shifts as one line each with their OC-IDs, and one state
-line ("6 stages, 4 with friction, 3 shifts, 2 unchanged, State:
-current+future"). Never paste the file body. Then force the decision:
+Report per the voice contract: the stage list as one line each
+(number, name, friction count), the shifts as one line each with their
+OC-IDs, and the state line ("6 stages, 4 with friction, 3 shifts, 2
+unchanged, State: current+future"). The decision to force:
 name the moment that matters most — the stage whose friction is
 best-evidenced or highest-stakes — with its one-line why, and offer
 opportunity-map scoped to this journey. If friction clusters where

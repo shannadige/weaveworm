@@ -11,7 +11,9 @@ communities, support archives). Output: the mining file below, then
 evidence-log entries. If no plan block exists, say so and run
 research-plan first — the question and target-user definition come from
 the plan; without them, mining returns whatever the loudest reviewers
-complain about.
+complain about. Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here.
 
 ## Mining file
 
@@ -98,6 +100,6 @@ evidence it named, remind the user to mark the question answered in
 research-plan. Close by telling the user the one thing the mining could
 not answer, so the next Q-NNN block is ready if they want it.
 
-In chat, show only the theme one-liners with their counts, the new E-NNN
-headings, and one state line ("3 sources, 4 themes, 6 entries logged").
-Never paste the mining file body into the conversation — point at it.
+Report per the voice contract: the theme one-liners with their counts,
+the new E-NNN headings, and one state line ("3 sources, 4 themes, 6
+entries logged").

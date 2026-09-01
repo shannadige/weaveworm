@@ -10,7 +10,9 @@ Method is interviews or another open-ended conversational method — not
 usability tests or surveys, which have their own kits. Output: the kit file
 below. If no plan block exists for the question, say so and run
 research-plan first — never improvise Participants or the research question
-here; the kit inherits them.
+here; the kit inherits them. Conversation runs per the voice contract
+at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here.
 
 ## Kit file
 
@@ -31,8 +33,8 @@ here; the kit inherits them.
 
 ## Before drafting
 
-The plan doesn't carry everything the kit needs. Ask once, as one batched
-question — same discipline as research-plan — for: session length (default
+The plan doesn't carry everything the kit needs. The intake floor:
+session length (default
 45 minutes if they have no preference) and whether sessions are recorded.
 If not recorded, the consent script drops the recording clause and keeps
 the rest. Never improvise either value mid-draft. If the user can't be
@@ -124,9 +126,8 @@ Session length: <minutes>
 
 ## After writing the kit
 
-Show the user only the file path, the Quota line, and the concrete first
-step ("message 10 candidates today"). Never paste the full kit back into
-chat — point at the file.
+Report per the voice contract: the file path, the Quota line, and the
+concrete first step ("message 10 candidates today").
 
 ## After each session
 

@@ -2,7 +2,10 @@
 
 Claude Code plugins for product design. Each plugin covers one stage of the
 design stack; skills produce fixed-shape artifacts, and stages hand off
-through documents — not vibes.
+through documents — not vibes. All stages share one conversation
+contract, [references/voice.md](references/voice.md): canonical at the
+repo root, synced into each plugin by `scripts/sync-voice.sh`, edited
+only at the root.
 
 ## Plugins
 

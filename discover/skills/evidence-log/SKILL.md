@@ -8,7 +8,12 @@ description: Record, update, or query research findings in a project's evidence 
 Maintain the project's evidence log per the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/evidence-log-spec.md`. Read the spec before
 your first write in a session; it defines the file location, entry format,
-ID rules, and confidence levels. Do not improvise fields.
+ID rules, and confidence levels. Do not improvise fields. Conversation
+runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here. One deliberate
+exception, below: queried entries return verbatim, because downstream
+work cites their IDs.
 
 ## Recording findings
 

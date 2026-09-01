@@ -62,4 +62,6 @@ Skills create every file and header themselves — you never scaffold anything.
   review-mining instead of stalling on "recruit participants".
 
 The shared contract all skills write against:
-[evidence-log-spec.md](references/evidence-log-spec.md).
+[evidence-log-spec.md](references/evidence-log-spec.md). How they talk
+while writing it: [voice.md](references/voice.md), the conversation
+contract shared across all weaveworm stages.

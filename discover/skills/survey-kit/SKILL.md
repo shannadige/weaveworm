@@ -9,6 +9,9 @@ Input: a `Q-NNN` block from the plan file (default `research/plans.md`)
 whose Method is a survey. Output: the kit file below. If no plan block
 exists, say so and run research-plan first — the kit inherits the
 question and Participants line; never improvise them here.
+Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
+and question/report shape live there, not here.
 
 One check before drafting: research-plan warns that a survey written
 before any qualitative work measures assumptions precisely. If the
@@ -134,9 +137,8 @@ D1. <demographics, last>
 
 ## After writing the kit
 
-Show the user only the file path, the fielding arithmetic line, and the
-concrete first step ("pilot with 2 people this week"). Never paste the
-full kit back into chat — point at the file.
+Report per the voice contract: the file path, the fielding arithmetic
+line, and the concrete first step ("pilot with 2 people this week").
 
 ## After fielding
 

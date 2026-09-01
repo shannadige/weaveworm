@@ -87,6 +87,8 @@ anything.
   evidence recorded or merged through discover's evidence-log does.
 
 The shared contract all five skills write against:
-[define-spec.md](references/define-spec.md). The upstream format it
+[define-spec.md](references/define-spec.md). How they talk while
+writing it: [voice.md](references/voice.md), the conversation contract
+shared across all weaveworm stages. The upstream format it
 consumes:
 [discover's evidence-log spec](../discover/references/evidence-log-spec.md).
