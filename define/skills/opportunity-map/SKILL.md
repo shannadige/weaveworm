@@ -1,6 +1,6 @@
 ---
 name: opportunity-map
-description: The last stage of define — cluster evidence and journey friction into a prioritized opportunity backlog: O-NNN blocks, each one problem-shaped sentence with its evidence, the role and journey moment it lives in, impact against the charter's outcomes, and the team's stated complexity. Use when a designer asks "what should we work on", "turn the research into opportunities", "prioritize what we learned", "help me prioritize the roadmap", "impact vs effort on these", wants to mark an opportunity pursued, deferred, or dropped, or a journey map just landed and they want next steps. Do NOT use for writing the charter (use product-charter), mapping journeys (use journey-map), writing the stakeholder readout (use discover's synthesis), or recording findings (use discover's evidence-log).
+description: The last stage of define — cluster evidence and journey friction into a prioritized opportunity backlog: O-NNN blocks, each one problem-shaped sentence with its evidence, the role and journey moment it lives in, impact against the charter's outcomes, and the team's stated complexity. Use when a designer asks "what should we work on", "turn the research into opportunities", "prioritize what we learned", "help me prioritize the roadmap", "impact vs effort on these", wants to mark an opportunity pursued, deferred, dropped, or delivered, or a journey map just landed and they want next steps. Do NOT use for writing the charter (use product-charter), mapping journeys (use journey-map), writing the stakeholder readout (use discover's synthesis), or recording findings (use discover's evidence-log).
 ---
 
 # opportunity-map
@@ -95,6 +95,18 @@ and question/report shape live there, not here.
   `dropped — contradicted by E-NNN (→ O-NNN)` fires without
   instruction when new evidence contradicts the statement itself —
   the corrected statement becomes a new block.
+- **Delivered is the loop actually closing.** When the user says a
+  pursued opportunity shipped and its outcome was read (deliver's
+  outcome-review ends by sending them here), write the spec's
+  `delivered` form: the date, the outcome's verdict as deliver gave
+  it, the `E-NNN` holding the reading, and the outcome review's path
+  as the user states it. The block moves under the `<!-- delivered
+  -->` marker. No reading in the log, or a `too early` verdict, means
+  it stays `pursued` — say what's missing. `delivered` is terminal:
+  when a `flat` or `regressed` outcome is worth another go, that's a
+  fresh block whose `Evidence:` cites the reading, ranked like any
+  other, with the delivered block gaining `(→ O-NNN)`; the first
+  attempt's record stays intact.
 - **Re-runs update, never duplicate; keep the backlog workable.**
   Same opportunity, fresh evidence → append per the spec's allowed
   edits. More than ~10 open blocks means the map stopped helping
@@ -106,9 +118,11 @@ and question/report shape live there, not here.
 ## After the mapping
 
 Report per the voice contract: pursued blocks first (one line each —
-they're the handoff), then the top 5 open opportunities as one line
-each — ID, statement, impact, complexity — plus the state line
-covering the rest ("9 opportunities: 1 pursued, 6 open, 2 dropped").
+they're the handoff), delivered blocks next (one line each with the
+verdict — they're what pursuing bought), then the top 5 open
+opportunities as one line each — ID, statement, impact, complexity —
+plus the state line covering the rest ("10 opportunities: 1 pursued,
+1 delivered, 6 open, 2 dropped").
 The decision this artifact exists for: which
 opportunity gets pursued — name your top pick and the one-line why.
 If the top pick is `(single source)`, contested, or carries
@@ -125,5 +139,7 @@ first. If any shift or Non-goal check surfaced a gap, name it here.
 - A composite score as the rank driver — the insist path is the
   `Score (requested):` line.
 - Raising confidence during mapping.
+- Writing `delivered` with no evidence-log entry for the reading, or
+  re-opening a delivered block instead of writing a fresh one.
 - Deleting or renumbering blocks, or editing a heading sentence —
   other edits per the spec's allowed list.

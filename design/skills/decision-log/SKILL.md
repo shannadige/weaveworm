@@ -8,8 +8,9 @@ description: "The design stage's evidence log — record load-bearing design cho
 The design stage's evidence log: the artifact critique argues with,
 and the memory that outlives whoever made the call. Input: a design
 choice — from concept-sprint's pick, a flow or prototype call, a
-critique finding that a stage traces to nothing, or the user
-directly. Output: `design/decisions.md` per the spec's decision block
+critique finding that a stage traces to nothing, a build-review
+finding that the build hit a real limit, an outcome reading that
+matched a `Reverses on:` line, or the user directly. Output: `design/decisions.md` per the spec's decision block
 format, plus the brief Status writes this skill owns (`validated` and
 its decay, below). Read the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/design-spec.md` before your first
@@ -75,7 +76,9 @@ and question/report shape live there, not here.
   state at F-002.1, two prototype screens, and C-004's chosen status
   were built on the reversed call") — re-pointing them is flow-map's,
   prototype's, and concept-sprint's work, but naming the blast
-  radius is this skill's, in the same pass.
+  radius is this skill's, in the same pass. When a deliver build spec
+  pins this brief, name that the spec is now stale and a fresh one is
+  build-spec's next action.
 - **Writing against a `validated` brief downgrades it, same pass.**
   A new or reversing `D-NNN` on a validated brief flips that brief's
   Status to `in-design — revalidation needed (→ D-NNN)`. The old

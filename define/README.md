@@ -51,7 +51,7 @@ define/
 ├── charter-<agreed-date>.md   # archived superseded charters
 ├── roles.md                   # all U-NNN role blocks
 ├── journeys/J-NNN-<slug>.md   # one journey per role × scope
-└── opportunities.md           # all O-NNN blocks, ranked
+└── opportunities.md           # all O-NNN blocks, ranked; pursued ones close as delivered
 ```
 
 Skills create every file and header themselves — you never scaffold
@@ -74,8 +74,10 @@ anything.
   evidence lands later, claims get re-cited — promotion, not rewrite.
 - **`agreed` means frozen.** While the charter is `draft`, edit
   freely. Once the team commits, changes go through supersession — the
-  record of what was agreed never silently changes. (One exception:
-  backfilling a measured baseline that was promised as unknown.)
+  record of what was agreed never silently changes. (Two exceptions,
+  both on metric lines: backfilling a measured baseline that was
+  promised as unknown, and recording the result once deliver has read
+  the outcome — reached, short, or regressed against the target.)
 - **Outcomes over artifacts.** Each skill ends by forcing the decision
   its artifact exists for — which role matters most, which moment
   hurts, which opportunity gets pursued — and every artifact is

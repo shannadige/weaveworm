@@ -136,8 +136,10 @@ it, and it must promise nothing no outcome delivers.>
 <owned by the success-metrics skill; product-charter writes the stubs>
 - **OC-001:** tbd (run success-metrics)
 - **OC-002:** <metric> — <baseline> → <target> within <window> — <one-line why this target>
+- **OC-003:** <metric> — 41% (measured 2026-09-10) → 60% within 30 days — <why> — result: 58% (measured 2026-10-28, E-041) — short
 - **Guardrails:**
   - <metric that must not degrade> — currently <level, or `unmeasured`>
+  - <guardrail> — currently 1.2% — result: held (measured 2026-10-28, E-042)
 - **Secondary (requested):** <metric> — does not measure any outcome
 - **Instrumented by:** <where the numbers come from>
 
@@ -195,6 +197,19 @@ Charter field rules:
   <window: set with the baseline> — target waits on measurement`. A
   backfilled baseline is written `<value> (measured YYYY-MM-DD)`. The
   target's one-line why is a benchmark, a cited E-ID, or `(ambition)`.
+  **A result is the charter's answer to its own target**, appended to
+  the metric line as `— result: <value> (measured YYYY-MM-DD, E-NNN)
+  — reached | short | regressed`, judged against the target (deliver's
+  outcome verdicts judge against the baseline, so a metric can have
+  `moved` there and `short` here without contradiction — movement is
+  the evidence, the target was the ambition). The `E-NNN` is the
+  evidence-log entry holding the reading; a result with no entry is
+  never written. A guardrail's result is `— result: held | breached
+  (measured YYYY-MM-DD, E-NNN)`. A later reading replaces the result
+  line; the history is the evidence log and deliver's outcome reviews.
+  A directional target (no baseline when agreed) takes a result only
+  after its baseline was backfilled; until then the reading *is* the
+  baseline.
   **Secondary (requested)** exists only for a metric the user insisted
   on that measures no outcome; the line says so in as many words.
 
@@ -207,9 +222,15 @@ Charter lifecycle (transitions written by product-charter):
   figure never passes) **and** every outcome's `For:` names a `U-NNN`
   — an outcome still reading `(role tbd)` is an outcome for nobody,
   which is not something a team can commit to. From here the file is
-  frozen. One edit is allowed after `agreed`: the baseline backfill,
-  written `<value> (measured YYYY-MM-DD)` — filling in a promised
-  measurement is not changing the agreement.
+  frozen. Two edits are allowed after `agreed`, both on metric and
+  guardrail lines only: the baseline backfill, written `<value>
+  (measured YYYY-MM-DD)`, and the result line per the Success metrics
+  rules — filling in a promised measurement, or recording what the
+  agreed target came to, is not changing the agreement. A result of
+  `reached` or `regressed` is the standing prompt for supersession:
+  an outcome that came true or went backwards is a charter whose
+  challenges have moved, and product-charter is where that gets
+  re-cut.
 - `superseded (→ charter.md, <date>)` — written on the archived file's
   Status line at archive time, the one edit ever made to an archive.
   The supersession procedure: move the old file to
@@ -309,11 +330,14 @@ Log: <path to the evidence log — default research/evidence-log.md; `none — a
 
 File order: `pursued` blocks first, under a `<!-- pursued -->` marker
 — they are the backlog's output, what the design stage pulls, and they
-lead the file and the chat summary. Then open blocks in rank order,
-best case first. Then `deferred` and `dropped` blocks below a
-`<!-- parked -->` marker — only dead blocks park, so they never
-compete for rank position. Markers are written when first needed. At
-most ~10 open blocks; park the tail as `deferred — below the line`.
+lead the file and the chat summary. Then `delivered` blocks under a
+`<!-- delivered -->` marker — finished, with the outcome's verdict on
+record, kept visible so the backlog shows what pursuing actually
+bought. Then open blocks in rank order, best case first. Then
+`deferred` and `dropped` blocks below a `<!-- parked -->` marker —
+only dead blocks park, so they never compete for rank position.
+Markers are written when first needed. At most ~10 open blocks; park
+the tail as `deferred — below the line`.
 
 ```markdown
 ## O-003 <the opportunity as one problem-shaped sentence>
@@ -360,8 +384,19 @@ most ~10 open blocks; park the tail as `deferred — below the line`.
   all written by opportunity-map, including
   `dropped — contradicted by E-NNN (→ O-NNN)` when new evidence
   contradicts the statement itself and the corrected statement becomes
-  a new block. Allowed edits: everything but the heading sentence — a
-  different statement is a new block.
+  a new block. `pursued` closes as `delivered (<date>) — OC-001 moved
+  | flat | regressed (E-NNN, → <outcome review path>)`: written by
+  opportunity-map on the user's word once a deliver outcome review
+  exists for the brief that pulled the block and its reading is in
+  the evidence log. The verdict is deliver's, baseline-relative,
+  carried verbatim; the path is recorded as the user gives it — define
+  never parses deliver's files. A `too early` reading writes nothing;
+  the block stays `pursued`. `delivered` is terminal: a `flat` or
+  `regressed` outcome the team wants to attack again is a fresh block
+  whose `Evidence:` cites the reading, with the delivered block
+  gaining `(→ O-NNN)` — the same shape as a contradiction. Allowed
+  edits: everything but the heading sentence — a different statement
+  is a new block.
 
 ## Upstream contract
 

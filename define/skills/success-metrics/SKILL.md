@@ -11,9 +11,9 @@ knows about current instrumentation. Output: the charter's Success metrics
 section, filled per the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/define-spec.md`. This skill owns
 exactly that section: while the charter is `draft` it may rewrite it
-freely; once `agreed`, the only allowed edit is the spec's baseline
-backfill, and anything else means the supersession procedure via
-product-charter. If no charter exists yet, route to product-charter
+freely; once `agreed`, the only allowed edits are the spec's baseline
+backfill and its result line, and anything else means the supersession
+procedure via product-charter. If no charter exists yet, route to product-charter
 first — metrics without outcomes have nothing to measure. Conversation
 runs per the voice contract at
 `${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
@@ -54,8 +54,20 @@ unknown-baseline forms, and list everything unconfirmed at the end.
   `within <window: set with the baseline>`. On an assumption-led
   charter this is the expected shape: unknowns stay visible, never
   replaced with plausible numbers so the section looks finished. When
-  a measurement later lands, the backfill — the one edit allowed after
-  `agreed` — is written `<value> (measured YYYY-MM-DD)`.
+  a measurement later lands, the backfill — one of the two edits
+  allowed after `agreed` — is written `<value> (measured YYYY-MM-DD)`.
+- **Results are read against the target, and only from the log.**
+  When the user brings a reading (deliver's outcome-review ends by
+  sending them here), write the spec's result form on the metric line
+  — `reached`, `short`, or `regressed` against the target, citing the
+  `E-NNN` that holds the number. No entry, no result: route the
+  reading through discover's evidence-log first. Deliver's verdict on
+  the same number is baseline-relative, so `moved` there can be
+  `short` here; say so in plain words when it happens ("it moved, and
+  it didn't get to the target you agreed") rather than letting the
+  two words look like a disagreement. Guardrails take `held` or
+  `breached` the same way. A directional target with no backfilled
+  baseline takes the reading as its baseline, not as a result.
 - **Targets carry a why.** Per the spec: a benchmark, a cited E-ID, or
   explicit ambition marked `(ambition)`. A naked number invites
   hitting it by any means.
@@ -74,7 +86,12 @@ research-plan. If every outcome's metric now passes its half of the
 spec's agreed gate, say so — and check the other half: outcomes still
 reading `(role tbd)` mean user-roles stands between this charter and
 `agreed`. product-charter writes that transition, and agreeing freezes
-the file. End on the single next action, whichever it is.
+the file. After a result write, the read is on the charter as a
+whole: outcomes reached, short, regressed, still unmeasured, and any
+with nothing pursued against them — and a `reached` or `regressed`
+result names product-charter's supersession as the next action,
+because the challenge behind that outcome has moved. End on the
+single next action, whichever it is.
 
 ## What this skill refuses
 
@@ -83,4 +100,6 @@ the file. End on the single next action, whichever it is.
 - Inventing a baseline, or a precise target with no stated why.
 - Two metrics on one outcome.
 - Editing the section of an `agreed` charter beyond the spec's
-  baseline backfill.
+  baseline backfill and result line.
+- A result with no evidence-log entry behind it, or one judged
+  against anything but the agreed target.

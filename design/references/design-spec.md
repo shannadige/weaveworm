@@ -1,8 +1,8 @@
 # Design spec — v1
 
 > **Status: v1 — settled and consumed.** Every format and lifecycle
-> below is decided and consumed by the stage's six skills. The one
-> item still open (what deliver pulls) is deliver's spec to claim —
+> below is decided and consumed by the stage's six skills. The last
+> open item (what deliver pulls) is now claimed by deliver's spec —
 > see Open decisions.
 
 Design turns define's handoff — pursued `O-NNN` opportunities — into
@@ -457,7 +457,7 @@ that named in every pass too.
 
 ## Open decisions
 
-All settled 2026-09-01 except item 8, which is deliver's to claim:
+All settled 2026-09-01; item 8 claimed by deliver 2026-09-02:
 
 1. ~~Brief status lifecycle, and whether `validated` requires a test
    or just a critique pass.~~ Resolved — both, as a two-tier gate:
@@ -489,6 +489,14 @@ All settled 2026-09-01 except item 8, which is deliver's to claim:
    Resolved — see Standalone fallback: intake questions per missing
    artifact, answers as labeled assumptions in the brief, critique
    counts the debt, citations backfilled when define lands.
-8. What exactly deliver will pull — which of these artifacts is the
-   handoff surface (likely flows + decisions + prototype, but that's
-   deliver's spec to claim).
+8. ~~What exactly deliver will pull — which of these artifacts is
+   the handoff surface.~~ Claimed — flows (each stage and edge
+   becomes a criterion), decisions (carried with their `Reverses on:`
+   lines as what the build may not change), and the prototype
+   (its `data-flow` annotations and README map normative, its markup
+   and sample data incidental), plus the brief's `Done when:` and the
+   `OC-NNN` metrics it moves, the brief's open questions, and the
+   findings of the critique pass that made it pull-able, as the
+   spec's Open items. A brief is pull-able at `reviewed` or
+   `validated`; `in-design` only on the user's explicit override,
+   recorded on the spec. See deliver-spec.md, Upstream contract.
