@@ -4,7 +4,7 @@
 # plugins and must never be edited directly.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-for stage in discover define design; do
+for stage in discover define design deliver; do
   cp references/voice.md "$stage/references/voice.md"
 done
-echo "synced references/voice.md -> discover, define, design"
+echo "synced references/voice.md -> discover, define, design, deliver"

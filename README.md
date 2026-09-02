@@ -29,6 +29,14 @@ only at the root.
   `prototype`, `design-critique`. Shared contract:
   [design spec](design/references/design-spec.md).
   Usage guide: [design/README.md](design/README.md).
+- **deliver** — a reviewed design into a build a human engineer or a
+  coding agent produces without deciding anything load-bearing by
+  accident, then a reading of whether the outcome moved: build specs,
+  slices, instruments, build reviews, and outcome reviews. Skills:
+  `build-spec`, `slice-plan`, `instrumentation-plan`, `build-review`,
+  `outcome-review`. Shared contract:
+  [deliver spec](deliver/references/deliver-spec.md).
+  Usage guide: [deliver/README.md](deliver/README.md).
 
 ## Install
 

@@ -19,6 +19,11 @@
       "name": "design",
       "source": "./design",
       "description": "Product-design solution toolkit — pursued opportunities into briefs, divergent concepts, a decision log, flows, and testable HTML prototypes, with critique as the recurring gate against the charter. Works assumption-led when define hasn't run."
+    },
+    {
+      "name": "deliver",
+      "source": "./deliver",
+      "description": "Product-design delivery toolkit — a reviewed design into a build spec a human engineer or a coding agent builds from without asking, slices that each deliver a journey shift, instruments behind the charter's metrics, build reviews against the decisions that must not silently reverse, and an outcome review of whether the metric moved. Works assumption-led when design hasn't run."
     }
   ]
 }
