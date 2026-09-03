@@ -653,7 +653,7 @@ second record on the same brief the same day suffixes the filename
 - **Brief:** B-001   (or `none — assumption-led`, the file keyed by S-NNN)
 - **Spec:** S-001   (or `S-001, S-002` when shipped slices span a superseded spec and its successor; both gain `measured`)
 - **Shipped:** SL-001 (2026-09-14), SL-002 (2026-09-28)
-- **Window:** 30 days from SL-002 — ends 2026-10-28 (charter: OC-001 within 30 days)   (per metric section instead, when the metrics' windows differ)
+- **Window:** 30 days from SL-002 — ends 2026-10-28 (charter: OC-001 within 30 days)   (per metric section instead, when the metrics' windows differ; or `none — no moving slice shipped` when every shipped slice carries `none alone`)
 - **Evidence:** E-041, E-042   (or `none — too early (window ends 2026-10-28)`)
 - **Also changed in window:** <anything else that could explain a move, or `none known`>
 ```
@@ -669,7 +669,7 @@ section, and the decision:
 - **Verdict:** moved
 
 ## Guardrails
-- <guardrail line> — held (E-042)   (or `breached (E-NNN)` / `unmeasured`)
+- <guardrail line> — held (E-042)   (or `breached (E-NNN)` / `unmeasured` / `too early`)
 
 ## Decision
 keep   (or `iterate — <what the reading raises>` / `revert — D-015 reverses on <observation>: happened` / `too early — read again after <date>`)
@@ -683,6 +683,12 @@ Outcome rules:
   this record cites them. Deliver mints no `E-NNN`; a review whose
   `Evidence:` line is neither entries nor the `too early` form is
   not written.
+- **Header lines keep their forms.** `Shipped:` is slice IDs with
+  slice-plan's dates; `Window:` is the length, the slice it counts
+  from, and the end date, or the no-moving-slice form. Neither
+  carries an explanation; what the record can't say in those forms
+  is said in chat, and a header with nothing to put on `Shipped:`
+  is the no-shipped-slice case, which writes no record.
 - **The window is the charter's** `within <window>` for that metric,
   counted from the shipped date of the last slice that moves it. When
   the charter has none (a directional target waiting on a baseline),
@@ -691,9 +697,18 @@ Outcome rules:
   record says what it would take to read sooner. When no shipped
   slice moves the metric (every shipped slice carries `none alone`,
   or the moving slice was dropped or deferred), there is no start
-  date: the verdict is `too early (no moving slice shipped)`.
+  date: the verdict is `too early (no moving slice shipped)`. That
+  form describes shipped slices; with no slice at `shipped` on
+  record there is no record to write, so nothing is written (the
+  readings may still land in the evidence log, marked there as
+  readings with no shipped slice behind them), and the route is
+  build-review, then slice-plan on its clean pass.
 - **Verdict per metric:** `moved`, `flat`, `regressed`, `too early`,
-  or `first reading <value>`. Baseline and observed always appear
+  or `first reading <value>`; per guardrail: `held`, `breached`,
+  `unmeasured`, or `too early`. A guardrail is `too early` when its
+  reading is in but the window has not ended, and `unmeasured` only
+  when no instrument or reading stands behind it. Baseline and
+  observed always appear
   together; a `moved` with no baseline is refused — the honest
   verdict is `first reading <value>`, which becomes the baseline:
   instrumentation-plan records it on the block, success-metrics
