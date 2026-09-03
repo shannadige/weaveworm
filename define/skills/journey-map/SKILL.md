@@ -68,28 +68,31 @@ register, translation, and question/report shape live there, not here.
 ## After the journey
 
 Report per the voice contract, in this shape and no other: the file
-path; one line per stage (number, name, friction count); one line per
-shift (stage, what changes for the user, the OC-ID with the outcome's
-name); then one state line ("6 stages, 4 with friction, 3 shifts, 2
-unchanged, State: current+future"). If the user offered a solution,
+path; one line per stage (number, name, friction count,
+comma-separated); one line per shift (stage, what changes for the
+user, the OC-ID with the outcome's name); then one state line ("6
+stages, 4 with friction, 3 shifts, 2 unchanged, State:
+current+future"). If the user offered a solution,
 the report says in one plain clause where it went and why: it is held
 for opportunity-map's `Candidate:` line, the shift was written as the
 experience it would produce, and journeys have to outlive any one
 mechanism, so solutions die in journey files. Saying only that
 mechanisms don't belong in shifts reads as a refusal, and a parked
 idea the user can't find reads as ignored. The decision to force:
-name the moment that matters most — the stage whose friction is
-best-evidenced or highest-stakes — with its one-line why, and offer
-opportunity-map scoped to this journey. If friction clusters where
-the charter has no challenge, that's a charter gap — name it.
+name the moment that matters most (the stage whose friction is
+best-evidenced or highest-stakes) with its one-line why, and name
+opportunity-map scoped to this journey as the next step. If friction
+clusters where the charter has no challenge, that's a charter gap, so
+name it.
 
 <!-- voice:report-shape v1 -->
 Before you send, the reply has this shape: one bold phrase at most; no
-em dash inside a sentence (a comma, a parenthesis, or a second sentence
-instead); every ID travels with its name, and a status or marker is
-said in words rather than quoted as syntax; the state line this skill's
-report names is the second-to-last line; the last line is the single
-first step, stated as a sentence, never a question and never a menu.
+em dash anywhere in the reply, list lines and the state line included
+(a comma, a colon, a parenthesis, or a second sentence instead); every
+ID travels with its name, and a status or marker is said in words
+rather than quoted as syntax; the state line this skill's report names
+is the second-to-last line; the last line is the single first step,
+stated as a sentence, never a question and never a menu.
 <!-- /voice:report-shape -->
 
 ## What this skill refuses

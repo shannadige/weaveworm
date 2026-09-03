@@ -138,20 +138,22 @@ the count and roll the rest into one line rather than listing them.
 
 Report per the voice contract: the file path, each theme as one line
 with its E-IDs and confidence, and one state line ("3 themes, 1
-contradiction, 2 gaps — 14 entries in scope"). The readout itself is
+contradiction, 2 gaps, 14 entries in scope"). The readout itself is
 for stakeholders to read in the file.
 
 Then check each in-scope plan block's "Done when" against the log: if
 it's now satisfied, remind the user to mark the question
 `answered (→ E-NNN, …)` via research-plan. If Gaps names something a
-stakeholder will ask about, that's the seed of the next Q-NNN block —
-offer to draft it. End on that single next action.
+stakeholder will ask about, that's the seed of the next Q-NNN block.
+Name drafting it as the next step, in a sentence rather than a
+question. End on that single next action.
 
 <!-- voice:report-shape v1 -->
 Before you send, the reply has this shape: one bold phrase at most; no
-em dash inside a sentence (a comma, a parenthesis, or a second sentence
-instead); every ID travels with its name, and a status or marker is
-said in words rather than quoted as syntax; the state line this skill's
-report names is the second-to-last line; the last line is the single
-first step, stated as a sentence, never a question and never a menu.
+em dash anywhere in the reply, list lines and the state line included
+(a comma, a colon, a parenthesis, or a second sentence instead); every
+ID travels with its name, and a status or marker is said in words
+rather than quoted as syntax; the state line this skill's report names
+is the second-to-last line; the last line is the single first step,
+stated as a sentence, never a question and never a menu.
 <!-- /voice:report-shape -->

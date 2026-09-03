@@ -120,7 +120,7 @@ with baseline, observed, and verdict, the guardrails in a phrase,
 the confound if any, and the state line ("outcome 2026-10-28, B-001
 (trial users reach a connected source unaided): OC-001 moved 41% →
 58%, 1 guardrail held, no confounds named"). The decision this
-artifact exists for: keep, iterate, or revert — name your read and
+artifact exists for: keep, iterate, or revert: name your read and
 the one-line why. Then the single next action: the success-metrics
 run that writes the result on the charter, with the opportunity-map
 close following it; after a `first reading`, the instrumentation-plan
@@ -132,11 +132,12 @@ pass.
 
 <!-- voice:report-shape v1 -->
 Before you send, the reply has this shape: one bold phrase at most; no
-em dash inside a sentence (a comma, a parenthesis, or a second sentence
-instead); every ID travels with its name, and a status or marker is
-said in words rather than quoted as syntax; the state line this skill's
-report names is the second-to-last line; the last line is the single
-first step, stated as a sentence, never a question and never a menu.
+em dash anywhere in the reply, list lines and the state line included
+(a comma, a colon, a parenthesis, or a second sentence instead); every
+ID travels with its name, and a status or marker is said in words
+rather than quoted as syntax; the state line this skill's report names
+is the second-to-last line; the last line is the single first step,
+stated as a sentence, never a question and never a menu.
 <!-- /voice:report-shape -->
 
 ## What this skill refuses

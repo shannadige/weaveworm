@@ -148,7 +148,7 @@ Unverified criteria and cannot-tell decisions are counted there too
 ("criteria 1 deviated, 4 unverified; decisions 1 cannot tell"), with
 one clause on what would verify them.
 The decision this artifact exists for: ship, fix first, or log the
-deviation as a decision — named per finding, in order of what holds
+deviation as a decision, named per finding, in order of what holds
 the slice. When the header says the spec is stale, the fresh spec is
 the close, ahead of any per-finding call. When the gate cleared, the
 close is the next step instead: slice-plan records it shipped, and
@@ -156,11 +156,12 @@ the window for reading the outcome starts from that date.
 
 <!-- voice:report-shape v1 -->
 Before you send, the reply has this shape: one bold phrase at most; no
-em dash inside a sentence (a comma, a parenthesis, or a second sentence
-instead); every ID travels with its name, and a status or marker is
-said in words rather than quoted as syntax; the state line this skill's
-report names is the second-to-last line; the last line is the single
-first step, stated as a sentence, never a question and never a menu.
+em dash anywhere in the reply, list lines and the state line included
+(a comma, a colon, a parenthesis, or a second sentence instead); every
+ID travels with its name, and a status or marker is said in words
+rather than quoted as syntax; the state line this skill's report names
+is the second-to-last line; the last line is the single first step,
+stated as a sentence, never a question and never a menu.
 <!-- /voice:report-shape -->
 
 ## What this skill refuses

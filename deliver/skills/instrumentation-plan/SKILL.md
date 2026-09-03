@@ -91,7 +91,7 @@ instrument with the metric and the stage it fires at, the baseline
 state in plain terms, and the state line ("3 instruments: 2 with
 baselines, 1 unmeasured; 1 guardrail unwired"). The decision this
 artifact exists for: which baseline gets measured before the first
-slice ships — name your pick and the one-line why, since a metric
+slice ships: name your pick and the one-line why, since a metric
 read with no baseline is the first reading, not a result. Whenever
 any block reads `Charter: not yet backfilled`, the single next
 action is define's success-metrics to backfill it, named every run
@@ -100,11 +100,12 @@ with the research-plan run that would measure it.
 
 <!-- voice:report-shape v1 -->
 Before you send, the reply has this shape: one bold phrase at most; no
-em dash inside a sentence (a comma, a parenthesis, or a second sentence
-instead); every ID travels with its name, and a status or marker is
-said in words rather than quoted as syntax; the state line this skill's
-report names is the second-to-last line; the last line is the single
-first step, stated as a sentence, never a question and never a menu.
+em dash anywhere in the reply, list lines and the state line included
+(a comma, a colon, a parenthesis, or a second sentence instead); every
+ID travels with its name, and a status or marker is said in words
+rather than quoted as syntax; the state line this skill's report names
+is the second-to-last line; the last line is the single first step,
+stated as a sentence, never a question and never a menu.
 <!-- /voice:report-shape -->
 
 ## What this skill refuses
