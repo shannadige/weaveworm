@@ -58,6 +58,16 @@ question/report shape live there, not here.
   the voice contract. A brief serving no journey shift names that
   gap on its own `Journey:` line rather than citing the nearest
   moment for cover.
+- **`For:` is who the scope serves, checked at intake.** Before
+  writing, hold `For:` against the shifts and `Done when:`: a role
+  named on either with no shift in scope is a gap the brief would
+  carry into every concept and flow. Ask in the intake pass, plainly
+  ("Done when says the manager stops emailing, but every shift here is
+  the resident's — keep the manager and name what changes for them,
+  or narrow this to residents and reword Done when?"), and don't
+  write until one is chosen; a dropped role with a real need becomes
+  an Open question. Critique reports drift from this line; it does
+  not gate on it, so the fix belongs here.
 - **Constraints are inherited first, then local.** Every charter
   constraint that binds this brief comes over citing the charter and
   carrying its `given (<source>)`. Brief-local limits the intake

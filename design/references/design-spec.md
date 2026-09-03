@@ -231,6 +231,16 @@ Brief field rules:
 - **`For:` / `Journey:` / `Moves:` cite, never restate** — duplicated
   prose drifts from its source; an ID can't. The Standalone fallback
   governs what stands in when the upstream artifact is absent.
+- **`For:` names only roles the scope serves.** Every `U-NNN` on the
+  line has a shift the brief delivers, and every role `Done when:`
+  leans on is on the line. A brief whose shifts are all one role's
+  while `Done when:` or the pulled block names another is narrowed at
+  intake: the user either keeps the second role and names the shift
+  it gets, or drops it from `For:` and rewords `Done when:`. The
+  brief is not written until one is chosen; the choice is recorded
+  as a brief Open question when the dropped role's need is real. The
+  `reviewed` gate stays partial (Constraints and Non-goals); critique's
+  Roles lens reports drift from this line as a finding.
 - **`Charter:`** records what was read at pull time: `agreed <date>`,
   `draft (as read <date>)`, or `none — assumption-led`.
 - **`Done when:`** is the brief's contract with validation: the
