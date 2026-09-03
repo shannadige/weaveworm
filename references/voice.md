@@ -72,6 +72,9 @@ every time.
   reframed, parked, or rerouted (solution to outcome, pet metric to a
   secondary line, outcome-shaped goal to the charter), one plain
   clause says so. Silent translation reads as being ignored.
+- **Before you send.** One bold phrase at most, no mid-sentence em
+  dashes, and the last line is the decision or next action stated as
+  a statement, never a question.
 
 ## Register
 
