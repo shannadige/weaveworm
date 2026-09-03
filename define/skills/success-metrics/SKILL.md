@@ -60,7 +60,11 @@ unknown-baseline forms, and list everything unconfirmed at the end.
   window set with the baseline`, never an angle-bracket placeholder
   that reads as an unfilled template. On an assumption-led
   charter this is the expected shape: unknowns stay visible, never
-  replaced with plausible numbers so the section looks finished. When
+  replaced with plausible numbers so the section looks finished. Why
+  the baseline is unknown, the single data points that don't add up
+  to one, proxies, and caveats go on the spec's one sub-bullet under
+  the metric line, never on the line itself — a metric line is one
+  scan long, and instrumentation-plan and outcome-review read it. When
   a measurement later lands, the backfill — one of the two edits
   allowed after `agreed` — is written `<value> (measured YYYY-MM-DD)`.
 - **Results are read against the target, and only from the log.**

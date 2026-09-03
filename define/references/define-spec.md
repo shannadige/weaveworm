@@ -144,6 +144,7 @@ it, and it must promise nothing no outcome delivers.>
 <owned by the success-metrics skill; product-charter writes the stubs>
 - **OC-001:** tbd (run success-metrics)
 - **OC-002:** <metric> — <baseline> → <target> within <window> — <one-line why this target>
+  - <why the baseline is what it is, proxies, caveats — one sub-bullet, only when needed>
 - **OC-003:** <metric> — 41% (measured 2026-09-10) → 60% within 30 days — <why> — result: 58% (measured 2026-10-28, E-041) — short
 - **Guardrails:**
   - <metric that must not degrade> — currently <level, or `unmeasured`>
@@ -206,6 +207,11 @@ Charter field rules:
   waits on measurement`. A
   backfilled baseline is written `<value> (measured YYYY-MM-DD)`. The
   target's one-line why is a benchmark, a cited E-ID, or `(ambition)`.
+  **The metric line carries only measure, baseline, target, window,
+  and the one-line why.** Baseline reasoning, the data points that
+  fall short of a baseline, proxies, and caveats go on one indented
+  sub-bullet under the line, so the line downstream skills read stays
+  one scan long; a metric with nothing to caveat has no sub-bullet.
   **A result is the charter's answer to its own target**, appended to
   the metric line as `— result: <value> (measured YYYY-MM-DD, E-NNN)
   — reached | short | regressed`, judged against the target (deliver's
