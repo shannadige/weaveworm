@@ -44,7 +44,10 @@ only at the root.
 /plugin marketplace add shannadige/weaveworm
 ```
 
-Then pick plugins from the `/plugin` menu.
+Then pick plugins from the `/plugin` menu. Each plugin ships a hook that
+keeps the model out of the plugin checkout; it runs on `python3`, which
+must be on your PATH (macOS and most Linux distributions have it). If it
+is missing the hook stays quiet and the guard is simply off.
 
 ## Testing
 
@@ -61,3 +64,7 @@ eval` layout, with shared fixtures under `<plugin>/evals/fixtures/`.
 The runner behind it, `scripts/eval-pilot.py`, also does the full
 ablation (no plugin, spec in the system prompt, plugin loaded) with LLM
 judges. That is for a one-off benchmark claim, not for checking edits.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
