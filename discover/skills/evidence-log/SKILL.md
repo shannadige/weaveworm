@@ -1,6 +1,6 @@
 ---
 name: evidence-log
-description: Record, update, or query research findings in a project's evidence log. Use after any research session — interviews, usability tests, teardowns, analytics reviews — or when the user asks "what do we know about X". Do NOT use for planning research (use research-plan) or writing interview guides (use interview-kit).
+description: Record, update, or query research findings in a project's evidence log. Use after any research session — interviews, usability tests, teardowns, analytics reviews — or when the user asks "what do we know about X". If the notes have no plan block yet (no research/plans.md, or no Q-NNN for their question), route to research-plan first so the entries have a question to cite, then log here. Do NOT use for planning research (use research-plan) or writing interview guides (use interview-kit).
 ---
 
 # evidence-log

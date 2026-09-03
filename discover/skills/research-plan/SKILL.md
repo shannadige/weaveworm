@@ -1,6 +1,6 @@
 ---
 name: research-plan
-description: Turn a product question into a one-page research plan — method chosen via decision table, participants, timeline, and a definition of done. Plans accumulate in research/plans.md as Q-NNN blocks with open/answered/dropped status. Use when a designer asks "how should I research X", "should I run interviews or a survey", adds a new question mid-project, wants to mark a question answered, or can't reach users directly and needs proxy sources. Do NOT use for recording findings (use evidence-log).
+description: Turn a product question into a one-page research plan — method chosen via decision table, participants, timeline, and a definition of done. Plans accumulate in research/plans.md as Q-NNN blocks with open/answered/dropped status. Use when a designer or PM asks "how should I research X", "should I run interviews or a survey", adds a new question mid-project, wants to mark a question answered, or can't reach users directly and needs proxy sources. Also use when research has already been run but never planned: "I have interview notes but no plan", "we did six interviews last week and nothing is logged", "put the question on record". It still applies when the right answer is "log what you have": the plan block is what evidence-log entries cite, so it gets written first (marked as already fielded), and only then do the notes go to evidence-log. Never skip it to read the raw notes and advise directly. Do NOT use for recording findings themselves (use evidence-log, once a plan block exists).
 ---
 
 # research-plan
@@ -37,7 +37,10 @@ files, are read-only, and are never listed, searched, or written.
 - Two edits are allowed to an existing block: its **Status** line, and
   appending one **Fielded:** line when the work actually runs (actual
   dates, sessions completed, instrument version used) — Timeline stays
-  the plan; Fielded records reality. Status transitions:
+  the plan; Fielded records reality. When the research ran before any
+  plan existed (notes in `research/raw/`, no block), write the block
+  from what happened and add its Fielded line in the same pass, so the
+  evidence log has a question to cite. Status transitions:
   - `open` → `answered (→ E-014, E-015)` once the entries named in "Done
     when" exist in the evidence log — cite them by ID. Substantively
     answered but formally short of "Done when" (or the reverse) →
@@ -105,8 +108,11 @@ Two flags to raise before planning:
 
 If the user can't be reached to confirm — a reframe, a primary-question
 pick, or a batched default — act anyway, record in the block that the
-call is the operator's and unconfirmed, and list it for confirmation.
-Unconfirmed is a state to surface, not a reason to stall.
+call is unconfirmed, and list it for confirmation. A call this skill
+makes is recorded as the skill's (on the Fielded line or beside the
+reframed heading), never attributed to the user: "reframe made by
+research-plan, unconfirmed" rather than "made by the PM". Unconfirmed
+is a state to surface, not a reason to stall.
 
 ## Plan template
 
