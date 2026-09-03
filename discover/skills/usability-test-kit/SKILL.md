@@ -19,7 +19,12 @@ being tested (URL, build, or prototype link) and its
 version or date; whether sessions are moderated or unmoderated; and the
 session length. Never guess a build identifier — a wrong one silently
 pools results across different artifacts. If the user is unreachable,
-stop rather than draft against an unnamed build.
+stop rather than draft against an unnamed build. Mode is on the same
+never-guess floor: a plan that says "remote" has not said moderated,
+and the two modes need different success criteria and a different
+script. If the build is named but the user can't be reached on mode,
+write `Mode: moderated (unconfirmed)`, draft for a moderated session,
+and flag it for confirmation before session 1.
 
 ## Kit file
 
@@ -34,7 +39,7 @@ stop rather than draft against an unnamed build.
   <!-- weaveworm usability-test-kit v1 -->
   Plan: Q-NNN in research/plans.md
   Testing: <the artifact — live product, prototype link, build — and its state/version>
-  Mode: <moderated | unmoderated>
+  Mode: <moderated | unmoderated | moderated (unconfirmed)>
   ```
 
 - Four sections, in order: **Screener**, **Tasks**, **Facilitator
@@ -69,14 +74,39 @@ different artifacts don't pool.
 - **No UI vocabulary in the task wording.** Using the interface's own
   labels ("add a *workspace*") tests reading, not navigation. Describe
   the goal in the participant's words from the screener or prior
-  interviews.
+  interviews. The task heading is task wording too: it gets read aloud,
+  or shown in an unmoderated run, and a heading that echoes the
+  option's label ("Tell the app you'll be away" above an "I'll be away"
+  button) hands over the answer before the scenario starts. Head each
+  task with the goal in the participant's words.
 - **Success criteria fixed before session 1.** Each task states, in the
   kit: success (observable end state), partial, and failure — plus a
   time or give-up bound. Deciding after watching is how every session
   becomes a success.
+- **Criteria test what the artifact can show.** When the brief's Done
+  when has a half this artifact cannot exhibit (a resident-only
+  prototype cannot show whether the manager had to email anyone), the
+  kit names that half as out of reach next to the task and says what
+  the session can observe instead. It never substitutes a criterion
+  that sounds like the Done when ("participant doesn't say they'd email
+  the manager") and calls it a direct test; a criterion worded to match
+  the brief hides that the session never checked it. The half out of
+  reach goes to chat as a gap the plan still owes.
+- **Scenario and success point the same way.** A scenario that ends
+  "do what you'd actually do" cannot have a success line that counts
+  one honest answer as failure. Either the scenario sets up a goal the
+  disallowed route cannot reach, or the criterion observes the path
+  taken rather than what the participant says they would do. Read each
+  scenario against its success line before session 1 and change
+  whichever is wrong.
 - **5–7 tasks, realistic order** (as a real user would encounter them),
   first task easy to settle nerves. Each fits the session length with
-  slack; cut tasks, not the debrief.
+  slack; cut tasks, not the debrief. Fewer than five is allowed when
+  the session length forces it (three bounded tasks plus consent and
+  debrief is what 30 minutes holds); the cut is narrated in chat,
+  naming which parts of the plan's Done when the remaining tasks leave
+  uncovered, so the user can lengthen the session or accept the gap
+  rather than discover it in the log.
 
 ## Facilitator script
 
@@ -115,7 +145,7 @@ to stop or skip any task. Plain language, not legalese.
 <!-- weaveworm usability-test-kit v1 -->
 Plan: Q-001 in research/plans.md
 Testing: <artifact + version/date>
-Mode: <moderated | unmoderated>
+Mode: <moderated | unmoderated | moderated (unconfirmed)>
 
 ## Screener
 
