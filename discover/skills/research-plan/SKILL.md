@@ -5,13 +5,16 @@ description: Turn a product question into a one-page research plan — method ch
 
 # research-plan
 
-Input: a product question in plain language. Output: the one-page plan below,
-filled in and appended to the plan file. If the user's question is really
-several questions, say so and plan for the one they confirm matters most;
-the others can be appended later as their own `Q-NNN` blocks.
-Conversation runs per the voice contract at
-`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
-and question/report shape live there, not here.
+Input: a product question in plain language. Output: the one-page plan
+below, filled in and appended to the plan file. If the user's question
+is really several questions, say so and plan for the one they confirm
+matters most; the others can be appended later as their own `Q-NNN`
+blocks. Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
+question/report shape live there, not here. Project artifacts
+(`research/`, `define/`, `design/`, `deliver/`) live under the working
+directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files,
+is read-only, and is never listed, searched, or written.
 
 ## Plan file
 

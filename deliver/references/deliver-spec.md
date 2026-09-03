@@ -51,6 +51,12 @@ Default root: `deliver/` in the user's project, next to `design/`,
 `define/`, and `research/`. If the user keeps delivery work elsewhere,
 ask once, then reuse their answer for the session.
 
+Every path above is relative to the working directory, the user's
+project. The plugin root (`${CLAUDE_PLUGIN_ROOT}`, where this spec
+lives) holds only spec and voice files: it is read-only, is never
+listed, searched, or written, and is never where a project artifact
+is looked for.
+
 ```
 deliver/
 ├── specs/S-NNN-<slug>.md       # one build spec per brief (per handoff); criteria S-NNN.N

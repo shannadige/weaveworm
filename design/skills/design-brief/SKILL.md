@@ -6,19 +6,21 @@ description: "The first stage of design — turn a pursued O-NNN opportunity int
 # design-brief
 
 The first stage of design, and the assumption boundary: concepts,
-decisions, flows, and prototypes all cite the brief and never reach
-past it. Input: a `pursued` block in `define/opportunities.md`, plus
-the charter, roles, and journeys it cites, and the evidence log where
-cited directly (ask once if define or research work lives elsewhere).
-Output: `design/briefs/B-NNN-<slug>.md` (design root per the spec —
-ask once if design work lives elsewhere) per the spec's brief format,
-Status `open`. Read the spec at
-`${CLAUDE_PLUGIN_ROOT}/references/design-spec.md` before your first
-write in a session — it owns the brief format, ID rules, lifecycle,
-uncertainty markers, and the Standalone fallback; do not improvise
-fields. Conversation runs per the voice contract at
-`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
-and question/report shape live there, not here.
+decisions, flows, and prototypes all cite the brief and never reach past
+it. Input: a `pursued` block in `define/opportunities.md`, plus the
+charter, roles, and journeys it cites, and the evidence log where cited
+directly (ask once if define or research work lives elsewhere). Output:
+`design/briefs/B-NNN-<slug>.md` (design root per the spec — ask once if
+design work lives elsewhere) per the spec's brief format, Status `open`.
+Read the spec at `${CLAUDE_PLUGIN_ROOT}/references/design-spec.md`
+before your first write in a session — it owns the brief format, ID
+rules, lifecycle, uncertainty markers, and the Standalone fallback; do
+not improvise fields. Project artifacts (`research/`, `define/`,
+`design/`, `deliver/`) live under the working directory;
+`${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files, is
+read-only, and is never listed, searched, or written. Conversation runs
+per the voice contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` —
+register, translation, and question/report shape live there, not here.
 
 ## Brief rules
 

@@ -12,8 +12,11 @@ evidence-log entries. If no plan block exists, say so and run
 research-plan first — the question and target-user definition come from
 the plan; without them, mining returns whatever the loudest reviewers
 complain about. Conversation runs per the voice contract at
-`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
-and question/report shape live there, not here.
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
+question/report shape live there, not here. Project artifacts
+(`research/`, `define/`, `design/`, `deliver/`) live under the working
+directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files,
+is read-only, and is never listed, searched, or written.
 
 ## Mining file
 

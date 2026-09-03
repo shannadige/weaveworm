@@ -11,6 +11,10 @@ block exists, say so and run research-plan first — the kit inherits the
 question and the Participants line from the plan. Conversation runs per
 the voice contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` —
 register, translation, and question/report shape live there, not here.
+Project artifacts (`research/`, `define/`, `design/`, `deliver/`) live
+under the working directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec
+and voice files, is read-only, and is never listed, searched, or
+written.
 
 ## Before writing the kit
 

@@ -6,21 +6,24 @@ description: "The gate stage of design — run a dated critique pass over a brie
 # design-critique
 
 The gate stage of design: the recurring pass that checks the work
-against the charter it must not betray. Input: a brief and every
-design artifact citing it — concepts, decisions, flows, prototype —
-plus the charter, journeys, roles, and the pulled opportunity's
-block in opportunities.md upstream, read as they stand now, not as
-they stood at pull time. This skill's intake floor is empty: it asks
-the user nothing; its input is the artifacts as they stand. Output:
-`design/critiques/<date>-B-NNN.md` per the spec's critique format,
-and the one write this skill makes outside its own file: the brief's
-Status to `reviewed (<date>, → D-NNN)` when the gate clears, the
-pick pointer carried forward per the brief lifecycle. Read the spec at
+against the charter it must not betray. Input: a brief and every design
+artifact citing it — concepts, decisions, flows, prototype — plus the
+charter, journeys, roles, and the pulled opportunity's block in
+opportunities.md upstream, read as they stand now, not as they stood at
+pull time. This skill's intake floor is empty: it asks the user nothing;
+its input is the artifacts as they stand. Output:
+`design/critiques/<date>-B-NNN.md` per the spec's critique format, and
+the one write this skill makes outside its own file: the brief's Status
+to `reviewed (<date>, → D-NNN)` when the gate clears, the pick pointer
+carried forward per the brief lifecycle. Read the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/design-spec.md` before your first
 write in a session — it owns the lens set, the verdict form, and the
-gate; do not improvise lenses. Conversation runs per the voice
-contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register,
-translation, and question/report shape live there, not here.
+gate; do not improvise lenses. Project artifacts (`research/`,
+`define/`, `design/`, `deliver/`) live under the working directory;
+`${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files, is
+read-only, and is never listed, searched, or written. Conversation runs
+per the voice contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` —
+register, translation, and question/report shape live there, not here.
 
 ## Critique rules
 

@@ -1,3 +1,5 @@
 # eval run output (traces, created files, judge verdicts)
 */evals/results/
 __pycache__/
+# end-to-end run evidence (workspaces, traces, prompts)
+.runs/

@@ -2,6 +2,7 @@
 # Static checks on every SKILL.md, no model calls. Exit 1 on any error.
 #   frontmatter has name and description
 #   the voice contract is cited
+#   the shared plugin-root sentence is present (plugin root never listed, searched, or written)
 #   every ${CLAUDE_PLUGIN_ROOT}/... path resolves inside that plugin
 #   stage copies of voice.md match the canonical references/voice.md
 #   no banned words from the voice contract's Register section
@@ -26,6 +27,7 @@ for plugin in discover define design deliver; do
     grep -q '^name:' "$f" || err "$f: frontmatter lacks name"
     grep -q '^description:' "$f" || err "$f: frontmatter lacks description"
     grep -q 'references/voice.md' "$f" || err "$f: does not cite the voice contract"
+    tr -s '\n' ' ' <"$f" | grep -q 'never listed, searched, or written' || err "$f: lacks the plugin-root sentence (project artifacts live under the working directory; the plugin root is never listed, searched, or written)"
     for ref in $(grep -o '\${CLAUDE_PLUGIN_ROOT}/[A-Za-z0-9_./-]*' "$f" | sort -u); do
       path="$plugin/$(printf '%s' "$ref" | sed 's|^\${CLAUDE_PLUGIN_ROOT}/||')"
       [ -e "$path" ] || err "$f: $ref does not resolve"

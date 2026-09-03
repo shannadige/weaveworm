@@ -9,6 +9,10 @@ cite entries by ID instead of re-quoting research.
 - Default path: `research/evidence-log.md` in the user's project. If the user
   keeps research elsewhere, ask once, then reuse their answer for the session.
 - If the file doesn't exist, create it with the header below before appending.
+- `research/` is relative to the working directory, the user's project. The
+  plugin root (`${CLAUDE_PLUGIN_ROOT}`, where this spec lives) holds only spec
+  and voice files: it is read-only, is never listed, searched, or written, and
+  is never where a project artifact is looked for.
 
 ```markdown
 # Evidence log

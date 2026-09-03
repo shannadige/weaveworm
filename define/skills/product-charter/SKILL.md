@@ -8,16 +8,18 @@ description: Write and steward the product charter — challenges as falsifiable
 The first stage of define: everything downstream — roles, journeys,
 opportunity impact — traces back to the charter's challenges and
 outcomes. Input: the evidence log (default `research/evidence-log.md`;
-ask once if research lives elsewhere), syntheses as secondary input,
-and the user's knowledge of mandates and constraints. Output:
+ask once if research lives elsewhere), syntheses as secondary input, and
+the user's knowledge of mandates and constraints. Output:
 `define/charter.md` (define root per the spec — ask once if definition
 work lives elsewhere) per the spec at
-`${CLAUDE_PLUGIN_ROOT}/references/define-spec.md`. Read the spec before
-writing — it owns the format, ID rules, confidence inheritance, and
-the charter lifecycle. Do not improvise sections. Conversation runs
-per the voice contract at
-`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
-and question/report shape live there, not here.
+`${CLAUDE_PLUGIN_ROOT}/references/define-spec.md`. Project artifacts
+(`research/`, `define/`, `design/`, `deliver/`) live under the working
+directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files,
+is read-only, and is never listed, searched, or written. Read the spec
+before writing — it owns the format, ID rules, confidence inheritance,
+and the charter lifecycle. Do not improvise sections. Conversation runs
+per the voice contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` —
+register, translation, and question/report shape live there, not here.
 
 ## Before writing
 

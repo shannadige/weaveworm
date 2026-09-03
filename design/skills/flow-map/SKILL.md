@@ -5,24 +5,26 @@ description: "The articulation stage of design — turn a brief's chosen concept
 
 # flow-map
 
-The articulation stage of design: where the chosen direction stops
-being a phrase and becomes stages a prototype can render and a test
-can walk. Input: a brief with a concept-sprint pick on record — any
-post-pick Status qualifies, since each carries the pick pointer
-(`in-design (→ D-NNN)`, `reviewed (<date>, → D-NNN)`,
-`in-design — revalidation needed (→ D-NNN)`, `validated (…through
-D-NNN…)`), and the concept file's `chosen (→ D-NNN)` line is the
-cross-check — plus the chosen `C-NNN` and the journey moment the
-brief cites. No pick on record means nothing to articulate — route
-to concept-sprint; a flow drawn from an unchosen concept launders
-the pick. Output: `design/flows/F-NNN-<slug>.md` per the
-spec's flow file format, one flow per brief × scope. Read the spec at
-`${CLAUDE_PLUGIN_ROOT}/references/design-spec.md` before your first
-write in a session — it owns the file format, the stage cap, the
-Edges section, and tracing rules; do not improvise fields.
-Conversation runs per the voice contract at
-`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
-and question/report shape live there, not here.
+The articulation stage of design: where the chosen direction stops being
+a phrase and becomes stages a prototype can render and a test can walk.
+Input: a brief with a concept-sprint pick on record — any post-pick
+Status qualifies, since each carries the pick pointer (`in-design (→
+D-NNN)`, `reviewed (<date>, → D-NNN)`, `in-design — revalidation needed
+(→ D-NNN)`, `validated (…through D-NNN…)`), and the concept file's
+`chosen (→ D-NNN)` line is the cross-check — plus the chosen `C-NNN` and
+the journey moment the brief cites. No pick on record means nothing to
+articulate — route to concept-sprint; a flow drawn from an unchosen
+concept launders the pick. Output: `design/flows/F-NNN-<slug>.md` per
+the spec's flow file format, one flow per brief × scope. Read the spec
+at `${CLAUDE_PLUGIN_ROOT}/references/design-spec.md` before your first
+write in a session — it owns the file format, the stage cap, the Edges
+section, and tracing rules; do not improvise fields. Project artifacts
+(`research/`, `define/`, `design/`, `deliver/`) live under the working
+directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files,
+is read-only, and is never listed, searched, or written. Conversation
+runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
+question/report shape live there, not here.
 
 ## Mapping rules
 

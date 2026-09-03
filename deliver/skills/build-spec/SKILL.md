@@ -6,22 +6,24 @@ description: "The handoff stage of deliver — turn a reviewed brief's flows, de
 # build-spec
 
 The handoff stage of deliver, and the stage's assumption boundary:
-slices, instruments, reviews, and outcomes all cite the spec and
-never reach past it. Input: a brief at a spec-able status, its
-current flows (never a superseded one), the decisions those flows
-trace to in `design/decisions.md`, the prototype's README map, the
-newest critique, and the charter lines the brief cites (ask once if
-design, define, or research work lives elsewhere). Output:
-`deliver/specs/S-NNN-<slug>.md` (deliver root per the spec — ask
-once if delivery work lives elsewhere) per the spec's build spec
-format, Status `open`, and `handed off` at the close on the user's
-word. Read the spec at
+slices, instruments, reviews, and outcomes all cite the spec and never
+reach past it. Input: a brief at a spec-able status, its current flows
+(never a superseded one), the decisions those flows trace to in
+`design/decisions.md`, the prototype's README map, the newest critique,
+and the charter lines the brief cites (ask once if design, define, or
+research work lives elsewhere). Output: `deliver/specs/S-NNN-<slug>.md`
+(deliver root per the spec — ask once if delivery work lives elsewhere)
+per the spec's build spec format, Status `open`, and `handed off` at the
+close on the user's word. Read the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/deliver-spec.md` before your first
-write in a session — it owns the spec format, criteria rules,
-lifecycle, recipient packaging, and the Standalone fallback; do not
-improvise fields. Conversation runs per the voice contract at
-`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
-and question/report shape live there, not here.
+write in a session — it owns the spec format, criteria rules, lifecycle,
+recipient packaging, and the Standalone fallback; do not improvise
+fields. Project artifacts (`research/`, `define/`, `design/`,
+`deliver/`) live under the working directory; `${CLAUDE_PLUGIN_ROOT}`
+holds only the spec and voice files, is read-only, and is never listed,
+searched, or written. Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
+question/report shape live there, not here.
 
 ## Spec rules
 

@@ -5,23 +5,26 @@ description: The last stage of define — cluster evidence and journey friction 
 
 # opportunity-map
 
-The fourth stage of define, and its handoff: a ranked backlog the
-design stage pulls from. Input: the evidence log (default
+The fourth stage of define, and its handoff: a ranked backlog the design
+stage pulls from. Input: the evidence log (default
 `research/evidence-log.md`; ask once if research lives elsewhere),
 journey files in `define/journeys/`, the charter, and syntheses as
-secondary input — optionally scoped to a journey, a `Q-NNN`, or a
-topic. Scoping covers `Question: unplanned` entries whose slug matches
-and Question-less entries by Source-line matching, per the spec's
-Upstream contract. Read the spec at
+secondary input — optionally scoped to a journey, a `Q-NNN`, or a topic.
+Scoping covers `Question: unplanned` entries whose slug matches and
+Question-less entries by Source-line matching, per the spec's Upstream
+contract. Read the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/define-spec.md` before your first
 write in a session — it owns the block format, file order, ID rules,
-statuses, and confidence inheritance; do not improvise fields. Output:
+statuses, and confidence inheritance; do not improvise fields. Project
+artifacts (`research/`, `define/`, `design/`, `deliver/`) live under the
+working directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice
+files, is read-only, and is never listed, searched, or written. Output:
 `define/opportunities.md` (define root per the spec — ask once if
-definition work lives elsewhere) created with the spec's header —
-`Log: none — assumption-led` when no log exists — or updated.
-Conversation runs per the voice contract at
-`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
-and question/report shape live there, not here.
+definition work lives elsewhere) created with the spec's header — `Log:
+none — assumption-led` when no log exists — or updated. Conversation
+runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
+question/report shape live there, not here.
 
 ## Mapping rules
 

@@ -6,18 +6,20 @@ description: "The materialization stage of design — build a self-contained HTM
 # prototype
 
 The materialization stage of design: the brief's flows made walkable,
-built to be tested, not admired. Input: a brief's `F-NNN` flows and
-the decisions they trace to. No flows means nothing to render — route
-to flow-map; a prototype improvised past the flows is a mockup with
-annotations missing. Output: `design/prototypes/B-NNN/` —
-`index.html` plus `README.md` mapping screen → `F-NNN.S` → `D-NNN`,
-per the spec's prototype format. Read the spec at
+built to be tested, not admired. Input: a brief's `F-NNN` flows and the
+decisions they trace to. No flows means nothing to render — route to
+flow-map; a prototype improvised past the flows is a mockup with
+annotations missing. Output: `design/prototypes/B-NNN/` — `index.html`
+plus `README.md` mapping screen → `F-NNN.S` → `D-NNN`, per the spec's
+prototype format. Read the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/design-spec.md` before your first
 write in a session — it owns the format, the fidelity policy, and the
-annotation mechanism; do not improvise. Conversation runs per the
-voice contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` —
-register, translation, and question/report shape live there, not
-here.
+annotation mechanism; do not improvise. Project artifacts (`research/`,
+`define/`, `design/`, `deliver/`) live under the working directory;
+`${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files, is
+read-only, and is never listed, searched, or written. Conversation runs
+per the voice contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` —
+register, translation, and question/report shape live there, not here.
 
 ## Prototype rules
 

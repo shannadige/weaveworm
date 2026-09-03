@@ -8,13 +8,17 @@ description: Execute a Q-NNN plan whose method is competitive teardown — use w
 Input: a `Q-NNN` block from the plan file (default `research/plans.md`)
 whose Method is competitive teardown, plus the competitors to examine —
 from the plan or the user. Output: one teardown file per competitor, a
-comparison file, then evidence-log entries. If no plan block exists, offer
-the one-line version: confirm the question and axes inline, run the
-teardown, and append the Q-NNN block afterward so the evidence stays
+comparison file, then evidence-log entries. If no plan block exists,
+offer the one-line version: confirm the question and axes inline, run
+the teardown, and append the Q-NNN block afterward so the evidence stays
 citable. Either way the axes come from the question, never from whatever
 the competitor's homepage happens to emphasize. Conversation runs per
 the voice contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` —
 register, translation, and question/report shape live there, not here.
+Project artifacts (`research/`, `define/`, `design/`, `deliver/`) live
+under the working directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec
+and voice files, is read-only, and is never listed, searched, or
+written.
 
 ## Run order
 

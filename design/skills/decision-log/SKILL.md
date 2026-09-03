@@ -5,20 +5,23 @@ description: "The design stage's evidence log — record load-bearing design cho
 
 # decision-log
 
-The design stage's evidence log: the artifact critique argues with,
-and the memory that outlives whoever made the call. Input: a design
-choice — from concept-sprint's pick, a flow or prototype call, a
-critique finding that a stage traces to nothing, a build-review
-finding that the build hit a real limit, an outcome reading that
-matched a `Reverses on:` line, or the user directly. Output: `design/decisions.md` per the spec's decision block
-format, plus the brief Status writes this skill owns (`validated` and
-its decay, below). Read the spec at
+The design stage's evidence log: the artifact critique argues with, and
+the memory that outlives whoever made the call. Input: a design choice —
+from concept-sprint's pick, a flow or prototype call, a critique finding
+that a stage traces to nothing, a build-review finding that the build
+hit a real limit, an outcome reading that matched a `Reverses on:` line,
+or the user directly. Output: `design/decisions.md` per the spec's
+decision block format, plus the brief Status writes this skill owns
+(`validated` and its decay, below). Read the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/design-spec.md` before your first
 write in a session — it owns the block format, the traced-or-contested
-bar, confidence inheritance, and the brief lifecycle; do not
-improvise fields. Conversation runs per the voice contract at
-`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
-and question/report shape live there, not here.
+bar, confidence inheritance, and the brief lifecycle; do not improvise
+fields. Project artifacts (`research/`, `define/`, `design/`,
+`deliver/`) live under the working directory; `${CLAUDE_PLUGIN_ROOT}`
+holds only the spec and voice files, is read-only, and is never listed,
+searched, or written. Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
+question/report shape live there, not here.
 
 ## Logging rules
 

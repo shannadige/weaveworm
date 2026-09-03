@@ -5,23 +5,26 @@ description: "The gate stage of deliver — run a dated review of a build agains
 
 # build-review
 
-The gate stage of deliver: the pass that checks what got built
-against what the design decided, before it ships. Input: a build
-spec, the slice under review, the spec's decisions pin, the
-instruments whose `Fires at:` falls in this slice, and the build
-itself — a commit, a staging URL, a demo, or the user walking you
-through it — plus `design/decisions.md` as it stands now, not as it
-stood at handoff. Output: `deliver/reviews/<date>-S-NNN.md` per the
-spec's build review format, and the writes this skill makes outside
-its own file: the spec's Status to `built (<date>, through SL-NNN)`
-when a clean pass covers the last planned slice, and an instrument's
-Status to `firing` when its lens confirms it. Read the spec at
+The gate stage of deliver: the pass that checks what got built against
+what the design decided, before it ships. Input: a build spec, the slice
+under review, the spec's decisions pin, the instruments whose `Fires
+at:` falls in this slice, and the build itself — a commit, a staging
+URL, a demo, or the user walking you through it — plus
+`design/decisions.md` as it stands now, not as it stood at handoff.
+Output: `deliver/reviews/<date>-S-NNN.md` per the spec's build review
+format, and the writes this skill makes outside its own file: the spec's
+Status to `built (<date>, through SL-NNN)` when a clean pass covers the
+last planned slice, and an instrument's Status to `firing` when its lens
+confirms it. Read the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/deliver-spec.md` before your first
-write in a session — it owns the lens set, the verdict forms, the
-gate, and the routing rule; do not improvise lenses. Conversation
+write in a session — it owns the lens set, the verdict forms, the gate,
+and the routing rule; do not improvise lenses. Project artifacts
+(`research/`, `define/`, `design/`, `deliver/`) live under the working
+directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files,
+is read-only, and is never listed, searched, or written. Conversation
 runs per the voice contract at
-`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
-and question/report shape live there, not here.
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
+question/report shape live there, not here.
 
 ## Review rules
 

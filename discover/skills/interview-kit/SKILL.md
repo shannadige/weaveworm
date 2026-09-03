@@ -5,14 +5,17 @@ description: Turn a Q-NNN research plan into interview instruments — a screene
 
 # interview-kit
 
-Input: a `Q-NNN` block from the plan file (default `research/plans.md`) whose
-Method is interviews or another open-ended conversational method — not
-usability tests or surveys, which have their own kits. Output: the kit file
-below. If no plan block exists for the question, say so and run
-research-plan first — never improvise Participants or the research question
-here; the kit inherits them. Conversation runs per the voice contract
-at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
-and question/report shape live there, not here.
+Input: a `Q-NNN` block from the plan file (default `research/plans.md`)
+whose Method is interviews or another open-ended conversational method —
+not usability tests or surveys, which have their own kits. Output: the
+kit file below. If no plan block exists for the question, say so and run
+research-plan first — never improvise Participants or the research
+question here; the kit inherits them. Conversation runs per the voice
+contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register,
+translation, and question/report shape live there, not here. Project
+artifacts (`research/`, `define/`, `design/`, `deliver/`) live under the
+working directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice
+files, is read-only, and is never listed, searched, or written.
 
 ## Kit file
 

@@ -7,21 +7,22 @@ description: Map one role's experience as a J-NNN journey file — current state
 
 The third stage of define: journeys turn roles plus evidence into the
 before/after picture that opportunity-map prioritizes from. Input: one
-`U-NNN` role from `define/roles.md`, a scope (the slice of experience
-to map — from the user, or proposed from where the role's evidence
-clusters), the evidence log, and the charter if one exists. Output:
-one `define/journeys/J-NNN-<slug>.md` file (define root per the spec —
-ask once if definition work lives elsewhere) per the spec at
+`U-NNN` role from `define/roles.md`, a scope (the slice of experience to
+map — from the user, or proposed from where the role's evidence
+clusters), the evidence log, and the charter if one exists. Output: one
+`define/journeys/J-NNN-<slug>.md` file (define root per the spec — ask
+once if definition work lives elsewhere) per the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/define-spec.md` — read it before
-writing; it owns the file format, stage IDs, and confidence
-inheritance. The define root lives in the user's project, under the
-working directory; the plugin root holds only the spec to read and is
-never written to. If roles.md doesn't exist, route to user-roles first — a
+writing; it owns the file format, stage IDs, and confidence inheritance.
+Project artifacts (`research/`, `define/`, `design/`, `deliver/`) live
+under the working directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec
+and voice files, is read-only, and is never listed, searched, or
+written. If roles.md doesn't exist, route to user-roles first — a
 journey without a role is a flowchart of nobody; the quick path is
-running user-roles for just the one role in question, assumption-led
-if it must be. Conversation runs per the voice contract at
-`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
-and question/report shape live there, not here.
+running user-roles for just the one role in question, assumption-led if
+it must be. Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
+question/report shape live there, not here.
 
 ## Mapping rules
 

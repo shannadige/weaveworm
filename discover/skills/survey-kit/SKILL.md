@@ -8,10 +8,13 @@ description: Turn a Q-NNN research plan whose method is a survey into fielding i
 Input: a `Q-NNN` block from the plan file (default `research/plans.md`)
 whose Method is a survey. Output: the kit file below. If no plan block
 exists, say so and run research-plan first — the kit inherits the
-question and Participants line; never improvise them here.
-Conversation runs per the voice contract at
-`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
-and question/report shape live there, not here.
+question and Participants line; never improvise them here. Conversation
+runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
+question/report shape live there, not here. Project artifacts
+(`research/`, `define/`, `design/`, `deliver/`) live under the working
+directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files,
+is read-only, and is never listed, searched, or written.
 
 One check before drafting: research-plan warns that a survey written
 before any qualitative work measures assumptions precisely. If the

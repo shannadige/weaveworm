@@ -5,23 +5,26 @@ description: "The closing stage of deliver — after a slice ships and its windo
 
 # outcome-review
 
-The closing stage of deliver: where a shipped build stops being a
-build and becomes a reading against the outcome the charter named.
-Input: the brief, its spec, the slices marked `shipped` with their
-dates, the instruments behind the spec's `Moves:` metrics and the
-charter's guardrails, and the numbers — the user's read, an export,
-or a query result (ask once if define, design, or research work
-lives elsewhere). Output: `deliver/outcomes/<date>-B-NNN.md` per the
-spec's outcome review format, written only after the readings are in
+The closing stage of deliver: where a shipped build stops being a build
+and becomes a reading against the outcome the charter named. Input: the
+brief, its spec, the slices marked `shipped` with their dates, the
+instruments behind the spec's `Moves:` metrics and the charter's
+guardrails, and the numbers — the user's read, an export, or a query
+result (ask once if define, design, or research work lives elsewhere).
+Output: `deliver/outcomes/<date>-B-NNN.md` per the spec's outcome review
+format, written only after the readings are in
 `research/evidence-log.md` (a `too early` record excepted), and the
 spec's Status becoming `measured (<date>, → outcomes/<date>-B-NNN.md)`
 when any verdict is other than `too early`. Read the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/deliver-spec.md` before your first
 write in a session — it owns the record format, the window rule, the
 verdict forms, and what a reading may and may not prove; do not
-improvise verdicts. Conversation runs per the voice contract at
-`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
-and question/report shape live there, not here.
+improvise verdicts. Project artifacts (`research/`, `define/`,
+`design/`, `deliver/`) live under the working directory;
+`${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files, is
+read-only, and is never listed, searched, or written. Conversation runs
+per the voice contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` —
+register, translation, and question/report shape live there, not here.
 
 ## Reading rules
 

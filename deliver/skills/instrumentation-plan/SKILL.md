@@ -6,21 +6,24 @@ description: "The measurement stage of deliver — write I-NNN instrument blocks
 # instrumentation-plan
 
 The measurement stage of deliver: where the charter's metrics get an
-event, a place in the flow, and a starting number, so that shipping
-can be read instead of guessed at. Input: the charter's Success
-metrics section (its `OC-NNN` lines, guardrails, and `Instrumented
-by:`), the build spec's `Moves:` line, and the flows its criteria
-cite (ask once if define or design work lives elsewhere). Output:
+event, a place in the flow, and a starting number, so that shipping can
+be read instead of guessed at. Input: the charter's Success metrics
+section (its `OC-NNN` lines, guardrails, and `Instrumented by:`), the
+build spec's `Moves:` line, and the flows its criteria cite (ask once if
+define or design work lives elsewhere). Output:
 `deliver/instrumentation.md` (deliver root per the spec — ask once if
-delivery work lives elsewhere) per the spec's instrument block
-format, created with its header or appended — one file across all
-specs, because metrics are charter-global. Read the spec at
+delivery work lives elsewhere) per the spec's instrument block format,
+created with its header or appended — one file across all specs, because
+metrics are charter-global. Read the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/deliver-spec.md` before your first
 write in a session — it owns the block format, the baseline route,
-statuses, and ID rules; do not improvise fields. Conversation runs
-per the voice contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md`
-— register, translation, and question/report shape live there, not
-here.
+statuses, and ID rules; do not improvise fields. Project artifacts
+(`research/`, `define/`, `design/`, `deliver/`) live under the working
+directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files,
+is read-only, and is never listed, searched, or written. Conversation
+runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
+question/report shape live there, not here.
 
 ## Instrument rules
 

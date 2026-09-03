@@ -5,19 +5,22 @@ description: "The scoping stage of deliver — cut an S-NNN build spec into SL-N
 
 # slice-plan
 
-The scoping stage of deliver: where a spec becomes the increments a
-team can ship, each one a change the user would notice. Input: a
-build spec (any status but `superseded`) and, when there is one, the
-brief it serves — for the `J-NNN.S` shifts and `OC-NNN` metrics a
-slice has to carry on its own. Output: `deliver/slices/S-NNN.md` (deliver root per the
-spec — ask once if delivery work lives elsewhere) per the spec's
-slice block format, created with its header or updated. Read the
-spec at `${CLAUDE_PLUGIN_ROOT}/references/deliver-spec.md` before
-your first write in a session — it owns the block format, legitimacy
-test, coverage rule, statuses, and ID rules; do not improvise fields.
-Conversation runs per the voice contract at
-`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
-and question/report shape live there, not here.
+The scoping stage of deliver: where a spec becomes the increments a team
+can ship, each one a change the user would notice. Input: a build spec
+(any status but `superseded`) and, when there is one, the brief it
+serves — for the `J-NNN.S` shifts and `OC-NNN` metrics a slice has to
+carry on its own. Output: `deliver/slices/S-NNN.md` (deliver root per
+the spec — ask once if delivery work lives elsewhere) per the spec's
+slice block format, created with its header or updated. Read the spec at
+`${CLAUDE_PLUGIN_ROOT}/references/deliver-spec.md` before your first
+write in a session — it owns the block format, legitimacy test, coverage
+rule, statuses, and ID rules; do not improvise fields. Project artifacts
+(`research/`, `define/`, `design/`, `deliver/`) live under the working
+directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files,
+is read-only, and is never listed, searched, or written. Conversation
+runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
+question/report shape live there, not here.
 
 ## Slicing rules
 

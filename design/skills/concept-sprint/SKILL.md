@@ -5,24 +5,26 @@ description: "The divergence stage of design — generate 3+ distinct C-NNN conc
 
 # concept-sprint
 
-The divergence stage of design: the one place directions multiply
-before everything downstream converges. Input: a `B-NNN` brief and
-everything it cites — the brief is the assumption boundary, so
-concepts cite it and never reach past it; if no brief exists, route
-to design-brief first (its Standalone fallback covers missing define
-artifacts — a sprint without a brief has nothing to trade against).
-Output: `design/concepts/B-NNN.md` per the spec's concept block
-format (`C-NNN` numbering is stage-global: the next ID scans every
-file under `design/concepts/`, not just this brief's sprint), and at
-the pick, the choosing `D-NNN` in `design/decisions.md` per the
-decision block format, with the brief's Status flipped to
-`in-design (→ D-NNN)` in the same pass. Read the spec at
-`${CLAUDE_PLUGIN_ROOT}/references/design-spec.md` before your first
-write in a session — it owns the block formats, ID rules, and the
-post-pick iteration discipline; do not improvise fields. Conversation
-runs per the voice contract at
-`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation,
-and question/report shape live there, not here.
+The divergence stage of design: the one place directions multiply before
+everything downstream converges. Input: a `B-NNN` brief and everything
+it cites — the brief is the assumption boundary, so concepts cite it and
+never reach past it; if no brief exists, route to design-brief first
+(its Standalone fallback covers missing define artifacts — a sprint
+without a brief has nothing to trade against). Output:
+`design/concepts/B-NNN.md` per the spec's concept block format (`C-NNN`
+numbering is stage-global: the next ID scans every file under
+`design/concepts/`, not just this brief's sprint), and at the pick, the
+choosing `D-NNN` in `design/decisions.md` per the decision block format,
+with the brief's Status flipped to `in-design (→ D-NNN)` in the same
+pass. Read the spec at `${CLAUDE_PLUGIN_ROOT}/references/design-spec.md`
+before your first write in a session — it owns the block formats, ID
+rules, and the post-pick iteration discipline; do not improvise fields.
+Project artifacts (`research/`, `define/`, `design/`, `deliver/`) live
+under the working directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec
+and voice files, is read-only, and is never listed, searched, or
+written. Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
+question/report shape live there, not here.
 
 ## Sprint rules
 
