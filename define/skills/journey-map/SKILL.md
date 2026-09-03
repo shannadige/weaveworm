@@ -14,7 +14,9 @@ one `define/journeys/J-NNN-<slug>.md` file (define root per the spec —
 ask once if definition work lives elsewhere) per the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/define-spec.md` — read it before
 writing; it owns the file format, stage IDs, and confidence
-inheritance. If roles.md doesn't exist, route to user-roles first — a
+inheritance. The define root lives in the user's project, under the
+working directory; the plugin root holds only the spec to read and is
+never written to. If roles.md doesn't exist, route to user-roles first — a
 journey without a role is a flowchart of nobody; the quick path is
 running user-roles for just the one role in question, assumption-led
 if it must be. Conversation runs per the voice contract at
@@ -62,10 +64,17 @@ and question/report shape live there, not here.
 
 ## After the journey
 
-Report per the voice contract: the stage list as one line each
-(number, name, friction count), the shifts as one line each with their
-OC-IDs, and the state line ("6 stages, 4 with friction, 3 shifts, 2
-unchanged, State: current+future"). The decision to force:
+Report per the voice contract, in this shape and no other: the file
+path; one line per stage (number, name, friction count); one line per
+shift (stage, what changes for the user, the OC-ID with the outcome's
+name); then one state line ("6 stages, 4 with friction, 3 shifts, 2
+unchanged, State: current+future"). If the user offered a solution,
+the report says in one plain clause where it went and why: it is held
+for opportunity-map's `Candidate:` line, the shift was written as the
+experience it would produce, and journeys have to outlive any one
+mechanism, so solutions die in journey files. Saying only that
+mechanisms don't belong in shifts reads as a refusal, and a parked
+idea the user can't find reads as ignored. The decision to force:
 name the moment that matters most — the stage whose friction is
 best-evidenced or highest-stakes — with its one-line why, and offer
 opportunity-map scoped to this journey. If friction clusters where

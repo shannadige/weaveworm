@@ -45,3 +45,19 @@ only at the root.
 ```
 
 Then pick plugins from the `/plugin` menu.
+
+## Testing
+
+Two tiers, both cheap. `scripts/lint-skills.sh` runs no model: it checks
+every SKILL.md for frontmatter, a voice-contract citation, resolving
+`${CLAUDE_PLUGIN_ROOT}` paths, banned words, and that each plugin's copy
+of voice.md matches the root. `scripts/smoke.sh` runs the lint, then one
+headless case per plugin (the mid-chain skill that reads upstream
+artifacts: `synthesis`, `journey-map`, `flow-map`, `build-spec`) with
+the plugin loaded and deterministic graders only, and prints one line
+per case. Cases live at `<plugin>/evals/<case>/` in the `claude plugin
+eval` layout, with shared fixtures under `<plugin>/evals/fixtures/`.
+
+The runner behind it, `scripts/eval-pilot.py`, also does the full
+ablation (no plugin, spec in the system prompt, plugin loaded) with LLM
+judges. That is for a one-off benchmark claim, not for checking edits.

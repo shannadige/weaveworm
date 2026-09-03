@@ -1,0 +1,3 @@
+# eval run output (traces, created files, judge verdicts)
+*/evals/results/
+__pycache__/

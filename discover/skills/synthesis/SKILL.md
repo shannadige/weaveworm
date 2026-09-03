@@ -64,6 +64,11 @@ and question/report shape live there, not here.
   If one side is stronger, say why (source independence, confidence,
   recency) and what would settle it. If the log's open-contradiction
   count exceeds what you surfaced, say so.
+- **Retracted entries are never load-bearing.** A struck-through entry
+  carries no theme, no side of a contradiction, and no recommendation.
+  It may be named in the gaps only to say what its retraction left
+  uncovered ("the one entry that asked was retracted, so there is no
+  valid evidence yet on what members want instead").
 - **Name the gaps.** What the question needed that no entry covers, and
   which populations the evidence structurally missed (screener limits,
   proxy-source skew). Clusters of `Question: unplanned` entries are named
@@ -90,14 +95,15 @@ Scope: Q-NNN, Q-NNN — E-entries as of <date> (log: <n> entries)
 
 ## Contradictions
 
-### <claim A> (E-004) vs <claim B> (E-009)
+### <claim A> (E-011) vs <claim B> (E-014)
 - **Stronger:** <side, and why — independence, confidence, recency>
 - **Would settle it:** <the study or entry that would>
 
 ## Gaps
 
 - <what the question needed that no entry covers, and who the evidence
-  structurally missed>
+  structurally missed; a retracted entry appears here only as the reason
+  for a hole>
 
 ## Recommendations
 
@@ -111,6 +117,8 @@ the count and roll the rest into one line rather than listing them.
 
 ## What this skill refuses
 
+- Building on a retracted entry: it never heads a theme, sits on a
+  contradiction, or backs a recommendation.
 - Inventing or upgrading claims: nothing enters a theme that isn't in
   the log, and no confidence rises during synthesis. If synthesis makes
   the user realize an entry is missing or wrong, route through

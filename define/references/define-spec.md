@@ -292,8 +292,10 @@ Then two sections:
 - **Current state** — numbered stages, each headed
   `### J-003.1 <stage name>` with `- **Doing:**` (observed behavior,
   E-cited) and `- **Friction:**` (what breaks down, E-cited or
-  `(assumption)`). At most 8 stages; finer grain belongs in a
-  narrower-scoped journey.
+  `(assumption)`). A stage where nothing breaks writes
+  `none observed — E-NNN`, citing the entries whose sessions covered
+  it, or `none observed (assumption)` when none did. At most 8
+  stages; finer grain belongs in a narrower-scoped journey.
 - **Future state** — per-stage `Shifts`: what is different *for the
   user*, phrased as experience, never mechanism — "the user connects a
   data source without leaving the flow (OC-001)" describes an
