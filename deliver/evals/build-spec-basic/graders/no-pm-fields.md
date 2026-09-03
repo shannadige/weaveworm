@@ -3,7 +3,7 @@ type: regex
 target:
   source: file
   path: deliver/specs/S-001-*.md
-pattern: "\\b(sprint|ticket|story points?|estimate[sd]?|Jira|assignee|owner:)\\b"
+pattern: "\\b(sprints?|tickets?|story points?|effort estimates?|estimated (effort|hours|days)|Jira|assignee|owner:)\\b"
 flags: i
 match: not_contains
 ---

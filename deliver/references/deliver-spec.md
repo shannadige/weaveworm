@@ -317,7 +317,8 @@ Criteria rules:
   (D-012)`); an edge heading names its kind and anchor (`error at
   F-002.3 (D-015)`). An edge with no decision of its own cites its
   anchor stage's decision; an open edge the flow left unanchored
-  heads by kind alone (`interrupted — open`). A stage whose flow line
+  heads by kind and stage with no decision cited
+  (`interrupted at F-002.2 — open`). A stage whose flow line
   reads `— (needs one)` is not spec-able: route to design's
   decision-log first, since a criterion with no decision behind it
   is taste the builder will encode. On an assumption-led spec the

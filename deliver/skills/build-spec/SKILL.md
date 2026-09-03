@@ -65,7 +65,7 @@ and question/report shape live there, not here.
   agent to turn into a test and for a human to confirm by hand; the
   spec writes no test code. An edge with no decision of its own
   cites its anchor stage's; an open edge the flow left unanchored
-  heads by kind alone.
+  heads by kind and stage with no decision cited.
 - **A stage with no decision behind it stops the write.** A flow line
   reading `— (needs one)` means the design hasn't decided; a
   criterion written over it encodes taste as a requirement. Route to
