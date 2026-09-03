@@ -198,11 +198,12 @@ Charter field rules:
   `baseline unknown (unmeasured)` — or `baseline unknown (→ Q-014)`
   only once that plan block actually exists; a bare `(→ Q-NNN)`
   placeholder is never written. With no baseline the target goes
-  directional and an unknown window is written
-  `within <window: set with the baseline>`, e.g.
+  directional and the unknown window is written in the fixed phrase
+  `number and window set with the baseline` (downstream skills look
+  for that phrase; never an angle-bracket placeholder), e.g.
   `- **OC-001:** 30-day setup completion — baseline unknown (unmeasured)
-  → directional: up; number set when the baseline lands, within
-  <window: set with the baseline> — target waits on measurement`. A
+  → directional: up; number and window set with the baseline — target
+  waits on measurement`. A
   backfilled baseline is written `<value> (measured YYYY-MM-DD)`. The
   target's one-line why is a benchmark, a cited E-ID, or `(ambition)`.
   **A result is the charter's answer to its own target**, appended to

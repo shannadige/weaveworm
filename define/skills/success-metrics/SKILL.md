@@ -56,8 +56,9 @@ unknown-baseline forms, and list everything unconfirmed at the end.
   row); cite `(→ Q-NNN)` only once that plan block actually exists.
   The target then goes directional per the spec's worked example — a
   precise target over an unknown baseline is a guess wearing precision
-  — and an unknown window is written
-  `within <window: set with the baseline>`. On an assumption-led
+  — and the unknown window is the spec's fixed phrase, `number and
+  window set with the baseline`, never an angle-bracket placeholder
+  that reads as an unfilled template. On an assumption-led
   charter this is the expected shape: unknowns stay visible, never
   replaced with plausible numbers so the section looks finished. When
   a measurement later lands, the backfill — one of the two edits
