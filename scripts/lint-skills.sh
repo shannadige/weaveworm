@@ -5,6 +5,7 @@
 #   the shared plugin-root sentence is present (plugin root never listed, searched, or written)
 #   every ${CLAUDE_PLUGIN_ROOT}/... path resolves inside that plugin
 #   stage copies of voice.md match the canonical references/voice.md
+#   each plugin's hooks/ (plugin-root guard) matches the canonical hooks/
 #   no banned words from the voice contract's Register section
 #   plugin.json exists and the marketplace lists the plugin
 set -uo pipefail
@@ -22,6 +23,11 @@ for plugin in discover define design deliver; do
   if ! cmp -s references/voice.md "$plugin/references/voice.md"; then
     err "$plugin/references/voice.md differs from references/voice.md (run scripts/sync-voice.sh)"
   fi
+  for h in hooks.json guard-plugin-root.py; do
+    if ! cmp -s "hooks/$h" "$plugin/hooks/$h"; then
+      err "$plugin/hooks/$h differs from hooks/$h (run scripts/sync-voice.sh)"
+    fi
+  done
   for f in "$plugin"/skills/*/SKILL.md; do
     [ "$(head -1 "$f")" = "---" ] || err "$f: no frontmatter"
     grep -q '^name:' "$f" || err "$f: frontmatter lacks name"

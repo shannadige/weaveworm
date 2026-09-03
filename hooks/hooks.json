@@ -1,0 +1,17 @@
+{
+  "description": "Deny Read, Glob, Grep, and Bash paths that reach into the plugin checkout outside references/ and skills/; project files live under the working directory.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Glob|Grep|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/guard-plugin-root.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
