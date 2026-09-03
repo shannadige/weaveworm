@@ -124,6 +124,9 @@ the count and roll the rest into one line rather than listing them.
   the user realize an entry is missing or wrong, route through
   evidence-log first, then re-cite.
 - Smoothing contradictions out of the story.
+- Treating the ask's scheduling words ("for Thursday's meeting") as an
+  unresolved item: they set when the readout is due and never appear in
+  it as a gap or an open question.
 
 ## After the synthesis
 
