@@ -79,10 +79,20 @@ The evidence log cites guides by version (`Source: interviews 2026-08
 - No leading or presuming questions — same discipline research-plan applies
   to the research question itself. "How do you feel about the new nav?"
   not "What do you love about the new nav?"
+- In a validation study, the pattern stays out of the question. When the
+  plan is checking whether one participant's finding repeats (a manager's
+  weekly sweep), no question or probe names the cadence or mechanism
+  under test ("something you do on a set schedule, like once a week?");
+  a manager who hears "once a week" agrees to it, and the study confirms
+  its own prompt. Ask for the last time it came up and how often it
+  does, and let the pattern turn up on its own or fail to.
 - Every core question gets 1–2 probes underneath ("What happened next?",
   "What did you do instead?") so silence has a follow-up ready.
 - Time-box each section; the whole guide must fit the session length with
-  slack. Cut questions, not the wrap.
+  slack, meaning the section minutes add up to less than the session
+  (about five of 45 left unallocated). Boxes that sum to exactly the
+  session length are a guide with no slack, and real sessions run long.
+  Cut a core question, not the buffer and not the wrap.
 
 ## Consent
 
