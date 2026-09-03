@@ -1,6 +1,6 @@
 ---
 name: build-review
-description: "The gate stage of deliver — run a dated review of a build against its S-NNN spec through fixed lenses: criteria met, deviated, or missing; edges handled; standing decisions silently reversed; instruments firing; prototype scaffolding shipped as real. Verdicts per lens with cited IDs, never a score; deviations routed to the owning skill, never fixed here. Use when a designer says \"review the build\", \"does this match the design\", \"did they build what we decided\", \"check the staging build\", or a slice is about to ship. Do NOT use for code review, critiquing the design itself (use design's design-critique), or fixing what it finds."
+description: "The gate stage of deliver — run a dated review of a build against its S-NNN spec through fixed lenses: criteria met, deviated, missing, or unverified; edges handled; standing decisions silently reversed; instruments firing; prototype scaffolding shipped as real. Verdicts per lens with cited IDs, never a score; deviations routed to the owning skill, never fixed here. Use when a designer says \"review the build\", \"does this match the design\", \"did they build what we decided\", \"check the staging build\", or a slice is about to ship. Do NOT use for code review, critiquing the design itself (use design's design-critique), or fixing what it finds."
 ---
 
 # build-review
@@ -36,7 +36,10 @@ translation, and question/report shape live there, not here.
   rule: reason-or-mistake is asked only when the Decisions lens
   finds a contradiction, because the question has no meaning until
   the contradiction is in front of the user. Nothing else; the input
-  is the build and the artifacts as they stand. A pass needs a slice
+  is the build and the artifacts as they stand. A build described
+  rather than shown (an account in chat, a written report) is still
+  input: `Reviewed:` names the secondhand account, and the pass runs
+  on what it says and no further. A pass needs a slice
   file — with none on record, slice-plan comes first — and may run
   on a slice already `shipped`, where the gate lenses go on record
   and gate nothing and the Instruments lens is the point.
@@ -49,20 +52,48 @@ translation, and question/report shape live there, not here.
   the next action. On an assumption-led spec there is no pin: the
   header reads `none — assumption-led`, the Decisions lens judges
   the `(assumption)` Must not change lines and quotes the line in
-  place of an ID, and the Scaffolding census names the debt.
+  place of an ID, and the Scaffolding census names the debt. Check
+  the spec's Status in the same breath: one still `open` was never
+  handed off, yet a build exists. The `Spec:` line says so, the
+  lenses run and gate as usual, the `built` write is not made over
+  `open` (Status moves forward in order), and the close names
+  build-spec recording the handoff on the user's word ahead of any
+  per-finding call; the next pass, counting this one, makes the
+  write.
 - **Fixed lenses, fixed order, verdict per lens.** Criteria, Edges,
   Decisions, Instruments, Scaffolding — all five run every pass, in
   that order, each closing `clean` or with findings citing `S-NNN.N`,
   `F-NNN.S`, `D-NNN`, or `I-NNN`. Every criterion in the slice, edge
   criteria included, is listed under Criteria as `met`, `deviated —
-  <how>`, or `missing`; an unlisted criterion is an unreviewed one.
+  <how>`, `missing`, or `unverified — <what the input lacked>`; an
+  unlisted criterion is an unreviewed one.
   Edges is the open-edge check only — for each open criterion,
   `clear` when nothing was built over it or `filled — <what>` when
   something was, since a filled open edge is a decision the builder
   made alone. Instruments reads `none specified — OC-NNN
   unmeasurable until instrumentation-plan runs` when the spec's
-  metric has no block, never `clean`. Never a composite score: a
-  number is how a review stops being argued with.
+  metric has no block, never `clean`; an instrument the input says
+  nothing about is `silent`, with what the input lacked on the
+  line, since only a confirmation is `firing`. Never a composite
+  score: a number is how a review stops being argued with. Five
+  sections and no more: the gate's outcome is read off Criteria and
+  Decisions and reported in chat, never written as a sixth heading.
+- **What the input can't show is unverified, never guessed.** A
+  criterion the account is silent on is `unverified — <what the
+  input lacked>`, and it holds the gate like `missing`; `deviated`
+  claims the build was seen doing something else, and silence is
+  not that. When the build is described rather than shown, every
+  criterion the account does not cover is `unverified`, and a pass
+  with every criterion `unverified` is still written: the file is
+  the record that nothing was verified, and the report says what
+  would verify it (a walkthrough, screenshots, the builder in the
+  room). A decision the input cannot settle either way, with no
+  contradiction found, is `cannot tell — <why>` under Decisions; it
+  holds the slice like a contradiction, and it is a different thing
+  from `undetermined`, which is only ever the user's answer once a
+  contradiction is on the table. Say it in product terms ("the
+  account gives a 24/48/72 cadence but not whether the manager set
+  it, so D-001 can't clear from here").
 - **A review is a dated record, never edited.** The next pass is a
   new file, suffixed `-2`, `-3` on the same day; the sequence is the
   build's audit trail. Fixes land in the build, and the next pass
@@ -113,6 +144,9 @@ Report per the voice contract: the file path, one line per lens with
 its verdict, the headline finding if there is one, and the state
 line ("review 2026-09-12, S-001 / SL-001 (connect a first source):
 criteria 9 met, 1 deviated; decisions clean; 1 instrument silent").
+Unverified criteria and cannot-tell decisions are counted there too
+("criteria 1 deviated, 4 unverified; decisions 1 cannot tell"), with
+one clause on what would verify them.
 The decision this artifact exists for: ship, fix first, or log the
 deviation as a decision — named per finding, in order of what holds
 the slice. When the header says the spec is stale, the fresh spec is
@@ -132,3 +166,8 @@ the window for reading the outcome starts from that date.
 - Reviewing code quality, architecture, or performance — this is
   fidelity to the design, and code review is someone else's tool.
 - Dropping a standing finding because it was named last pass.
+- A sixth section — the gate's outcome is read off Criteria and
+  Decisions and reported in chat; check the headings against the
+  five lenses before writing, and cut anything past Scaffolding.
+- A verdict word the spec does not list, or `deviated` on a
+  criterion the input never showed — silence is `unverified`.

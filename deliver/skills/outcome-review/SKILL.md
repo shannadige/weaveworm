@@ -46,6 +46,12 @@ question/report shape live there, not here.
   `E-NNN`; a review whose `Evidence:` line is neither entries nor
   the spec's `too early` form is not written. Say plainly when the
   log write is the step in the way.
+- **The header keeps the spec's forms.** `Shipped:` is slice IDs
+  with slice-plan's dates; `Window:` is the length, the slice it
+  counts from, and the end date, or the spec's no-moving-slice form.
+  Neither line explains itself: what the record can't say in those
+  forms is said in chat, and a header with nothing to put on
+  `Shipped:` is the no-shipped-slice branch, which writes nothing.
 - **The window is the charter's**, counted from the shipped date of
   the last slice that moves the metric; when the charter's line is
   directional with no window, use the one agreed at intake and record
@@ -53,17 +59,24 @@ question/report shape live there, not here.
   (window ends <date>)`, written as a record when the user asks for
   it, with what it would take to read sooner; its Decision reads `too
   early — read again after <date>` and the spec's Status is left
-  alone. No slice at `shipped` on record means no window to count:
-  route to slice-plan, which needs its clean build-review, before any
-  reading — a shipped date said in chat is not the record. When no
-  shipped slice moves the metric, the verdict is `too early (no
-  moving slice shipped)`. A spec whose `Moves:` reads `none named
+  alone. No slice at `shipped` on record means no window to count
+  and no record to write: nothing is written, the readings the user
+  brought may still be logged through evidence-log (marked there as
+  readings with no shipped slice behind them), and the reply routes
+  to build-review first, then slice-plan on its clean pass — a
+  shipped date said in chat is not the record. When slices did ship
+  and none moves the metric (every one carries `none alone`), the
+  verdict is `too early (no moving slice shipped)`; that form is
+  reserved for shipped slices and never stands in for a missing
+  record. A spec whose `Moves:` reads `none named
   (assumption-led)` has no metric to read: name success-metrics,
   then build-spec's `Moves:` backfill, then instrumentation-plan,
   and write nothing.
 - **Verdict per metric and per guardrail, baseline beside observed,
   always.** `moved`, `flat`, `regressed`, `too early`, or `first
-  reading <value>`; guardrails `held`, `breached`, or `unmeasured`.
+  reading <value>`; guardrails `held`, `breached`, `unmeasured`, or
+  `too early` (the reading is in but the window has not ended;
+  `unmeasured` means no instrument or reading behind it).
   A `moved` with no baseline is refused — the honest verdict is
   `first reading <value>`, which becomes the baseline: an
   instrumentation-plan re-run records it on the block, the charter
@@ -111,7 +124,11 @@ artifact exists for: keep, iterate, or revert — name your read and
 the one-line why. Then the single next action: the success-metrics
 run that writes the result on the charter, with the opportunity-map
 close following it; after a `first reading`, the instrumentation-plan
-re-run that records the baseline comes first.
+re-run that records the baseline comes first. On the no-shipped-slice
+branch there is no file to report: say what was logged and that the
+record waits on a shipped slice, and close on build-review as the
+first step, with slice-plan recording the ship date after its clean
+pass.
 
 ## What this skill refuses
 
@@ -123,3 +140,6 @@ re-run that records the baseline comes first.
 - Editing the charter, the decision log, or the opportunity backlog —
   the two define writes are named, never made.
 - Declaring the outcome from the build merely shipping.
+- Writing a record with no slice at `shipped` on record — every
+  `too early` form describes a shipped slice's window, never a
+  missing one.
