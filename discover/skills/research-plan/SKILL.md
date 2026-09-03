@@ -42,10 +42,10 @@ never listed, searched, or written.
   one session, send, or capture has happened. Before that, "not yet
   fielded" is what Status and Timeline already say; scheduled recruiting
   is still a plan, and a placeholder Fielded line would leave a second
-  one when the work runs. When the research ran before any plan
-  existed (notes in `research/raw/`, no block), write the block from
-  what happened and add its Fielded line in the same pass, so the
-  evidence log has a question to cite. Status transitions:
+  one when the work runs. When the research ran before any plan existed (notes in
+  `research/raw/`, no block), write the block from what happened and
+  add its Fielded line in the same pass, so the evidence log has a
+  question to cite. Status transitions:
   - `open` → `answered (→ E-014, E-015)` once the entries named in "Done
     when" exist in the evidence log — cite them by ID. Substantively
     answered but formally short of "Done when" (or the reverse) →
@@ -148,3 +148,12 @@ land somewhere citable, not in a slide deck.
 
 End by telling the user the concrete first step of their own plan — e.g.
 "Draft the screener and message 10 candidates today."
+
+<!-- voice:report-shape v1 -->
+Before you send, the reply has this shape: one bold phrase at most; no
+em dash inside a sentence (a comma, a parenthesis, or a second sentence
+instead); every ID travels with its name, and a status or marker is
+said in words rather than quoted as syntax; the state line this skill's
+report names is the second-to-last line; the last line is the single
+first step, stated as a sentence, never a question and never a menu.
+<!-- /voice:report-shape -->
