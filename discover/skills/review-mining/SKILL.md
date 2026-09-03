@@ -60,21 +60,35 @@ fabrication.
   add no new theme, and say so; that's saturation, not laziness.
 - **Count, don't vibe.** Every theme states the arithmetic with the item
   numbers inline: "11 of 60 reviews scanned mention export friction
-  [#3, #7, #12, …]" — never "many users complain about export." An item
-  supporting two themes is counted in both with the overlap said out
-  loud; theme counts that sum past n with no overlap note read as
-  fabrication. Repeat voices shrink the denominator — "7 of 12 posts
-  (4 distinct users)" — state both numbers. Record what was scanned
-  (source, date range, n, and the sort/filter applied — most recent,
-  most helpful, 1-star only) in **Sources** so the denominator is
-  auditable and its bias visible.
+  [#3, #7, #12, …]" — never "many users complain about export." Tally
+  before you write: walk the item list once and count n, the items per
+  product, and any rating or venue split you will cite, then check that
+  the per-product counts sum to n. Do this before **Sources** is
+  written; a per-product count that is off by one propagates into every
+  theme base, the plan block, and the log. Each theme's cited items are
+  items of the product the theme names, and each says what the theme's
+  claim says; an item arguing the other way ("just send me a second
+  text first" under a too-many-reminders theme) belongs to another
+  theme or to **Outliers**. An item supporting two themes is counted in
+  both with the overlap said out loud; theme counts that sum past n with
+  no overlap note read as fabrication. Repeat voices shrink the
+  denominator — "7 of 12 posts (4 distinct users)" — state both numbers.
+  Record what was scanned (source, date range, n, and the sort/filter
+  applied — most recent, most helpful, 1-star only) in **Sources** so
+  the denominator is auditable and its bias visible.
 - **Capped output.** At most 5 themes, ranked by count, the remainder
   rolled into one "also mentioned" line; 1–2 quotes per theme, not a
   quote wall.
 - **Verbatim quotes with URLs and dates.** Paraphrase loses the user's
-  actual language — the point of proxy research. Anonymize handles to
-  M1, M2… as you quote — M for mined voices; per the spec, P-numbers are
-  firsthand participants and R-numbers survey respondents.
+  actual language — the point of proxy research. When the export carries
+  no URLs, cite by item number and say so in **Sources**; never invent a
+  link. Anonymize handles to M1, M2… as you quote — M for mined voices;
+  per the spec, P-numbers are firsthand participants and R-numbers
+  survey respondents. Read the log's highest existing M before numbering
+  and continue from it. If the log already holds an M that is not a
+  mined voice (a firsthand manager filed as M1, say), say so in chat in
+  one clause and keep numbering from the highest anyway; relabelling is
+  the log's job, not the miner's.
 - **Name the skew.** Reviewers are self-selected extremes and complaints
   dominate; communities over-represent power users. **Coverage** must say
   who these sources structurally cannot speak for (e.g. churned users who
@@ -101,10 +115,16 @@ interviews — see research-plan").
 Log themes in the evidence log — one falsifiable claim per entry, Source
 citing the mining file (e.g. `Source: review-mining Q-004, mined
 2026-08-05, 11/60 reviews`), `Question: Q-NNN` so synthesis can scope
-it. Then check the plan's "Done when": if the mining was the last
-evidence it named, remind the user to mark the question answered in
-research-plan. Close by telling the user the one thing the mining could
-not answer, so the next Q-NNN block is ready if they want it.
+it. A theme that bundles two causes becomes two entries sharing a
+Source line; a compound entry can't be cited or contradicted.
+`Contradicts:` holds entry IDs only, and only where the two headings
+cannot both be true. Two entries that want the same thing for different
+reasons agree; tension short of contradiction goes in the Confidence
+line as a sentence, not in Contradicts. Then check the plan's "Done
+when": if the mining was the last evidence it named, remind the user to
+mark the question answered in research-plan. Close by telling the user
+the one thing the mining could not answer, so the next Q-NNN block is
+ready if they want it.
 
 Report per the voice contract: the theme one-liners with their counts,
 the new E-NNN headings, and one state line ("3 sources, 4 themes, 6

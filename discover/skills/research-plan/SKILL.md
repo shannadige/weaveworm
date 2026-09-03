@@ -51,6 +51,12 @@ never listed, searched, or written.
     answered but formally short of "Done when" (or the reverse) →
     `answered (→ …) — caveat: <one line>`, never a stretched claim and
     never an edited "Done when".
+  - `answered` needs an observation from outside the session: at least
+    one of the cited entries must have a Source that resolves to a file,
+    a URL, or a participant. A "Done when" written in the same pass as
+    the fielding cannot be met by that pass alone, however carefully its
+    claims are hedged; recall is not evidence. Until something was
+    opened, read, or heard, the block stays `open` or goes `deferred`.
   - `open` → `deferred — <reason>` for a question planned but knowingly
     not schedulable yet.
   - `open` → `dropped — <reason>` if the question is abandoned. Never delete
