@@ -391,7 +391,9 @@ the tail as `deferred — below the line`.
   composite score after pushback.
 - Statuses: `open` → `pursued (<date>)` when the team commits it to
   the design stage, `deferred — <reason>`, or `dropped — <reason>` —
-  all written by opportunity-map, including
+  all written by opportunity-map (design-brief may also write
+  `pursued (<date>)`, in this exact form, on the user's say-so at a
+  pull, per design-spec's Upstream contract), including
   `dropped — contradicted by E-NNN (→ O-NNN)` when new evidence
   contradicts the statement itself and the corrected statement becomes
   a new block. `pursued` closes as `delivered (<date>) — OC-001 moved

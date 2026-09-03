@@ -96,7 +96,9 @@ question/report shape live there, not here.
 - **Statuses close the loop.** `pursued (<date>)` when the team
   commits an opportunity to design — pursued blocks move to the top
   of the file under the spec's `<!-- pursued -->` marker; they're the
-  backlog's output, not its dead weight. `deferred`/`dropped` on
+  backlog's output, not its dead weight. Design-brief may write that
+  same status, in the same form, when the user commits at the pull;
+  read it as this skill's own write. `deferred`/`dropped` on
   instruction park below the `<!-- parked -->` marker, and
   `dropped — contradicted by E-NNN (→ O-NNN)` fires without
   instruction when new evidence contradicts the statement itself —

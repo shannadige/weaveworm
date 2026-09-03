@@ -29,13 +29,18 @@ question/report shape live there, not here.
 
 - **Only `pursued` blocks are pull-able.** An open opportunity isn't
   designable — the team hasn't chosen it, and a brief would launder
-  that. Redirect once: pursuing is a one-line status edit in
-  opportunity-map, and that's the honest route. If the user insists,
-  proceed on explicit override per the spec — `Pulls: O-NNN — open,
-  designed on user override (assumption)`, opportunities.md untouched
-  (design never writes upstream) — and say that critique will name
-  the unpursued pull in every pass until opportunity-map records the
-  call.
+  that. Ask once, in the intake pass: is the team committing to this
+  one? On a yes, record the pursue call yourself per the spec's
+  Upstream contract — the block's Status becomes `pursued (<date>)`
+  and the block moves under the `<!-- pursued -->` marker, the exact
+  write opportunity-map would make, from this spec alone and never
+  from the define skill file — then say in chat that the backlog was
+  edited on the user's say-so, and cite `Pulls: O-NNN (pursued
+  <date>)`. When the user wants the backlog left alone, proceed on
+  explicit override per the spec — `Pulls: O-NNN — open, designed on
+  user override (assumption)`, opportunities.md untouched — and say
+  that critique will name the unpursued pull in every pass until
+  someone records the call.
 - **One brief per pursued opportunity, or one per coherent cluster.**
   Pursued blocks sharing one problem and one journey moment can share
   a brief; propose the cluster and let the user confirm it, never
@@ -114,13 +119,13 @@ artifact exists for: is this brief's scope one concept sprint or two,
 and what's the first question that sprint has to answer — name your
 read and the one-line why. If the brief is assumption-led or
 override-pulled, say which single step (a research-plan question,
-recording the pursue call in opportunity-map) would firm it up before
-concepts start.
+recording the pursue call) would firm it up before concepts start.
 
 ## What this skill refuses
 
-- Designing from an open opportunity without the explicit override
-  path, or editing opportunities.md to make a pull look clean.
+- Designing from an open opportunity without either the user's
+  pursue call recorded per the spec or the explicit override path,
+  and any edit to opportunities.md other than that one pursue write.
 - Inventing constraints, or restating upstream prose the brief should
   cite.
 - A solution in the heading — it's held as a concept-sprint candidate

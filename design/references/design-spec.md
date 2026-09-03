@@ -112,19 +112,30 @@ discover, not polish.
 
 ## Upstream contract
 
-Design reads, and never writes:
+Design reads, and writes upstream exactly once — the pursue call
+below, on the user's word:
 
 - `define/opportunities.md` — **only `pursued` blocks are pull-able.**
-  An open opportunity is not designable; the honest route is back to
-  opportunity-map, where pursuing is a one-line status edit. If the
-  user insists on designing an open block, design-brief redirects
-  once, then proceeds on explicit override: the brief's `Pulls:` line
-  reads `O-NNN — open, designed on user override (assumption)` — the
-  override is the user's explicit call, so `(unconfirmed)`, define's
-  marker for calls made without them, would misfile it; what's
-  assumed is that the pursue call will be recorded. Design never
-  edits opportunities.md itself, and critique names the
-  unpursued pull in every pass until opportunity-map records the call.
+  An open opportunity is not designable; pursuing it is the team's
+  call, and a brief must not launder it. When the user pulls an open
+  block and says, in so many words, that the team is committing to
+  it, design-brief records that call itself rather than sending them
+  to opportunity-map: it sets the block's `- **Status:**` line to
+  `pursued (<date>)` and moves the block to the top of the file under
+  the `<!-- pursued -->` marker (creating the marker after the file's
+  `Log:` line if absent) — the exact write opportunity-map makes, per
+  define-spec's status rules, and the one write design makes upstream.
+  The brief's `Pulls:` line then reads `O-NNN (pursued <date>)` and
+  the chat report says the backlog was edited on the user's say-so.
+  This write depends on this spec alone, never on the define plugin
+  being installed. When the user wants the backlog left alone (an
+  exploratory brief, a call that isn't theirs to make), the brief
+  proceeds on explicit override instead: `Pulls:` reads `O-NNN —
+  open, designed on user override (assumption)` — the override is the
+  user's explicit call, so `(unconfirmed)`, define's marker for calls
+  made without them, would misfile it; what's assumed is that the
+  pursue call will be recorded — and critique names the unpursued
+  pull in every pass until someone records it.
 - `define/charter.md` — Constraints are what design may not trade
   away; Non-goals are a write-time gate on brief and concept scope;
   `OC-NNN` metrics are what prototypes and tests get measured against.
