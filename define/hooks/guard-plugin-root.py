@@ -1,14 +1,24 @@
 #!/usr/bin/env python3
-"""PreToolUse guard shipped with every weaveworm plugin.
+"""Plugin-root guard shipped with every weaveworm plugin.
 
 Project artifacts live under the working directory. The plugin checkout
 (this plugin's folder and the folder above it, which also has stage-named
-subfolders) holds only spec, voice, and skill files. A Read, Glob, Grep, or
-Bash path that reaches into that checkout anywhere other than a
-`references/` or `skills/` folder is denied with one line the model can
-act on. Paths under the working directory are always allowed, so a project
-that happens to live inside the checkout is never blocked. Any failure in
-this script allows the call (fail open); it must never break a session.
+subfolders) holds only spec, voice, and skill files. Two hook events, one
+script:
+
+PreToolUse (Read, Glob, Grep, Bash): a path that reaches into that
+checkout anywhere other than a `references/` or `skills/` folder is
+denied with one line the model can act on. Paths under the working
+directory are always allowed, so a project that happens to live inside the
+checkout is never blocked.
+
+PostToolUse (Skill): the moment a skill loads is the moment the model
+first sees the plugin's absolute path, so one line of context names the
+working directory the project lives under and the two folders in the
+checkout that are readable.
+
+Any failure in this script allows the call (fail open); it must never
+break a session.
 """
 import json, os, re, sys
 
@@ -21,7 +31,23 @@ def main():
     here = os.path.dirname(os.path.abspath(__file__))
     root = os.path.realpath(os.environ.get("CLAUDE_PLUGIN_ROOT") or os.path.join(here, ".."))
     parent = os.path.dirname(root)
+
+    def under(p, base):
+        return p == base or p.startswith(base + os.sep)
+
     if not parent or parent == os.sep:
+        return
+    event = data.get("hook_event_name") or ""
+
+    if event == "PostToolUse":
+        if tool != "Skill" or under(cwd, parent):
+            return
+        context = (f"Project artifacts (research/, define/, design/, deliver/) live under the working "
+                   f"directory {cwd}; read and write them by relative paths from there. The plugin "
+                   f"checkout at {parent} is not the project: only {root}/references/ and "
+                   f"{root}/skills/ are readable there, and every other path in it is denied.")
+        print(json.dumps({"hookSpecificOutput": {"hookEventName": "PostToolUse",
+                                                 "additionalContext": context}}))
         return
 
     def resolve(p):
@@ -29,9 +55,6 @@ def main():
         if not os.path.isabs(p):
             p = os.path.join(cwd, p)
         return os.path.realpath(p)
-
-    def under(p, base):
-        return p == base or p.startswith(base + os.sep)
 
     def is_reach(p):
         p = resolve(p)
