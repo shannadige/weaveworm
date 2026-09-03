@@ -50,7 +50,11 @@ answer, so each needs a terminate-vs-continue branch, not a judgment call:
   times in the last month did you X?" beats "Are you an experienced X-er?"
 - Every screener question states its continue condition; everything else
   terminates. List disqualifiers explicitly (works in UX/market research,
-  used the product < 1 week).
+  used the product < 1 week) on a `Disqualify:` line under the screener
+  table; the line is part of the kit even when the plan's Participants
+  line is wide. "Residents across all buildings" still excludes research
+  workers and the product's own team, and a screener without the line
+  lets them through.
 - Mirror the plan's Participants line — who counts, who's excluded. If the
   screener drifts from the plan, flag it, don't silently widen.
 - Name the analysis-time checks in the kit: straightliners (same answer
@@ -72,7 +76,12 @@ Same contract as interview guides — the evidence log cites
 
 - **Behavior over intent**: "How many times in the last month did you X?"
   beats "How likely are you to X?" Stated intent inflates; recall of
-  recent behavior is the honest signal.
+  recent behavior is the honest signal. The hypothetical form ("If you
+  knew X for certain, would you Y?") is banned outright: it asks the
+  respondent to imagine a fact and then predict themselves, and the
+  answer measures neither what they know nor what they do. Ask what
+  they believe X is, and read the behavior question already in the
+  questionnaire against it at analysis.
 - **One idea per question** — no double-barreled ("How satisfied are you
   with speed and reliability?" is two questions).
 - **No leading or loaded wording**, same discipline as the interview
@@ -80,6 +89,13 @@ Same contract as interview guides — the evidence log cites
 - **Scale hygiene**: balanced options, a genuine "not applicable / don't
   recall" escape, consistent direction across the questionnaire, 5 or 7
   points — pick one and keep it.
+- **Follow-ups skip what the previous answer ruled out.** A confidence
+  question after a knowledge question ("How sure are you about that?")
+  skips when the answer was "I don't know"; how sure someone is of not
+  knowing is a number with no meaning, and it lands in the count as if
+  it had one. Write the skip on the question itself (`skip if Q2 = I
+  don't know`) so the survey tool enforces it and the analysis base is
+  the people who gave an answer.
 - **Order**: behavior questions before attitude questions (attitudes
   contaminate recall less than the reverse), demographics last, one
   screener-critical question early enough to disqualify cheaply. Cap the
@@ -88,13 +104,22 @@ Same contract as interview guides — the evidence log cites
 ## Fielding floor
 
 State the arithmetic on the kit's Fielding line: target n from the plan's
-Participants line, expected response rate, therefore invites needed. The
-response rate must have a source — ask the user for their last survey's
-rate; if they have none, write `unknown` and state invites as a range,
-never a single guessed number. Below ~30 completes, report counts, not
-percentages — "7 of 24" is honest, "29%" implies precision the sample
-can't carry. Pilot with 2–3 people before fielding; their confusions are
-wording bugs, and fixing them is what v1 → v2 is for.
+Participants line, expected response rate, therefore invites needed. If
+the Participants line names a population and no n ("residents across
+all 12 buildings"), the target is `unresolved`, not a round number the
+kit picks; a target the plan never set is the kit widening the plan,
+and the reply asks for the n. The response rate must have a source —
+ask the user for their last survey's rate; if they have none, write
+`unknown` for the rate and `unresolved` for invites. An assumed rate is
+banned even when labeled as an assumption or written as a range ("10 to
+20%, placeholder"): a range built on a guessed rate is the guess with
+wider margins, and the invite count computed from it reads as sized.
+With no rate on record, the first send produces one: send to a known
+count, measure the return, then size the rest. Below ~30 completes,
+report counts, not percentages — "7 of 24" is honest, "29%" implies
+precision the sample can't carry. Pilot with 2–3 people before fielding;
+their confusions are wording bugs, and fixing them is what v1 → v2 is
+for.
 
 ## Intro
 
@@ -110,7 +135,7 @@ per the spec; P-numbers are firsthand session participants.
 # Survey kit — Q-001 <question>
 <!-- weaveworm survey-kit v1 -->
 Plan: Q-001 in research/plans.md
-Fielding: target <n> completes / response rate <rate or unknown> / invites <n or range>
+Fielding: target <n from the plan, or unresolved> completes / response rate <sourced rate or unknown> / invites <n, or unresolved>
 Caveats: <e.g. "no prior qualitative work on this question — measures assumptions">
 
 ## Screener
@@ -119,6 +144,7 @@ Caveats: <e.g. "no prior qualitative work on this question — measures assumpti
 |---|---|---|---|
 | S1 | <behavioral question> | <condition> | terminate |
 
+Disqualify: <explicit disqualifiers>
 Exclude at analysis: straightliners, speeders (< <s> seconds)
 
 ## Questionnaire v1
@@ -127,6 +153,7 @@ Changed: initial version
 
 1. <behavior question>
 2. <question>
+3. <confidence follow-up> (skip if 2 = I don't know)
    ...
 D1. <demographics, last>
 
