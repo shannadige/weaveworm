@@ -11,14 +11,16 @@ about current instrumentation. Output: the charter's Success metrics
 section, filled per the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/define-spec.md`. Project artifacts
 (`research/`, `define/`, `design/`, `deliver/`) live under the working
-directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files,
-is read-only, and is never listed, searched, or written. This skill owns
-exactly that section: while the charter is `draft` it may rewrite it
-freely; once `agreed`, the only allowed edits are the spec's baseline
-backfill and its result line, and anything else means the supersession
-procedure via product-charter. If no charter exists yet, route to
-product-charter first — metrics without outcomes have nothing to
-measure. Conversation runs per the voice contract at
+directory: a path like `define/roles.md` resolves against the working
+directory, never against `${CLAUDE_PLUGIN_ROOT}`, whose folder is named
+after a stage but holds only the spec and voice files, is read-only, and
+is never listed, searched, or written. This skill owns exactly that
+section: while the charter is `draft` it may rewrite it freely; once
+`agreed`, the only allowed edits are the spec's baseline backfill and
+its result line, and anything else means the supersession procedure via
+product-charter. If no charter exists yet, route to product-charter
+first — metrics without outcomes have nothing to measure. Conversation
+runs per the voice contract at
 `${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
 question/report shape live there, not here.
 

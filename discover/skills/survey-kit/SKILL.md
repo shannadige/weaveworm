@@ -13,8 +13,10 @@ runs per the voice contract at
 `${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
 question/report shape live there, not here. Project artifacts
 (`research/`, `define/`, `design/`, `deliver/`) live under the working
-directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files,
-is read-only, and is never listed, searched, or written.
+directory: a path like `define/roles.md` resolves against the working
+directory, never against `${CLAUDE_PLUGIN_ROOT}`, whose folder is named
+after a stage but holds only the spec and voice files, is read-only, and
+is never listed, searched, or written.
 
 One check before drafting: research-plan warns that a survey written
 before any qualitative work measures assumptions precisely. If the

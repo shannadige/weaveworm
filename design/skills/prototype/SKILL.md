@@ -15,11 +15,13 @@ prototype format. Read the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/design-spec.md` before your first
 write in a session — it owns the format, the fidelity policy, and the
 annotation mechanism; do not improvise. Project artifacts (`research/`,
-`define/`, `design/`, `deliver/`) live under the working directory;
-`${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files, is
-read-only, and is never listed, searched, or written. Conversation runs
-per the voice contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` —
-register, translation, and question/report shape live there, not here.
+`define/`, `design/`, `deliver/`) live under the working directory: a
+path like `define/roles.md` resolves against the working directory,
+never against `${CLAUDE_PLUGIN_ROOT}`, whose folder is named after a
+stage but holds only the spec and voice files, is read-only, and is
+never listed, searched, or written. Conversation runs per the voice
+contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register,
+translation, and question/report shape live there, not here.
 
 ## Prototype rules
 

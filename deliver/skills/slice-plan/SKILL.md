@@ -16,11 +16,12 @@ slice block format, created with its header or updated. Read the spec at
 write in a session — it owns the block format, legitimacy test, coverage
 rule, statuses, and ID rules; do not improvise fields. Project artifacts
 (`research/`, `define/`, `design/`, `deliver/`) live under the working
-directory; `${CLAUDE_PLUGIN_ROOT}` holds only the spec and voice files,
-is read-only, and is never listed, searched, or written. Conversation
-runs per the voice contract at
-`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
-question/report shape live there, not here.
+directory: a path like `define/roles.md` resolves against the working
+directory, never against `${CLAUDE_PLUGIN_ROOT}`, whose folder is named
+after a stage but holds only the spec and voice files, is read-only, and
+is never listed, searched, or written. Conversation runs per the voice
+contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register,
+translation, and question/report shape live there, not here.
 
 ## Slicing rules
 
