@@ -53,7 +53,7 @@ and question/report shape live there, not here.
 - **Not every stage shifts.** Stages listed under `Unchanged` are a
   feature of an honest map; an all-shifts future state is a rewrite
   fantasy. `current-only` is a legitimate `State:` when the future is
-  genuinely undecided — never invent shifts to look finished.
+  still undecided — never invent shifts to look finished.
 - **Re-mapping is a new file, not an edit war.** Small updates (new
   evidence on a stage) edit in place per the spec's journey
   allowed-edits rule; if the journey has materially changed — new

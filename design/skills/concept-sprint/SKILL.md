@@ -1,6 +1,6 @@
 ---
 name: concept-sprint
-description: "The divergence stage of design — generate 3+ genuinely distinct C-NNN concept directions for a B-NNN brief, each a mechanism stated as experience with its trades against constraints named, then force the pick (recorded as a D-NNN decision; parked concepts keep their IDs). Use when a designer says \"how might we solve this\", \"give me some directions\", \"explore concepts for the brief\", \"what are our options here\", or a brief just landed and they want solution ideas. Do NOT use for writing the brief (use design-brief), detailing the chosen direction (use flow-map), or logging the choice's rationale alone (use decision-log)."
+description: "The divergence stage of design — generate 3+ distinct C-NNN concept directions for a B-NNN brief, each a mechanism stated as experience with its trades against constraints named, then force the pick (recorded as a D-NNN decision; parked concepts keep their IDs). Use when a designer says \"how might we solve this\", \"give me some directions\", \"explore concepts for the brief\", \"what are our options here\", or a brief just landed and they want solution ideas. Do NOT use for writing the brief (use design-brief), detailing the chosen direction (use flow-map), or logging the choice's rationale alone (use decision-log)."
 ---
 
 # concept-sprint
@@ -34,7 +34,7 @@ and question/report shape live there, not here.
   generated mid-sprint whose cost you can't name gets its
   what-would-worry-you question asked when it exists, because the
   trade question can't precede the concept.
-- **The floor is 3 genuinely distinct directions before any pick.**
+- **The floor is 3 distinct directions before any pick.**
   Distinct means both halves differ: the `Mechanism:` lines describe
   different experiences, *and* the `Trades:` lines give up different
   costs — not different amounts of the same cost. The write-time
@@ -109,7 +109,7 @@ cheap test first, before flows and a prototype build on it.
 ## What this skill refuses
 
 - One concept presented as a sprint, or any pick before the floor of
-  three genuinely distinct directions is met.
+  three distinct directions is met.
 - Counting a variant, restyled duplicate, or strawman toward the
   floor.
 - A pick without its `D-NNN` — a Status line never carries the

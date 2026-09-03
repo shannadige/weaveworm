@@ -90,7 +90,7 @@ and question/report shape live there, not here.
 - **Re-runs update, never duplicate.** Same job, new upstream state →
   edit per the spec's allowed list: everything but the heading, and
   backfilling citations when define artifacts land is the expected
-  edit, not an exception. A genuinely different job is a new brief.
+  edit, not an exception. A different job is a new brief.
   This skill writes `open`, and `parked` on the user's call —
   recording the prior Status per the spec's `(was <status>)` form and
   restoring it verbatim when the user unparks, so a brief parked

@@ -48,7 +48,7 @@ register, translation, and question/report shape live there, not here.
   `assumption-led — no evidence cited`, and offer research-plan — an
   interview study per assumed role is the classic next question.
 - **Re-runs update, never duplicate.** Same role, fresh entries →
-  append per the spec's allowed edits; a genuinely different role → a
+  append per the spec's allowed edits; a different role → a
   new block. The heading is fixed.
 - **Single-role mode.** Called from journey-map for one role: write
   that block only (assumption-led if it must be), skip the

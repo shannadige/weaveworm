@@ -28,7 +28,7 @@ Caveats line.
   says survey but an interview kit exists — that's the normal
   interviews-then-quantify sequence, so route back to research-plan for a
   new Q-NNN block citing the old one, don't stack a second kit on the same
-  ID; the plan's Method line genuinely contradicts the existing kit —
+  ID; the plan's Method line contradicts the existing kit —
   flag it, don't overwrite.
 - Create with this header:
 
