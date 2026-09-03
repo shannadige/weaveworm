@@ -87,6 +87,16 @@ is used and anonymized — participants become P1, P2… per the spec at
 stripped of names and employers — and that they can
 stop or skip any question. Keep it plain language, not legalese.
 
+The label follows how the voice reached the log, not the person's role:
+anyone you sit down with is a P, a manager included, so the script never
+promises "M2". M is for mined proxy voices (reviews, forums, tickets) and
+R for survey respondents. Before the script names a number, read the
+evidence log's highest P and write the next one into the consent
+section, so this round's entries don't collide with earlier ones (no log
+yet means P1). If the log already holds a firsthand voice under an M
+label, say so in chat in one clause and leave it the next P, since the
+relabel will claim that number; evidence-log owns the relabel itself.
+
 ## Kit template
 
 ```markdown
