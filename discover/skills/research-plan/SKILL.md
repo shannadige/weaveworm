@@ -42,7 +42,10 @@ never listed, searched, or written.
   one session, send, or capture has happened. Before that, "not yet
   fielded" is what Status and Timeline already say; scheduled recruiting
   is still a plan, and a placeholder Fielded line would leave a second
-  one when the work runs. When the research ran before any plan existed (notes in
+  one when the work runs. One named exception: a competitor-teardown
+  attempted with no way to open a product records that attempt on a
+  Fielded line, so the plan shows the question was tried and what it
+  still needs. When the research ran before any plan existed (notes in
   `research/raw/`, no block), write the block from what happened and
   add its Fielded line in the same pass, so the evidence log has a
   question to cite. Status transitions:
