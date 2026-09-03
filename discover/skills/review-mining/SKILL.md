@@ -15,10 +15,11 @@ complain about. Conversation runs per the voice contract at
 `${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
 question/report shape live there, not here. Project artifacts
 (`research/`, `define/`, `design/`, `deliver/`) live under the working
-directory: read and write them by those relative paths, and never build
-an absolute path from where the spec lives, because
-`${CLAUDE_PLUGIN_ROOT}` and the folder above it hold only spec and voice
-files, are read-only, and are never listed, searched, or written.
+directory the session started in; read and write them by those relative
+paths and never `cd`. `${CLAUDE_PLUGIN_ROOT}` and the folder above it
+are not the project, even though that folder also has stage-named
+subfolders: they hold only spec and voice files, are read-only, and are
+never listed, searched, or written.
 
 ## Mining file
 

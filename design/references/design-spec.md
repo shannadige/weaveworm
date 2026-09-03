@@ -34,12 +34,13 @@ Default root: `design/` in the user's project, next to `define/` and
 `research/`. If the user keeps design work elsewhere, ask once, then
 reuse their answer for the session.
 
-Every path above is relative to the working directory, the user's
-project. Skills read and write by these relative paths and never build
-an absolute path from where this spec lives: the plugin root
-(`${CLAUDE_PLUGIN_ROOT}`) and the folder above it hold only spec and
-voice files, are read-only, are never listed, searched, or written, and
-are never where a project artifact is looked for.
+Every path above is relative to the working directory the session
+started in, the user's project. Skills read and write by these relative
+paths and never `cd`. The plugin root (`${CLAUDE_PLUGIN_ROOT}`) and the
+folder above it are not the project, even though that folder also has
+stage-named subfolders: they hold only spec and voice files, are
+read-only, are never listed, searched, or written, and are never where
+a project artifact is looked for.
 
 ```
 design/

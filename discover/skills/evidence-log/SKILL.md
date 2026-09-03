@@ -8,13 +8,14 @@ description: Record, update, or query research findings in a project's evidence 
 Maintain the project's evidence log per the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/evidence-log-spec.md`. Project
 artifacts (`research/`, `define/`, `design/`, `deliver/`) live under the
-working directory: read and write them by those relative paths, and
-never build an absolute path from where the spec lives, because
-`${CLAUDE_PLUGIN_ROOT}` and the folder above it hold only spec and voice
-files, are read-only, and are never listed, searched, or written. Read
-the spec before your first write in a session; it defines the file
-location, entry format, ID rules, and confidence levels. Do not
-improvise fields. Conversation runs per the voice contract at
+working directory the session started in; read and write them by those
+relative paths and never `cd`. `${CLAUDE_PLUGIN_ROOT}` and the folder
+above it are not the project, even though that folder also has
+stage-named subfolders: they hold only spec and voice files, are
+read-only, and are never listed, searched, or written. Read the spec
+before your first write in a session; it defines the file location,
+entry format, ID rules, and confidence levels. Do not improvise fields.
+Conversation runs per the voice contract at
 `${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
 question/report shape live there, not here. One deliberate exception,
 below: queried entries return verbatim, because downstream work cites

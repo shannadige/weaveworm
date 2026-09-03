@@ -11,19 +11,20 @@ plan file (default `research/plans.md`; if the user keeps research
 elsewhere, ask once, then reuse their answer for the session), scoped to
 one or more `Q-NNN` questions or a topic the user names. Project
 artifacts (`research/`, `define/`, `design/`, `deliver/`) live under the
-working directory: read and write them by those relative paths, and
-never build an absolute path from where the spec lives, because
-`${CLAUDE_PLUGIN_ROOT}` and the folder above it hold only spec and voice
-files, are read-only, and are never listed, searched, or written. Select
-in-scope entries by their `Question:` field — `unplanned` entries whose
-topic slug matches the named scope are in scope; for older entries
-without one, fall back to matching the Source line against the
-question's kit, teardown, or mining artifacts and the plan block's "Done
-when". Output: the synthesis file below. If the log has no entries in
-scope, say so — a synthesis of zero entries is a pitch, not research,
-and this skill refuses to write one. Conversation runs per the voice
-contract at `${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register,
-translation, and question/report shape live there, not here.
+working directory the session started in; read and write them by those
+relative paths and never `cd`. `${CLAUDE_PLUGIN_ROOT}` and the folder
+above it are not the project, even though that folder also has
+stage-named subfolders: they hold only spec and voice files, are
+read-only, and are never listed, searched, or written. Select in-scope
+entries by their `Question:` field — `unplanned` entries whose topic
+slug matches the named scope are in scope; for older entries without
+one, fall back to matching the Source line against the question's kit,
+teardown, or mining artifacts and the plan block's "Done when". Output:
+the synthesis file below. If the log has no entries in scope, say so — a
+synthesis of zero entries is a pitch, not research, and this skill
+refuses to write one. Conversation runs per the voice contract at
+`${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
+question/report shape live there, not here.
 
 ## Synthesis file
 
