@@ -36,7 +36,10 @@ Field rules:
 
 - **Heading** — `E-NNN` + the claim as one falsifiable sentence. A claim
   states something that could be proven wrong ("users abandon setup at the
-  API-key step"), not a theme ("onboarding friction").
+  API-key step"), not a theme ("onboarding friction"). Hedges belong in
+  Confidence, never in the heading: "X is recalled as doing Y" or "X
+  reportedly does Y" cannot be proven wrong, so the heading says "X does
+  Y" and the Confidence line carries the doubt and its reason.
 - **Evidence** — the observation that supports the claim. Counts and verbatim
   quotes beat paraphrase. Quote voices by ID, never by name — firsthand
   participants are P1, P2…, survey respondents R1, R2…, mined proxy voices

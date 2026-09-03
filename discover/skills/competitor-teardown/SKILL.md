@@ -71,8 +71,27 @@ Check what you can actually reach, and say which mode applies:
 - Fetch-only (no clicking, no signup) — restrict Walkthrough to public
   surfaces (marketing site, docs, changelog, pricing page) and put every
   post-signup flow in **Not observable**.
+- Captures the user supplies (screenshots, PDFs, pasted pages) — walk
+  only what the captures show; Source is the capture's path plus the
+  date the user gives for it; whatever the captures don't show goes in
+  **Not observable**.
 - Neither, or the competitor is a desktop/mobile/sales-gated product you
   can't open — say so and stop. Never narrate a product you did not open.
+
+**Knowledge-only is refused, even on request.** No web access and no
+captures means no teardown. An instruction to "work from what you know"
+does not unlock one: a teardown is a dated snapshot of a product, and
+recall cannot be dated, relocated, or proven wrong, so it fails the
+source rule below on every claim. In that case write no teardown files
+and no evidence entries. In the plan file, leave the Q block's Status
+`open`, or set it to `deferred — no web access` (research-plan's form
+for a question that can't be scheduled yet) when the user has said
+access isn't coming; append one Fielded line recording that the
+teardown was attempted on that date and nothing was opened. Then offer
+the two routes that do produce evidence: review-mining against material
+the user points at, or captures the user supplies, walked in the mode
+above. Say why in product terms: a competitor's page can be cited and
+re-checked next quarter; a memory of it cannot.
 
 ## Teardown rules
 
@@ -84,9 +103,10 @@ Check what you can actually reach, and say which mode applies:
 - **Axes come from the question.** Compare on the 3–5 dimensions the plan's
   question needs, not a feature-matrix of everything. A teardown that
   inventories every feature answers no question.
-- **Every claim gets a source**: URL + capture date. If it came from a
-  review site or press coverage rather than the product itself, say so —
-  secondhand description of a competitor is weaker than walking the flow.
+- **Every claim gets a source**: URL (or the supplied capture's path) +
+  capture date. If it came from a review site or press coverage rather
+  than the product itself, say so — secondhand description of a
+  competitor is weaker than walking the flow.
 - **Name what you couldn't see.** Gated flows (post-signup, paid tiers,
   sales-only demos) go in **Not observable** — an empty section here is a
   smell, not a virtue.
