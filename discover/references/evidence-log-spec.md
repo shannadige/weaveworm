@@ -40,7 +40,10 @@ Field rules:
 - **Evidence** — the observation that supports the claim. Counts and verbatim
   quotes beat paraphrase. Quote voices by ID, never by name — firsthand
   participants are P1, P2…, survey respondents R1, R2…, mined proxy voices
-  M1, M2…, so one log can hold all three without collision.
+  M1, M2…, so one log can hold all three without collision. The prefix is
+  assigned by source type, not carried over from the user's own labels: a
+  manager or stakeholder interviewed firsthand is a P, and a raw note filed
+  as "M1" is relabelled on entry, with the translation narrated in chat.
 - **Source** — where this came from, specific enough to relocate: session
   batch + date, teardown target + date, analytics query, etc.
 - **Question** — the `Q-NNN` plan block this entry answers. Synthesis scopes

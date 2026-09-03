@@ -39,8 +39,18 @@ their IDs.
 4. Append, then show the user only the new/changed entries and one line of
    log state: `Log: 14 entries, 2 contradictions open.`
 
-Anonymize as you write: participants become P1, P2… — strip names, emails,
-and employers from quotes.
+Anonymize as you write: strip names, emails, and employers from quotes,
+and label every voice by source type per the spec, never by the user's
+own labels. Anyone interviewed firsthand is a P (a stakeholder or
+manager interview is still a P), survey respondents are R, mined proxy
+voices (reviews, forums, secondhand reports) are M. The user's raw notes
+may carry their own scheme ("M1" for a manager, "S3" for a stakeholder,
+a first name); when a label collides with the convention, relabel to the
+next free ID of the right type and say so in chat in one clause ("the
+manager you filed as M1 is P6 in the log; M is reserved for mined
+voices, and a manager interview counts as firsthand"). Downstream skills
+read the prefix as the evidence type, so a wrong prefix caps a role's
+confidence for no reason.
 
 ## Querying
 
