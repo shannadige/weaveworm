@@ -114,6 +114,14 @@ P1, P2… per the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/evidence-log-spec.md`, and the right
 to stop or skip any task. Plain language, not legalese.
 
+Every participant in a session is a P, whatever their role; M is for
+mined proxy voices only and R for survey respondents. Before the script
+names a number, read the evidence log's highest P and write the next one
+into the consent section (no log yet means P1). If the log already holds
+a firsthand voice under an M label, say so in chat in one clause and
+leave it the next P, since the relabel will claim that number;
+evidence-log owns the relabel itself.
+
 ## Kit template
 
 ```markdown

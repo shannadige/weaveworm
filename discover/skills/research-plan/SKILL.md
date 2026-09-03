@@ -38,9 +38,13 @@ never listed, searched, or written.
 - Two edits are allowed to an existing block: its **Status** line, and
   appending one **Fielded:** line when the work actually runs (actual
   dates, sessions completed, instrument version used) — Timeline stays
-  the plan; Fielded records reality. When the research ran before any
-  plan existed (notes in `research/raw/`, no block), write the block
-  from what happened and add its Fielded line in the same pass, so the
+  the plan; Fielded records reality. The line is absent until at least
+  one session, send, or capture has happened. Before that, "not yet
+  fielded" is what Status and Timeline already say; scheduled recruiting
+  is still a plan, and a placeholder Fielded line would leave a second
+  one when the work runs. When the research ran before any plan
+  existed (notes in `research/raw/`, no block), write the block from
+  what happened and add its Fielded line in the same pass, so the
   evidence log has a question to cite. Status transitions:
   - `open` → `answered (→ E-014, E-015)` once the entries named in "Done
     when" exist in the evidence log — cite them by ID. Substantively
@@ -128,6 +132,8 @@ is a state to surface, not a reason to stall.
 - **Done when:** <the observable output, e.g. "8–12 entries appended to the
   evidence log, contradictions flagged, one recommendation drafted">
 - **Risks:** <top 1–2 ways this could mislead, e.g. recruiting bias, leading question>
+<!-- Fielded: appended only after the first session, send, or capture has
+     happened; until then Status and Timeline carry the state -->
 ```
 
 Keep the filled plan under one page. "Done when" must name the evidence log
