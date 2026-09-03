@@ -543,9 +543,9 @@ second pass on the same spec the same day suffixes the filename
 ```markdown
 # Build review — S-001 — 2026-09-12
 <!-- weaveworm build-review v1 -->
-- **Spec:** S-001 (decisions through D-021)
+- **Spec:** S-001 (decisions through D-021)   (or `S-001 (decisions through D-021; still open — handoff never recorded)`)
 - **Slice:** SL-001
-- **Reviewed:** <what and where: commit, staging URL, or a demo walkthrough, and with whom>
+- **Reviewed:** <what and where: commit, staging URL, or a demo walkthrough, and with whom>   (or `secondhand — <whose account, in what form>` when the build was described, not shown)
 - **Brief decisions now:** through D-021   (or `through D-024 — spec stale` / `none — assumption-led`)
 ```
 
@@ -557,9 +557,17 @@ the Instruments lens is why it was run.
 Then one section per lens, fixed set, in this order:
 
 1. **Criteria** — per `S-NNN.N` in the slice, edge criteria
-   included: `met`, `deviated — <how>`, or `missing`. Every
-   criterion in the slice is listed; an unlisted criterion is an
-   unreviewed one.
+   included: `met`, `deviated — <how>`, `missing`, or `unverified —
+   <what the input lacked>`. Every criterion in the slice is listed;
+   an unlisted criterion is an unreviewed one. `unverified` is the
+   verdict for a criterion the input could not show either way (the
+   account is silent on it, the walkthrough skipped it); it holds
+   the gate like `missing`, and it is never written as `deviated`,
+   which claims the reviewer saw the build do something else. When
+   the build was described rather than shown, `Reviewed:` carries
+   the secondhand form and every criterion the account does not
+   cover is `unverified`; a pass with every criterion `unverified`
+   is still written, as the record that nothing was verified.
 2. **Edges** — the open-edge check, the one thing Criteria can't
    express: for each open criterion in the slice, `clear` (nothing
    was built over it) or `filled — <what was built>`. A filled open
@@ -571,9 +579,17 @@ Then one section per lens, fixed set, in this order:
    to decision-log`; `mistake — S-001.4 re-issued`; `undetermined`.
    The reviewer asks the user which it is during the pass; when the
    user can't say (the builder isn't in the room), it stays
-   `undetermined` and the next pass re-asks.
+   `undetermined` and the next pass re-asks. A decision the input
+   cannot settle either way (no contradiction found, and nothing
+   showing it was honored) is written `cannot tell — <why>`. It is
+   a different form from `undetermined`, which only ever follows a
+   contradiction, and it holds the slice until a pass can see the
+   decision in the build.
 4. **Instruments** — each `I-NNN` whose `Fires at:` falls in this
-   slice: `firing` or `silent`. When the spec's `Moves:` metric has
+   slice: `firing` or `silent`. An instrument the input says nothing
+   about is `silent`, with what the input lacked on the same line:
+   `firing` is a confirmation, and only a confirmation flips the
+   instrument's Status. When the spec's `Moves:` metric has
    no block at all, the lens reads `none specified — OC-001
    unmeasurable until instrumentation-plan runs`, never `clean`.
 5. **Scaffolding** — prototype sample data, placeholder copy, or
@@ -581,12 +597,15 @@ Then one section per lens, fixed set, in this order:
    `(assumption)` lines and override notes (a missing critique, an
    assumption-led brief), named every pass until resolved.
 
-Verdict per lens: `clean`, or findings citing IDs. Never a score.
+Verdict per lens: `clean`, or findings citing IDs. Never a score,
+and never a sixth section: the gate's outcome is read off Criteria
+and Decisions and reported in chat, not written as a `Gate` heading.
 
 Gating, settled: **a partial gate on the slice.** A slice may be
 recorded `shipped` only after a pass whose Criteria and Decisions
-lenses are clean; a `deviated`, `missing`, or contradiction finding
-holds it. When, counting this pass and the review files on record,
+lenses are clean; a `deviated`, `missing`, `unverified`, `cannot
+tell`, or contradiction finding holds it. When, counting this pass
+and the review files on record,
 every slice not `dropped` has such a pass, build-review writes the
 spec's Status to `built (<date>, through SL-NNN)` — one of its two
 writes outside its own file; the other is flipping an instrument to
@@ -611,6 +630,14 @@ reviewed, and the pass ends by naming the fresh spec as the next
 action. A stale pass still gates and still writes: shipping a
 faithful build of a design that has since moved is the team's call,
 made with the header in front of them.
+
+Handoff: a spec still `open` at pass time was built against without
+the handoff ever being recorded. The `Spec:` line says so, the pass
+runs and gates as usual, and the `built` write is not made over
+`open`, since Status moves forward in order: build-spec records the
+handoff on the user's word, and the next pass, counting this one,
+makes the write. The close names that handoff ahead of any
+per-finding call.
 
 ## Outcome review format (outcomes/<date>-B-NNN.md)
 
