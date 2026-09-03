@@ -15,14 +15,14 @@ once if definition work lives elsewhere) per the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/define-spec.md` — read it before
 writing; it owns the file format, stage IDs, and confidence inheritance.
 Project artifacts (`research/`, `define/`, `design/`, `deliver/`) live
-under the working directory: a path like `define/roles.md` resolves
-against the working directory, never against `${CLAUDE_PLUGIN_ROOT}`,
-whose folder is named after a stage but holds only the spec and voice
-files, is read-only, and is never listed, searched, or written. If
-roles.md doesn't exist, route to user-roles first — a journey without a
-role is a flowchart of nobody; the quick path is running user-roles for
-just the one role in question, assumption-led if it must be.
-Conversation runs per the voice contract at
+under the working directory: read and write them by those relative
+paths, and never build an absolute path from where the spec lives,
+because `${CLAUDE_PLUGIN_ROOT}` and the folder above it hold only spec
+and voice files, are read-only, and are never listed, searched, or
+written. If roles.md doesn't exist, route to user-roles first — a
+journey without a role is a flowchart of nobody; the quick path is
+running user-roles for just the one role in question, assumption-led if
+it must be. Conversation runs per the voice contract at
 `${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
 question/report shape live there, not here.
 

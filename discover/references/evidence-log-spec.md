@@ -9,10 +9,12 @@ cite entries by ID instead of re-quoting research.
 - Default path: `research/evidence-log.md` in the user's project. If the user
   keeps research elsewhere, ask once, then reuse their answer for the session.
 - If the file doesn't exist, create it with the header below before appending.
-- `research/` is relative to the working directory, the user's project, never
-  to the plugin root (`${CLAUDE_PLUGIN_ROOT}`, where this spec lives): that
-  folder holds only spec and voice files, is read-only, is never listed,
-  searched, or written, and is never where a project artifact is looked for.
+- `research/` is relative to the working directory, the user's project. Skills
+  read and write by that relative path and never build an absolute path from
+  where this spec lives: the plugin root (`${CLAUDE_PLUGIN_ROOT}`) and the
+  folder above it hold only spec and voice files, are read-only, are never
+  listed, searched, or written, and are never where a project artifact is
+  looked for.
 
 ```markdown
 # Evidence log

@@ -17,14 +17,14 @@ contract. Read the spec at
 write in a session — it owns the block format, file order, ID rules,
 statuses, and confidence inheritance; do not improvise fields. Project
 artifacts (`research/`, `define/`, `design/`, `deliver/`) live under the
-working directory: a path like `define/roles.md` resolves against the
-working directory, never against `${CLAUDE_PLUGIN_ROOT}`, whose folder
-is named after a stage but holds only the spec and voice files, is
-read-only, and is never listed, searched, or written. Output:
-`define/opportunities.md` (define root per the spec — ask once if
-definition work lives elsewhere) created with the spec's header — `Log:
-none — assumption-led` when no log exists — or updated. Conversation
-runs per the voice contract at
+working directory: read and write them by those relative paths, and
+never build an absolute path from where the spec lives, because
+`${CLAUDE_PLUGIN_ROOT}` and the folder above it hold only spec and voice
+files, are read-only, and are never listed, searched, or written.
+Output: `define/opportunities.md` (define root per the spec — ask once
+if definition work lives elsewhere) created with the spec's header —
+`Log: none — assumption-led` when no log exists — or updated.
+Conversation runs per the voice contract at
 `${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
 question/report shape live there, not here.
 
