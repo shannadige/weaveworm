@@ -45,7 +45,11 @@ and question/report shape live there, not here.
   card grid with blue accents" is prototype's call, made later and
   traced to its own decision if contested. A state written as visuals
   gets rewritten as what it communicates and lets the user do — and
-  you say so.
+  you say so. A stage is a unit of the user's progress, the same rule
+  journey-map holds its stages to: "parcel remains uncollected" is a
+  state, and a state heads no stage. It belongs in the `State:` line
+  of the stage that produced it, or as the condition the next step
+  starts from; the stage keeps a step the user takes.
 - **Every stage traces to a decision.** Its `Decision:` line names
   the `D-NNN` behind it, and most stages inherit the concept's
   choosing decision. A stage resting on a choice no block covers gets
