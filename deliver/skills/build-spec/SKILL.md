@@ -93,7 +93,14 @@ question/report shape live there, not here.
   the README map are the design; markup, styling, copy, and sample
   data are placeholders. A rendering becomes normative only through
   a cited decision, written `promoted: <what> (D-NNN)` — never
-  because it looked finished.
+  because it looked finished. The README map is read at
+  `design/prototypes/B-NNN/README.md` and nowhere else by default; a
+  README found at any other path (nested inside the prototype folder,
+  say) still supplies the map, but its location is a design-side
+  defect owned by prototype, named in the `## For the builder`
+  preamble with the path it was found at, and repeated in the report.
+  Reading it silently would tell the builder the design is in order
+  when the next skill to look for the map will not find it.
 - **Recipient packaging changes two things and nothing else.** The
   preamble under `## For the builder` and the Open section's heading:
   `## Handoff agenda` for a human, read as the questions to settle

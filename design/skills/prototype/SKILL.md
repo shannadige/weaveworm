@@ -9,9 +9,15 @@ The materialization stage of design: the brief's flows made walkable,
 built to be tested, not admired. Input: a brief's `F-NNN` flows and the
 decisions they trace to. No flows means nothing to render — route to
 flow-map; a prototype improvised past the flows is a mockup with
-annotations missing. Output: `design/prototypes/B-NNN/` — `index.html`
-plus `README.md` mapping screen → `F-NNN.S` → `D-NNN`, per the spec's
-prototype format. Read the spec at
+annotations missing. Output: `index.html` plus `README.md` mapping
+screen → `F-NNN.S` → `D-NNN`, per the spec's prototype format, both
+written to `design/prototypes/B-NNN/` as a path from the project root.
+Never `cd` into the folder: a shell that has moved makes the next
+relative write land nested inside the prototype, and critique and
+build-spec read the map at its path, so a nested README is a map they
+never see. After writing, list the folder and move any file that landed
+elsewhere before reporting; the report describes the folder as it
+stands. Read the spec at
 `${CLAUDE_PLUGIN_ROOT}/references/design-spec.md` before your first
 write in a session — it owns the format, the fidelity policy, and the
 annotation mechanism; do not improvise. Project artifacts (`research/`,
@@ -98,3 +104,6 @@ design risks validating a charter violation.
   through flow-map and decision-log, narrated.
 - Passing sample data off as real — real-shaped is labeled in the
   README, every time.
+- Reporting before the folder is checked — a README anywhere other
+  than beside `index.html` is this skill's to move, not the next
+  stage's to notice.

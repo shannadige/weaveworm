@@ -47,9 +47,14 @@ translation, and question/report shape live there, not here.
   dropped shift at flow-map; an untraced screen at decision-log
   (which mints the missing block) or prototype (which cuts the
   screen); a decision nothing traces to is flagged as noise — it
-  keeps its ID, flagged, never deleted. The critique that quietly
-  repairs what it found has stopped being a gate and started being
-  an author reviewing itself.
+  keeps its ID, flagged, never deleted. A prototype README missing
+  from `design/prototypes/B-NNN/README.md`, or found anywhere else,
+  is a Traceability finding owned by prototype, never an aside in the
+  report: the map is how every screen traces to its stage for anyone
+  who doesn't open markup, and a map that isn't at its path is a map
+  downstream reads as absent. The critique that quietly repairs what
+  it found has stopped being a gate and started being an author
+  reviewing itself.
 - **The debt census is priced, not just counted.** Count the
   `(untested)` decisions and the brief's `(assumption)` lines, then
   weight by stakes: for each high-stakes item — hard to reverse, or
