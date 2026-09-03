@@ -11,7 +11,9 @@ Reads the same case layout (`<plugin>/evals/<case>/prompt.md`, `graders/*.md`,
 
 File-targeted graders see files the agent created OR modified in the workspace.
 Deterministic graders (file_exists, regex, tool_used) run locally; llm graders
-call a judge model with structured output. Graders marked `with_only: true`
+call a judge model with structured output. A regex grader passes on
+`match: contains` (default) or `match: not_contains`; give it `min: N` and/or
+`max: N` instead to pass on a match count within that range. Graders marked `with_only: true`
 are reported but excluded from the score, matching the official ablation.
 `--skip-llm` skips the judge entirely (llm graders are reported as skipped and
 excluded from the score); that is the smoke configuration `scripts/smoke.sh` uses.
@@ -188,6 +190,9 @@ def grade(grader, run, workspace, judge_model, skip_llm=False):
         if 'i' in str(grader.get('flags', '')):
             flags |= re.I
         n = len(re.findall(grader['pattern'], text, flags))
+        if 'min' in grader or 'max' in grader:
+            lo, hi = grader.get('min', 0), grader.get('max', 10**6)
+            return lo <= n <= hi, f'{n} match(es), wanted {lo}..{hi}', 0
         mode = grader.get('match', 'contains')
         ok = n > 0 if mode == 'contains' else n == 0
         return ok, f'{n} match(es), wanted {mode}', 0
