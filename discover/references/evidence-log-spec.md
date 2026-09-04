@@ -1,8 +1,8 @@
 # Evidence log spec — v1
 
 The evidence log is one markdown file that accumulates research findings as
-structured entries. Every discover skill appends to it; later design stages
-cite entries by ID instead of re-quoting research.
+structured entries. Every discover skill appends to it; later work cites
+entries by ID instead of re-quoting research.
 
 ## File
 
@@ -12,9 +12,9 @@ cite entries by ID instead of re-quoting research.
 - `research/` is relative to the working directory the session started in, the
   user's project. Skills read and write by that relative path and never `cd`.
   The plugin root (`${CLAUDE_PLUGIN_ROOT}`) and the folder above it are not the
-  project, even though that folder also has stage-named subfolders: they hold
-  only spec and voice files, are read-only, are never listed, searched, or
-  written, and are never where a project artifact is looked for.
+  project: they hold only spec and voice files, are read-only, are never
+  listed, searched, or written, and are never where a project artifact is
+  looked for.
 
 ```markdown
 # Evidence log

@@ -1,42 +1,25 @@
 # weaveworm
 
-Claude Code plugins for product design. Each plugin covers one stage of the
-design stack; skills produce fixed-shape artifacts, and stages hand off
-through documents — not vibes. All stages share one conversation
-contract, [references/voice.md](references/voice.md): canonical at the
-repo root, synced into each plugin by `scripts/sync-voice.sh`, edited
-only at the root.
+A Claude Code plugin for product designers doing discovery. Its skills
+produce fixed-shape artifacts (a research plan, study instruments, an
+evidence log, a synthesis readout) and hand off through documents, not
+vibes. Chat follows one conversation contract,
+[references/voice.md](references/voice.md): canonical at the repo root,
+synced into the plugin by `scripts/sync-voice.sh`, edited only at the
+root.
 
-## Plugins
+## The plugin
 
-- **discover** — research planning, study instruments, evidence logging, and
-  synthesis. Skills: `research-plan`, `interview-kit`, `survey-kit`,
-  `usability-test-kit`, `competitor-teardown`, `review-mining`,
-  `evidence-log`, `synthesis`. Shared contract:
-  [evidence log spec](discover/references/evidence-log-spec.md).
-  Usage guide: [discover/README.md](discover/README.md).
-- **define** — the product strategy workshop as a pipeline: product
-  charter, user roles, journey maps, and impact-vs-complexity
-  opportunity prioritization, built on discover's evidence log. Skills:
-  `product-charter`, `success-metrics`, `user-roles`, `journey-map`,
-  `opportunity-map`. Shared contract:
-  [define spec](define/references/define-spec.md).
-  Usage guide: [define/README.md](define/README.md).
-- **design** — pursued opportunities into solutions a team can test:
-  briefs, divergent concepts, a decision log, flows, and
-  self-contained HTML prototypes, gated by recurring critique. Skills:
-  `design-brief`, `concept-sprint`, `decision-log`, `flow-map`,
-  `prototype`, `design-critique`. Shared contract:
-  [design spec](design/references/design-spec.md).
-  Usage guide: [design/README.md](design/README.md).
-- **deliver** — a reviewed design into a build a human engineer or a
-  coding agent produces without deciding anything load-bearing by
-  accident, then a reading of whether the outcome moved: build specs,
-  slices, instruments, build reviews, and outcome reviews. Skills:
-  `build-spec`, `slice-plan`, `instrumentation-plan`, `build-review`,
-  `outcome-review`. Shared contract:
-  [deliver spec](deliver/references/deliver-spec.md).
-  Usage guide: [deliver/README.md](deliver/README.md).
+**discover** — research planning, study instruments, evidence logging,
+and synthesis. Skills: `research-plan`, `interview-kit`, `survey-kit`,
+`usability-test-kit`, `competitor-teardown`, `review-mining`,
+`evidence-log`, `synthesis`. Shared contract:
+[evidence log spec](discover/references/evidence-log-spec.md).
+Usage guide: [discover/README.md](discover/README.md).
+
+Earlier versions carried three more stages (define, design, deliver).
+They were removed on 2026-09-04 to keep the work on discovery; the git
+history has them.
 
 ## Install
 
@@ -44,7 +27,7 @@ only at the root.
 /plugin marketplace add shannadige/weaveworm
 ```
 
-Then pick plugins from the `/plugin` menu. Each plugin ships a hook that
+Then pick `discover` from the `/plugin` menu. The plugin ships a hook that
 keeps the model out of the plugin checkout; it runs on `python3`, which
 must be on your PATH (macOS and most Linux distributions have it). If it
 is missing the hook stays quiet and the guard is simply off.
@@ -53,13 +36,12 @@ is missing the hook stays quiet and the guard is simply off.
 
 Two tiers, both cheap. `scripts/lint-skills.sh` runs no model: it checks
 every SKILL.md for frontmatter, a voice-contract citation, resolving
-`${CLAUDE_PLUGIN_ROOT}` paths, banned words, and that each plugin's copy
-of voice.md matches the root. `scripts/smoke.sh` runs the lint, then one
-headless case per plugin (the mid-chain skill that reads upstream
-artifacts: `synthesis`, `journey-map`, `flow-map`, `build-spec`) with
-the plugin loaded and deterministic graders only, and prints one line
-per case. Cases live at `<plugin>/evals/<case>/` in the `claude plugin
-eval` layout, with shared fixtures under `<plugin>/evals/fixtures/`.
+`${CLAUDE_PLUGIN_ROOT}` paths, banned words, and that the plugin's copy
+of voice.md matches the root. `scripts/smoke.sh` runs the lint, then the
+headless cases under `discover/evals/` (`research-plan-notes-first` and
+`synthesis`) with the plugin loaded and deterministic graders only, and
+prints one line per case. Cases use the `claude plugin eval` layout,
+with shared fixtures under `discover/evals/fixtures/`.
 
 The runner behind it, `scripts/eval-pilot.py`, also does the full
 ablation (no plugin, spec in the system prompt, plugin loaded) with LLM

@@ -2,7 +2,7 @@
 
 Discovery toolkit for product designers. Eight skills, one pipeline: plan a
 question, run the study, log the evidence, synthesize the readout. Every
-artifact has a fixed shape and a citable ID, so later design stages can point
+artifact has a fixed shape and a citable ID, so any later work can point
 at `E-014` instead of re-quoting research.
 
 ## The loop

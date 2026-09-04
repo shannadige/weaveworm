@@ -10,11 +10,10 @@ spec at `${CLAUDE_PLUGIN_ROOT}/references/evidence-log-spec.md`) and the
 plan file (default `research/plans.md`; if the user keeps research
 elsewhere, ask once, then reuse their answer for the session), scoped to
 one or more `Q-NNN` questions or a topic the user names. Project
-artifacts (`research/`, `define/`, `design/`, `deliver/`) live under the
+artifacts (`research/`) live under the
 working directory the session started in; read and write them by those
 relative paths and never `cd`. `${CLAUDE_PLUGIN_ROOT}` and the folder
-above it are not the project, even though that folder also has
-stage-named subfolders: they hold only spec and voice files, are
+above it are not the project: they hold only spec and voice files, are
 read-only, and are never listed, searched, or written. Select in-scope
 entries by their `Question:` field — `unplanned` entries whose topic
 slug matches the named scope are in scope; for older entries without

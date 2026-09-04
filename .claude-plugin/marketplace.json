@@ -9,21 +9,6 @@
       "name": "discover",
       "source": "./discover",
       "description": "Product-design discovery toolkit: plan research, run it, and log evidence in one shared, parseable format."
-    },
-    {
-      "name": "define",
-      "source": "./define",
-      "description": "Product-design definition toolkit — the product strategy workshop as a pipeline: charter, user roles, journey maps, and impact-vs-complexity opportunity prioritization. Works assumption-led when there's no research yet."
-    },
-    {
-      "name": "design",
-      "source": "./design",
-      "description": "Product-design solution toolkit — pursued opportunities into briefs, divergent concepts, a decision log, flows, and testable HTML prototypes, with critique as the recurring gate against the charter. Works assumption-led when define hasn't run."
-    },
-    {
-      "name": "deliver",
-      "source": "./deliver",
-      "description": "Product-design delivery toolkit — a reviewed design into a build spec a human engineer or a coding agent builds from without asking, slices that each deliver a journey shift, instruments behind the charter's metrics, build reviews against the decisions that must not silently reverse, and an outcome review of whether the metric moved. Works assumption-led when design hasn't run."
     }
   ]
 }

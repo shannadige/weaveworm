@@ -6,7 +6,7 @@ Reads the same case layout (`<plugin>/evals/<case>/prompt.md`, `graders/*.md`,
 `claude -p`, in up to three arms:
 
   without  no plugin, no extra prompt            (raw prompting)
-  spec     define-spec.md appended as system prompt (a strong prompt, no skill)
+  spec     the stage spec appended as system prompt (a strong prompt, no skill)
   with     the plugin loaded via --plugin-dir     (the skill)
 
 File-targeted graders see files the agent created OR modified in the workspace.
@@ -19,9 +19,9 @@ are reported but excluded from the score, matching the official ablation.
 excluded from the score); that is the smoke configuration `scripts/smoke.sh` uses.
 
 Usage:
-  scripts/eval-pilot.py define [--case journey-map-basic] [--runs 2]
+  scripts/eval-pilot.py discover [--case synthesis-basic] [--runs 2]
       [--arms without,spec,with] [--model sonnet] [--judge-model sonnet]
-      [--parallel 4] [--out define/evals/results] [--skip-llm]
+      [--parallel 4] [--out discover/evals/results] [--skip-llm]
 """
 import argparse, codecs, concurrent.futures as cf, datetime as dt, fnmatch, glob, json, os, re
 import shutil, subprocess, sys, tempfile, threading

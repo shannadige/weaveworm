@@ -14,11 +14,10 @@ the plan; without them, mining returns whatever the loudest reviewers
 complain about. Conversation runs per the voice contract at
 `${CLAUDE_PLUGIN_ROOT}/references/voice.md` — register, translation, and
 question/report shape live there, not here. Project artifacts
-(`research/`, `define/`, `design/`, `deliver/`) live under the working
+(`research/`) live under the working
 directory the session started in; read and write them by those relative
 paths and never `cd`. `${CLAUDE_PLUGIN_ROOT}` and the folder above it
-are not the project, even though that folder also has stage-named
-subfolders: they hold only spec and voice files, are read-only, and are
+are not the project: they hold only spec and voice files, are read-only, and are
 never listed, searched, or written.
 
 ## Mining file

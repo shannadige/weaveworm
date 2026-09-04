@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Plugin-root guard shipped with every weaveworm plugin.
+"""Plugin-root guard shipped with the weaveworm plugin.
 
 Project artifacts live under the working directory. The plugin checkout
-(this plugin's folder and the folder above it, which also has stage-named
-subfolders) holds only spec, voice, and skill files. Two hook events, one
+(this plugin's folder and the folder above it) holds only spec, voice, and
+skill files. Two hook events, one
 script:
 
 PreToolUse (Read, Glob, Grep, Bash): a path that reaches into that
@@ -42,7 +42,7 @@ def main():
     if event == "PostToolUse":
         if tool != "Skill" or under(cwd, parent):
             return
-        context = (f"Project artifacts (research/, define/, design/, deliver/) live under the working "
+        context = (f"Project artifacts (research/) live under the working "
                    f"directory {cwd}; read and write them by relative paths from there. The plugin "
                    f"checkout at {parent} is not the project: only {root}/references/ and "
                    f"{root}/skills/ are readable there, and every other path in it is denied.")
@@ -89,7 +89,7 @@ def main():
     shown = hits[0] if len(hits) == 1 else f"{hits[0]} (and {len(hits) - 1} more)"
     reason = (f"{shown} is inside the plugin checkout, which holds only spec and skill files; "
               f"project files live under the working directory ({cwd}), so use a relative path "
-              f"like research/, define/, design/, or deliver/ from there.")
+              f"like research/ from there.")
     print(json.dumps({"hookSpecificOutput": {"hookEventName": "PreToolUse",
                                              "permissionDecision": "deny",
                                              "permissionDecisionReason": reason}}))

@@ -1,4 +1,0 @@
-schema_version: "1.1"
-name: flow-map-basic
-context:
-  scaffold_script: ./scaffold.sh

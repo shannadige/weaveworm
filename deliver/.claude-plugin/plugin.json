@@ -1,9 +1,0 @@
-{
-  "name": "deliver",
-  "version": "0.1.0",
-  "description": "Delivery toolkit for product designers — stage four of the stack: turn a reviewed design into a build spec an engineer or an agent can build from without asking, slice it into increments that each deliver a journey shift, specify the instrumentation behind the charter's metrics, review the build against the decisions it must not silently reverse, and read whether the outcome moved.",
-  "author": {
-    "name": "Shan Nadige",
-    "email": "hello@shannadige.com"
-  }
-}

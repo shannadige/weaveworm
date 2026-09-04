@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Sync the canonical voice contract into each stage plugin's references/,
+# Sync the canonical voice contract into the plugin's references/,
 # the canonical plugin-root guard hook into each plugin's hooks/, and the
 # canonical report-shape block into every SKILL.md between its marker
 # comments. The canonicals live at references/voice.md,
@@ -9,12 +9,12 @@
 # section, and placing the markers is a one-time edit by hand.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-for stage in discover define design deliver; do
+for stage in discover; do
   cp references/voice.md "$stage/references/voice.md"
   mkdir -p "$stage/hooks"
   cp hooks/hooks.json hooks/guard-plugin-root.py "$stage/hooks/"
 done
-echo "synced references/voice.md and hooks/ -> discover, define, design, deliver"
+echo "synced references/voice.md and hooks/ -> discover"
 python3 - */skills/*/SKILL.md <<'PY'
 import re, sys
 open_m, close_m = '<!-- voice:report-shape v1 -->', '<!-- /voice:report-shape -->'

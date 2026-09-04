@@ -18,7 +18,7 @@ warn() { echo "warning $*"; warnings=$((warnings+1)); }
 banned='leverage|utili[sz]e|serves as|comprehensive|robust|crucial|pivotal|delve|seamless|streamline|empower|foster|actionable|holistic|deep dive|unpack|best practices|at its core|game-changer|transformative|moreover|furthermore|additionally|it'"'"'s worth noting|that said'
 intensifiers='genuinely|truly'
 
-for plugin in discover define design deliver; do
+for plugin in discover; do
   [ -f "$plugin/.claude-plugin/plugin.json" ] || err "$plugin: missing .claude-plugin/plugin.json"
   grep -q "\"source\": \"./$plugin\"" .claude-plugin/marketplace.json || err "$plugin: not listed in .claude-plugin/marketplace.json"
   if ! cmp -s references/voice.md "$plugin/references/voice.md"; then

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Cheap check of all four plugins: static lint, then one headless run of one
-# case per plugin with the plugin loaded, deterministic graders only.
+# Cheap check of the discover plugin: static lint, then one headless run of
+# each case with the plugin loaded, deterministic graders only.
 # Results land under <plugin>/evals/results/<timestamp>/ (gitignored); this
 # prints one line per case. Usage: scripts/smoke.sh [--model sonnet]
 set -uo pipefail
@@ -10,7 +10,7 @@ model=sonnet
 scripts/lint-skills.sh || { echo "smoke: lint failed, not running cases"; exit 1; }
 ts=$(date +%Y%m%d-%H%M%S)
 pids=()
-for plugin in discover define design deliver; do
+for plugin in discover; do
   out="$plugin/evals/results/$ts"
   mkdir -p "$out"
   python3 scripts/eval-pilot.py "$plugin" --arms with --runs 1 --skip-llm --parallel 1 \
@@ -20,7 +20,7 @@ done
 wait "${pids[@]}"
 echo
 printf '%-10s %-28s %-7s %-6s %-6s %s\n' plugin case score turns cost failed
-for plugin in discover define design deliver; do
+for plugin in discover; do
   python3 - "$plugin" "$plugin/evals/results/$ts/aggregate-result.json" <<'PY'
 import json, sys
 plugin, path = sys.argv[1], sys.argv[2]
